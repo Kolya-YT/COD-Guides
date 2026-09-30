@@ -17,26 +17,30 @@ title: COD Guides
   <div class="search-hint">Ищи по названию, описанию или механике</div>
 </div>
 
-<div class="home-section-head">
-  <div>
-    <div class="home-kicker">РАЗДЕЛ</div>
-    <h2>🌋 PvE</h2>
-  </div>
-  <span class="guide-count">15 гайдов</span>
+<div class="home-search">
+  <label class="search-box">
+    <span>🔎</span>
+    <input type="search" data-guide-search placeholder="Найти гайд или механику..." autocomplete="off" enterkeyhint="search">
+  </label>
+  <div class="search-hint">Ищи по названию, описанию или механике</div>
 </div>
 
-<div class="guide-grid">
-<div class="guide-card guide-card-pet-wrap">
-  <a class="guide-card-pet" href="{{ '/guides/pitomcy/' | relative_url }}">
-    <img src="https://img-cdn.2game.vn/2023/09/07/Call-of-Dragon-4.png" alt="Питомцы Call of Dragons">
-    <div class="guide-card-body">
-      <div class="guide-card-tag">🐾 PVE · ПИТОМЦЫ</div>
-      <h3>Питомцы</h3>
-      <p>Полный гайд по захвату, характеристикам, талантам, навыкам, регенерации и сборке.</p>
-      <span class="guide-open">Открыть гайд <b>→</b></span>
-    </div>
-  </a>
+<div class="category-nav" role="tablist" aria-label="Категории гайдов">
+  <button class="category-btn is-active" type="button" data-category-filter="all">Все</button>
+  <button class="category-btn" type="button" data-category-filter="giants">🌋 Исполины</button>
+  <button class="category-btn" type="button" data-category-filter="pets">🐾 Питомцы</button>
 </div>
+
+<div class="home-section-head" data-section="giants">
+  <div>
+    <div class="home-kicker">CALL OF DRAGONS · PVE</div>
+    <h2>🌋 Исполины</h2>
+  </div>
+  <span class="guide-count" data-count="giants">14 гайдов</span>
+</div>
+
+<div class="guide-grid" data-category="giants">
+
 
 
   <a class="guide-card" href="{{ '/guides/magma/' | relative_url }}">
@@ -179,6 +183,36 @@ title: COD Guides
     </div>
   </a>
 
+</div>
+
+<div class="home-section-head pets-section-head" data-section="pets">
+  <div>
+    <div class="home-kicker">CALL OF DRAGONS · WAR PETS</div>
+    <h2>🐾 Питомцы</h2>
+  </div>
+  <span class="guide-count" data-count="pets">1 гайд</span>
+</div>
+
+<div class="guide-grid pets-grid">
+<div class="guide-card guide-card-pet-wrap" data-category="pets">
+  <a class="guide-card-pet" href="{{ '/guides/pitomcy/' | relative_url }}">
+    <img src="https://img-cdn.2game.vn/2023/09/07/Call-of-Dragon-4.png" alt="Питомцы Call of Dragons">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🐾 PVE · ПИТОМЦЫ</div>
+      <h3>Питомцы</h3>
+      <p>Полный гайд по захвату, характеристикам, талантам, навыкам, регенерации и сборке.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+</div>
+</div>
+
+<div class="home-empty" data-search-empty hidden>
+  <span>😕</span>
+  <div>
+    <strong>Ничего не найдено</strong>
+    <p>Попробуй другое название или механику.</p>
+  </div>
 </div>
 
 <div class="home-empty">
