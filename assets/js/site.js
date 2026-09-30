@@ -93,3 +93,20 @@
   tabs.forEach(x=>x.addEventListener('click',()=>open(x.dataset.buildTab,true)));
   open(tabs[0].dataset.buildTab,false);
 })();
+
+
+/* PET BUILD SKILL TOOLTIPS */
+(() => {
+  const money = (card) => {
+    const row = card?.querySelector('.pet-build-cost');
+    return row ? row.textContent.replace(/\s+/g,' ').trim() : '';
+  };
+  document.querySelectorAll('.pet-build-skill[title]').forEach((el) => {
+    const card = el.closest('.pet-build-card');
+    const cost = money(card);
+    if (cost && !el.dataset.tooltipReady) {
+      el.title = el.title + '\\A' + cost;
+      el.dataset.tooltipReady = '1';
+    }
+  });
+})();
