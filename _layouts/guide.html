@@ -16,15 +16,14 @@
       {% if page.description %}<p>{{ page.description }}</p>{% endif %}
       {% if page.updated %}<div class="updated">Обновлено: {{ page.updated }}</div>{% endif %}
     </div>
+    {% if page.toc %}
     <div class="toc">
       <strong>📌 В этом гайде</strong>
-      <a href="#mechanics">Механика</a>
-      <a href="#groups">Группы</a>
-      <a href="#phases">Фазы</a>
-      <a href="#marks">Метки</a>
-      <a href="#acolytes">Аколиты</a>
-      <a href="#tips">Советы</a>
+      {% for item in page.toc %}
+      <a href="{{ item.href }}">{{ item.label }}</a>
+      {% endfor %}
     </div>
+    {% endif %}
     <div class="content">{{ content }}</div>
   </article>
 </main>
