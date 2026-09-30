@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b10">
+<title>{{ page.title }} — COD Guides</title>
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+<header class="top"><a href="{{ '/' | relative_url }}" class="brand">🔥 COD <b>GUIDES</b></a><a href="{{ '/' | relative_url }}" class="back">← Все гайды</a></header>
+<main class="page">
+  <article class="guide">
+    <div class="guide-head">
+      {% if page.category %}<div class="eyebrow">{{ page.category }}</div>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+      {% if page.updated %}<div class="updated">Обновлено: {{ page.updated }}</div>{% endif %}
+    </div>
+    <div class="toc">
+      <strong>📌 В этом гайде</strong>
+      <a href="#mechanics">Механика</a>
+      <a href="#groups">Группы</a>
+      <a href="#phases">Фазы</a>
+      <a href="#marks">Метки</a>
+      <a href="#acolytes">Аколиты</a>
+      <a href="#tips">Советы</a>
+    </div>
+    <div class="content">{{ content }}</div>
+  </article>
+</main>
+<footer>🔥 COD Guides · Call of Dragons</footer>
+</body>
+</html>
