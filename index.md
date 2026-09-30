@@ -4,24 +4,31 @@ title: COD Guides
 ---
 
 <section class="home-hero">
-  <div class="home-kicker">CALL OF DRAGONS</div>
-  <h1>Гайды по <span>Call of Dragons</span></h1>
-  <p>Понятные разборы PvE-испытаний, механик и тактик — с реальными скриншотами из игры.</p>
+  <div class="home-hero-copy">
+    <div class="home-kicker">CALL OF DRAGONS · GUIDE HUB</div>
+    <h1>Гайды по <span>Call of Dragons</span></h1>
+    <p>Разбираем исполинов, питомцев и игровые механики простым языком — без лишней воды.</p>
+    <div class="home-hero-meta">
+      <span>🌋 14 исполинов</span>
+      <span>🐾 Питомцы</span>
+      <span>📱 Удобно с телефона</span>
+    </div>
+  </div>
 </section>
 
-<div class="home-search">
-  <label class="search-box">
-    <span>🔎</span>
-    <input type="search" data-guide-search placeholder="Найти гайд или механику..." autocomplete="off" enterkeyhint="search">
-  </label>
-  <div class="search-hint">Ищи по названию, описанию или механике</div>
-</div>
-
-<div class="category-nav" role="tablist" aria-label="Категории гайдов">
+<div class="home-tools">
+  <div class="home-search">
+    <label class="search-box">
+      <span>🔎</span>
+      <input type="search" data-guide-search placeholder="Найти гайд или механику…" autocomplete="off" enterkeyhint="search" aria-label="Поиск по гайдам">
+      <kbd>⌕</kbd>
+    </label>
+    <div class="search-hint">Ищи по названию, описанию или механике</div>
+    <div class="category-nav" role="tablist" aria-label="Категории гайдов">
   <button class="category-btn is-active" type="button" data-category-filter="all">Все</button>
   <button class="category-btn" type="button" data-category-filter="giants">🌋 Исполины</button>
   <button class="category-btn" type="button" data-category-filter="pets">🐾 Питомцы</button>
-</div>
+  </div>
 
 <div class="home-section-head" data-section="giants">
   <div>
@@ -192,7 +199,7 @@ title: COD Guides
     <div class="guide-card-body">
       <div class="guide-card-tag">🐾 PVE · ПИТОМЦЫ</div>
       <h3>Питомцы</h3>
-      <p>Полный гайд по захвату, характеристикам, талантам, навыкам, регенерации и сборке.</p>
+      <p>Полный гайд по захвату, характеристикам, талантам, навыкам, восстановлению и сборке.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
