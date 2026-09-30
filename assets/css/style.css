@@ -94,3 +94,12 @@
 .pet-guide-image img{display:block;width:100%;height:auto;max-height:560px;object-fit:cover}
 .pet-guide-image figcaption{padding:10px 14px;color:#8f99a7;font-size:12px;line-height:1.45;text-align:center}
 @media(max-width:600px){.pet-guide-image{margin:18px 0 22px;border-radius:13px}.pet-guide-image figcaption{font-size:11px;padding:9px 11px}}
+
+
+/* PET SCREENSHOT GALLERY */
+.pet-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0 30px}
+.pet-gallery-card{margin:0;background:#11151c;border:1px solid #292f39;border-radius:15px;overflow:hidden}
+.pet-gallery-card img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.pet-gallery-card figcaption{padding:9px 10px;color:#a7afba;font-size:12px;font-weight:700;text-align:center}
+@media(max-width:700px){.pet-gallery{grid-template-columns:1fr 1fr}.pet-gallery-card figcaption{font-size:11px}}
+@media(max-width:430px){.pet-gallery{grid-template-columns:1fr}}
