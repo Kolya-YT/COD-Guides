@@ -9,6 +9,14 @@ title: COD Guides
   <p>Понятные разборы PvE-испытаний, механик и тактик — с реальными скриншотами из игры.</p>
 </section>
 
+<div class="home-search">
+  <label class="search-box">
+    <span>🔎</span>
+    <input type="search" data-guide-search placeholder="Найти гайд или механику..." autocomplete="off" enterkeyhint="search">
+  </label>
+  <div class="search-hint">Ищи по названию, описанию или механике</div>
+</div>
+
 <div class="home-section-head">
   <div>
     <div class="home-kicker">РАЗДЕЛ</div>
