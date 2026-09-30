@@ -26,28 +26,20 @@ toc:
 Выбери тип войск — внутри откроются **готовые связки командиров, питомцев и навыков**. 🐾
 
 <div class="pet-build-category-grid">
-  <a class="pet-build-category pet-build-category-marksman" href="#builds-marksman">
-    <span class="pet-build-category-overlay"></span><div><small>🏹 ТИП ВОЙСК</small><strong>Стрелки</strong><span>Сборки с питомцами для стрелковых легионов</span></div>
-  </a>
-  <a class="pet-build-category pet-build-category-magic" href="#builds-magic">
-    <span class="pet-build-category-overlay"></span><div><small>🔮 ТИП ВОЙСК</small><strong>Маги</strong><span>Магический урон, контроль и поддержка</span></div>
-  </a>
-  <a class="pet-build-category pet-build-category-cav" href="#builds-cav">
-    <span class="pet-build-category-overlay"></span><div><small>🐎 ТИП ВОЙСК</small><strong>Кавалерия</strong><span>Скорость, урон и постоянный цикл</span></div>
-  </a>
-  <a class="pet-build-category pet-build-category-inf" href="#builds-inf">
-    <span class="pet-build-category-overlay"></span><div><small>🛡️ ТИП ВОЙСК</small><strong>Пехота</strong><span>Выживаемость, щиты и контратаки</span></div>
-  </a>
+  <button class="pet-build-category pet-build-category-marksman is-active" type="button" data-build-tab="marksman"><span class="pet-build-category-overlay"></span><span class="pet-build-category-content"><small>🏹 ТИП ВОЙСК</small><strong>Стрелки</strong><em>Сборки →</em></span></button>
+  <button class="pet-build-category pet-build-category-magic" type="button" data-build-tab="magic"><span class="pet-build-category-overlay"></span><span class="pet-build-category-content"><small>🔮 ТИП ВОЙСК</small><strong>Маги</strong><em>Сборки →</em></span></button>
+  <button class="pet-build-category pet-build-category-cav" type="button" data-build-tab="cav"><span class="pet-build-category-overlay"></span><span class="pet-build-category-content"><small>🐎 ТИП ВОЙСК</small><strong>Кава</strong><em>Сборки →</em></span></button>
+  <button class="pet-build-category pet-build-category-inf" type="button" data-build-tab="inf"><span class="pet-build-category-overlay"></span><span class="pet-build-category-content"><small>🛡️ ТИП ВОЙСК</small><strong>Пехота</strong><em>Сборки →</em></span></button>
 </div>
 
-<div class="pet-build-source">Актуальные связки сверяем с базой CoD Fan. urlCoD Fan — Hero Buildshttps://codfan.com/builds</div>
+<div class="pet-build-source">Билды рассчитаны по базе <a href="https://www.kraken-chronicles.com/pets/builder" target="_blank" rel="noopener noreferrer">Kraken Chronicles — конструктор питомцев</a>.</div>
 
-<div class="pet-build-category-section" id="builds-marksman">
+<div class="pet-build-category-section is-visible" id="builds-marksman" data-build-panel="marksman">
 <h3>🏹 Стрелки</h3><div class="pet-build-grid"><article class="pet-build-card pet-build-marksman">
     <div class="pet-build-top"><span class="pet-build-type">🏹 СТРЕЛКИ · OPEN FIELD</span><span class="pet-build-badge">АКТУАЛЬНАЯ</span></div>
     <div class="pet-build-heroes"><span class="pet-build-hero"><img src="https://codfan.com/img/heroes/art/maggrat.webp" alt="Магграт" loading="lazy"><strong>Магграт</strong></span><b>+</b><span class="pet-build-hero"><img src="https://codfan.com/img/heroes/art/zayda.webp" alt="Зайда" loading="lazy"><strong>Зайда</strong></span></div>
     <div class="pet-build-pet"><div class="pet-build-pet-icon" style="background-image:url('https://res.cloudinary.com/dbmyv6u9r/image/upload/q_auto/f_webp/COD/Shadow_Manticore_cxobkr')"></div><div><small>Питомец</small><strong>Сумрачная мантикора</strong></div></div>
-    <div class="pet-build-skills"><span class="pet-build-skill" title="Варварство 5"><img src="https://codfan.com/img/warpets/skills/barbarism.png?v=1.1.0" alt="Варварство 5" loading="lazy"></span><span class="pet-build-skill" title="Улучш. Варварство 5"><img src="https://codfan.com/img/warpets/skills/advanced_barbarism.png?v=1.1.0" alt="Улучш. Варварство 5" loading="lazy"></span><span class="pet-build-skill" title="Интенсив. Варварство 5"><img src="https://codfan.com/img/warpets/skills/intense_barbarism.png?v=1.1.0" alt="Интенсив. Варварство 5" loading="lazy"></span><span>Цепной удар 5</span><span>Улучш. Цепной удар 5</span><span class="pet-build-skill" title="Рёв крови"><img src="https://codfan.com/img/warpets/skills/blood_roar.png?v=1.1.0" alt="Рёв крови" loading="lazy"></span><span class="pet-build-skill" title="Смертельный укус"><img src="https://codfan.com/img/warpets/skills/fatal_bite.png?v=1.1.0" alt="Смертельный укус" loading="lazy"></span><span class="pet-build-skill" title="Гневный рёв"><img src="https://codfan.com/img/warpets/skills/angry_roar.png?v=1.1.0" alt="Гневный рёв" loading="lazy"></span></div>
+    <div class="pet-build-skills"><span class="pet-build-skill" title="Варварство 5"><img src="https://codfan.com/img/warpets/skills/barbarism.png?v=1.1.0" alt="Варварство 5" loading="lazy"></span><span class="pet-build-skill" title="Улучш. Варварство 5"><img src="https://codfan.com/img/warpets/skills/advanced_barbarism.png?v=1.1.0" alt="Улучш. Варварство 5" loading="lazy"></span><span class="pet-build-skill" title="Интенсив. Варварство 5"><img src="https://codfan.com/img/warpets/skills/intense_barbarism.png?v=1.1.0" alt="Интенсив. Варварство 5" loading="lazy"></span><span class="pet-build-skill" title="Цепной удар 5"><img src="https://codfan.com/img/warpets/skills/chain_strike.png?v=1.1.0" alt="Цепной удар 5" loading="lazy"></span><span class="pet-build-skill" title="Улучш. Цепной удар 5"><img src="https://codfan.com/img/warpets/skills/advanced_chain_strike.png?v=1.1.0" alt="Улучш. Цепной удар 5" loading="lazy"></span><span class="pet-build-skill" title="Рёв крови"><img src="https://codfan.com/img/warpets/skills/blood_roar.png?v=1.1.0" alt="Рёв крови" loading="lazy"></span><span class="pet-build-skill" title="Смертельный укус"><img src="https://codfan.com/img/warpets/skills/fatal_bite.png?v=1.1.0" alt="Смертельный укус" loading="lazy"></span><span class="pet-build-skill" title="Гневный рёв"><img src="https://codfan.com/img/warpets/skills/angry_roar.png?v=1.1.0" alt="Гневный рёв" loading="lazy"></span></div>
     <div class="pet-build-stats"><b>Фокус:</b> критический урон · физический урон · лечение от механики питомца</div>
   </article>
 <article class="pet-build-card pet-build-marksman">
@@ -59,7 +51,7 @@ toc:
   </article></div>
 </div>
 
-<div class="pet-build-category-section" id="builds-magic">
+<div class="pet-build-category-section" id="builds-magic" data-build-panel="magic">
 <h3>🔮 Маги</h3><div class="pet-build-grid"><article class="pet-build-card pet-build-magic">
     <div class="pet-build-top"><span class="pet-build-type">🔮 МАГИ · OPEN FIELD</span><span class="pet-build-badge">ОСНОВА</span></div>
     <div class="pet-build-heroes"><span class="pet-build-hero"><img src="https://codfan.com/img/heroes/art/liliya.webp" alt="Лилиия" loading="lazy"><strong>Лилиия</strong></span><b>+</b><span class="pet-build-hero"><img src="https://codfan.com/img/heroes/art/velyn.webp" alt="Велин" loading="lazy"><strong>Велин</strong></span></div>
@@ -76,7 +68,7 @@ toc:
   </article></div>
 </div>
 
-<div class="pet-build-category-section" id="builds-cav">
+<div class="pet-build-category-section" id="builds-cav" data-build-panel="cav">
 <h3>🐎 Кавалерия</h3><div class="pet-build-grid"><article class="pet-build-card pet-build-cav">
     <div class="pet-build-top"><span class="pet-build-type">🐎 КАВАЛЕРИЯ · PVP</span><span class="pet-build-badge">55510</span></div>
     <div class="pet-build-heroes"><span class="pet-build-hero"><img src="https://codfan.com/img/heroes/art/emrys.webp" alt="Эмрис" loading="lazy"><strong>Эмрис</strong></span><b>+</b><span class="pet-build-hero"><img src="https://codfan.com/img/heroes/art/bakshi.webp" alt="Бакши" loading="lazy"><strong>Бакши</strong></span></div>
@@ -88,17 +80,17 @@ toc:
     <div class="pet-build-top"><span class="pet-build-type">🐎 КАВАЛЕРИЯ · G5</span><span class="pet-build-badge">АКТУАЛЬНАЯ</span></div>
     <div class="pet-build-heroes"><span class="pet-build-hero"><img src="https://codfan.com/img/heroes/art/agnar.webp" alt="Агнар" loading="lazy"><strong>Агнар</strong></span><b>+</b><span class="pet-build-hero"><img src="https://codfan.com/img/heroes/art/freya.webp" alt="Фрейя" loading="lazy"><strong>Фрейя</strong></span></div>
     <div class="pet-build-pet"><div class="pet-build-pet-icon" style="background-image:url('https://res.cloudinary.com/dbmyv6u9r/image/upload/q_auto/f_webp/COD/Bullionbeast_spqul7')"></div><div><small>Питомец</small><strong>Денежный зверь</strong></div></div>
-    <div class="pet-build-skills"><span>Удача 5</span><span>Улучш. Удача 5</span><span class="pet-build-skill" title="Смертельный укус"><img src="https://codfan.com/img/warpets/skills/fatal_bite.png?v=1.1.0" alt="Смертельный укус" loading="lazy"></span><span class="pet-build-skill" title="Яростная атака"><img src="https://codfan.com/img/warpets/skills/fierce_attack.png?v=1.1.0" alt="Яростная атака" loading="lazy"></span><span class="pet-build-skill" title="Интенсив. Яростная атака"><img src="https://codfan.com/img/warpets/skills/intense_fierce_attack.png?v=1.1.0" alt="Интенсив. Яростная атака" loading="lazy"></span><span class="pet-build-skill" title="Гневный рёв"><img src="https://codfan.com/img/warpets/skills/angry_roar.png?v=1.1.0" alt="Гневный рёв" loading="lazy"></span><span class="pet-build-skill" title="Рёв крови"><img src="https://codfan.com/img/warpets/skills/blood_roar.png?v=1.1.0" alt="Рёв крови" loading="lazy"></span><span class="pet-build-skill" title="Зуб и коготь"><img src="https://codfan.com/img/warpets/skills/tooth_and_claw.png?v=1.1.0" alt="Зуб и коготь" loading="lazy"></span></div>
+    <div class="pet-build-skills"><span class="pet-build-skill pet-build-skill-text" title="Удача 5">Удача 5</span><span class="pet-build-skill pet-build-skill-text" title="Улучш. Удача 5">Улучш. Удача 5</span><span class="pet-build-skill" title="Смертельный укус"><img src="https://codfan.com/img/warpets/skills/fatal_bite.png?v=1.1.0" alt="Смертельный укус" loading="lazy"></span><span class="pet-build-skill" title="Яростная атака"><img src="https://codfan.com/img/warpets/skills/fierce_attack.png?v=1.1.0" alt="Яростная атака" loading="lazy"></span><span class="pet-build-skill" title="Интенсив. Яростная атака"><img src="https://codfan.com/img/warpets/skills/intense_fierce_attack.png?v=1.1.0" alt="Интенсив. Яростная атака" loading="lazy"></span><span class="pet-build-skill" title="Гневный рёв"><img src="https://codfan.com/img/warpets/skills/angry_roar.png?v=1.1.0" alt="Гневный рёв" loading="lazy"></span><span class="pet-build-skill" title="Рёв крови"><img src="https://codfan.com/img/warpets/skills/blood_roar.png?v=1.1.0" alt="Рёв крови" loading="lazy"></span><span class="pet-build-skill" title="Зуб и коготь"><img src="https://codfan.com/img/warpets/skills/tooth_and_claw.png?v=1.1.0" alt="Зуб и коготь" loading="lazy"></span></div>
     <div class="pet-build-stats"><b>Фокус:</b> Ловкость · урон · ярость · метка Auspicious Mark</div>
   </article></div>
 </div>
 
-<div class="pet-build-category-section" id="builds-inf">
+<div class="pet-build-category-section" id="builds-inf" data-build-panel="inf">
 <h3>🛡️ Пехота</h3><div class="pet-build-grid"><article class="pet-build-card pet-build-inf">
     <div class="pet-build-top"><span class="pet-build-type">🛡️ ПЕХОТА · OPEN FIELD</span><span class="pet-build-badge">СТАБИЛЬНАЯ</span></div>
     <div class="pet-build-heroes"><span class="pet-build-hero"><img src="https://codfan.com/img/heroes/art/madeline.webp" alt="Мадлен" loading="lazy"><strong>Мадлен</strong></span><b>+</b><span class="pet-build-hero"><img src="https://codfan.com/img/heroes/art/garwood.webp" alt="Гарвуд" loading="lazy"><strong>Гарвуд</strong></span></div>
     <div class="pet-build-pet"><div class="pet-build-pet-icon" style="background-image:url('https://res.cloudinary.com/dbmyv6u9r/image/upload/q_auto/f_webp/COD/Venomous_Lizard_zkaabp')"></div><div><small>Питомец</small><strong>Ядовитый ящер</strong></div></div>
-    <div class="pet-build-skills"><span>Заражение 5</span><span>Интенсив. Заражение 5</span><span class="pet-build-skill" title="Зуб и коготь"><img src="https://codfan.com/img/warpets/skills/tooth_and_claw.png?v=1.1.0" alt="Зуб и коготь" loading="lazy"></span><span class="pet-build-skill" title="Смертельный укус"><img src="https://codfan.com/img/warpets/skills/fatal_bite.png?v=1.1.0" alt="Смертельный укус" loading="lazy"></span><span class="pet-build-skill" title="Контрудар"><img src="https://codfan.com/img/warpets/skills/counterstrike.png?v=1.1.0" alt="Контрудар" loading="lazy"></span><span class="pet-build-skill" title="Улучш. Контрудар"><img src="https://codfan.com/img/warpets/skills/advanced_counterstrike.png?v=1.1.0" alt="Улучш. Контрудар" loading="lazy"></span><span class="pet-build-skill" title="Гневный рёв"><img src="https://codfan.com/img/warpets/skills/angry_roar.png?v=1.1.0" alt="Гневный рёв" loading="lazy"></span><span class="pet-build-skill" title="Рёв крови"><img src="https://codfan.com/img/warpets/skills/blood_roar.png?v=1.1.0" alt="Рёв крови" loading="lazy"></span></div>
+    <div class="pet-build-skills"><span class="pet-build-skill" title="Заражение 5"><img src="https://codfan.com/img/warpets/skills/infection.png?v=1.1.0" alt="Заражение 5" loading="lazy"></span><span class="pet-build-skill" title="Интенсив. Заражение 5"><img src="https://codfan.com/img/warpets/skills/intense_infection.png?v=1.1.0" alt="Интенсив. Заражение 5" loading="lazy"></span><span class="pet-build-skill" title="Зуб и коготь"><img src="https://codfan.com/img/warpets/skills/tooth_and_claw.png?v=1.1.0" alt="Зуб и коготь" loading="lazy"></span><span class="pet-build-skill" title="Смертельный укус"><img src="https://codfan.com/img/warpets/skills/fatal_bite.png?v=1.1.0" alt="Смертельный укус" loading="lazy"></span><span class="pet-build-skill" title="Контрудар"><img src="https://codfan.com/img/warpets/skills/counterstrike.png?v=1.1.0" alt="Контрудар" loading="lazy"></span><span class="pet-build-skill" title="Улучш. Контрудар"><img src="https://codfan.com/img/warpets/skills/advanced_counterstrike.png?v=1.1.0" alt="Улучш. Контрудар" loading="lazy"></span><span class="pet-build-skill" title="Гневный рёв"><img src="https://codfan.com/img/warpets/skills/angry_roar.png?v=1.1.0" alt="Гневный рёв" loading="lazy"></span><span class="pet-build-skill" title="Рёв крови"><img src="https://codfan.com/img/warpets/skills/blood_roar.png?v=1.1.0" alt="Рёв крови" loading="lazy"></span></div>
     <div class="pet-build-stats"><b>Фокус:</b> Сила · живучесть · контратаки · постоянное заражение</div>
   </article>
 <article class="pet-build-card pet-build-inf">

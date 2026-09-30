@@ -76,3 +76,20 @@
     }
   });
 })();
+
+/* PET BUILD CATEGORY TABS */
+(() => {
+  const tabs=[...document.querySelectorAll('[data-build-tab]')];
+  const panels=[...document.querySelectorAll('[data-build-panel]')];
+  if(!tabs.length||!panels.length)return;
+  const open=(type,scroll)=>{
+    tabs.forEach(x=>x.classList.toggle('is-active',x.dataset.buildTab===type));
+    panels.forEach(x=>x.classList.toggle('is-visible',x.dataset.buildPanel===type));
+    if(scroll){
+      const p=document.querySelector('[data-build-panel="'+type+'"]');
+      if(p)p.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  };
+  tabs.forEach(x=>x.addEventListener('click',()=>open(x.dataset.buildTab,true)));
+  open(tabs[0].dataset.buildTab,false);
+})();
