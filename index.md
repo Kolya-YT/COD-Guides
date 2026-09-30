@@ -14,7 +14,7 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">11 гайдов</span>
+  <span class="guide-count">12 гайдов</span>
 </div>
 
 <div class="guide-grid">
@@ -115,6 +115,16 @@ title: COD Guides
       <div class="guide-card-tag">🐍 PVE · ИСПОЛИН</div>
       <h3>Харибда</h3>
       <p>Щит, столбы, синие сферы, ловушки и связанные линии.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/plameneya/' | relative_url }}">
+    <img src="https://i.postimg.cc/g2BNrVM3/Plamenea.png" alt="Пламенея">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🔥 PVE · ИСПОЛИН</div>
+      <h3>Пламенея</h3>
+      <p>Копии легионов, преимущество типов, лавовые щиты и Пылающие небеса.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
