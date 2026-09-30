@@ -208,3 +208,25 @@
 .pet-build-tooltip-title{font-weight:900;color:#fff;margin-bottom:7px}.pet-build-tooltip-levels{display:grid;gap:3px}.pet-build-tooltip-levels span{display:flex;justify-content:space-between;gap:12px;padding:3px 5px;border-radius:5px;color:#8e98a7}.pet-build-tooltip-levels span.is-current{background:#252018;color:#fff}.pet-build-tooltip-levels b{color:#cbd1da}.pet-build-tooltip-levels em{font-style:normal;color:#f0c96b;white-space:nowrap}.pet-build-tooltip-levels img{width:12px;height:12px;vertical-align:-2px}
 
 .pet-build-skill img{font-size:0!important;color:transparent!important;text-indent:-9999px;overflow:hidden}.pet-build-skill.is-broken{background:linear-gradient(135deg,#252b36,#11161e)}.pet-build-skill.is-broken::before{content:"🐾";display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:16px;text-indent:0}.pet-build-skill.is-broken img{display:none!important}
+
+/* PET BUILD UI v9 — 3★ skills + damage */
+.pet-build-metrics{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:0 0 10px}
+.pet-build-metrics .pet-build-cost{margin:0}
+.pet-build-damage{display:inline-flex;align-items:center;gap:6px;padding:5px 8px;background:#0c1118;border:1px solid #303846;border-radius:999px;color:#8f99a8;font-size:9px;line-height:1;box-shadow:0 3px 10px #0004}
+.pet-build-damage span{color:#7f8998;font-weight:700}
+.pet-build-damage b{color:#ff9a69;font-size:10px;white-space:nowrap}
+
+.pet-build-skill{position:relative!important;overflow:hidden!important}
+.pet-build-skill img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;font-size:0!important;color:transparent!important;text-indent:-9999px!important}
+.pet-build-skill-stars{position:absolute;left:2px;right:2px;bottom:1px;z-index:3;text-align:center;font:900 7px/8px Arial,sans-serif;letter-spacing:-1px;color:#f4d36b;text-shadow:0 1px 2px #000,0 0 2px #000;pointer-events:none;white-space:nowrap}
+.pet-build-skill:hover .pet-build-skill-stars{color:#ffe79b}
+.pet-build-tooltip-title{font-size:11px}
+.pet-build-tooltip-levels b{font-size:10px;letter-spacing:0;color:#f0c96b;white-space:nowrap}
+.pet-build-tooltip-levels em{font-size:10px}
+
+@media(max-width:700px){
+  .pet-build-metrics{gap:5px}
+  .pet-build-damage{padding:5px 7px}
+  .pet-build-damage b{font-size:9px}
+  .pet-build-skill-stars{font-size:6px;line-height:7px}
+}
