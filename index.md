@@ -3,22 +3,48 @@ layout: default
 title: COD Guides
 ---
 
-# 📚 COD Guides
+<section class="home-hero">
+  <div class="home-kicker">CALL OF DRAGONS</div>
+  <h1>Гайды по <span>Call of Dragons</span></h1>
+  <p>Понятные разборы PvE-испытаний, механик и тактик — с реальными скриншотами из игры.</p>
+</section>
 
-Гайды по **Call of Dragons**, собранные в одном месте.
+<div class="home-section-head">
+  <div>
+    <div class="home-kicker">РАЗДЕЛ</div>
+    <h2>🌋 PvE</h2>
+  </div>
+  <span class="guide-count">2 гайда</span>
+</div>
 
-## 🌋 PvE
+<div class="guide-grid">
 
-### [🌋 Магма]({{ '/guides/magma/' | relative_url }})
-Полный разбор Магмы: расстановка, фазы, метки, переходы, камни лечения и аколиты.
+  <a class="guide-card" href="{{ '/guides/magma/' | relative_url }}">
+    <img src="https://i.postimg.cc/vZkKrtkQ/Magma.jpg" alt="Магма">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🌋 PVE · ИСПОЛИН</div>
+      <h3>Магма</h3>
+      <p>Расстановка групп, метки, переходы, камни лечения и аколиты.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
 
----
+  <a class="guide-card" href="{{ '/guides/ursus/' | relative_url }}">
+    <img src="https://i.postimg.cc/L6My7V0c/Vs-I44t-Bx3bjl6Mj-Oqwj-KM9h-Z1ADOky-MBn3el-WVQUd-Wd-Der-Zo-Ldy-Or-Y25bg-a-Cb-Dee-QA3Icbd-Zlzfq-GCOhp.jpg" alt="Гигантский Урсус">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🐻 PVE · ИСПОЛИН</div>
+      <h3>Гигантский Урсус</h3>
+      <p>Дистанция, рывок, красная зона, оглушение, камни лечения и ярость.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
 
-### [🐻 Гигантский Урсус]({{ '/guides/ursus/' | relative_url }})
-Разбор дистанции, рывка, оглушения, камней лечения и ярости.
+</div>
 
----
-
-### ➕ Новые гайды
-
-Каждый новый гайд будет отдельным Markdown-файлом. Дизайн и навигация останутся общими для всего сайта.
+<div class="home-empty">
+  <span>✨</span>
+  <div>
+    <strong>Новые гайды скоро</strong>
+    <p>Каждый новый гайд появится здесь отдельной карточкой.</p>
+  </div>
+</div>
