@@ -22,10 +22,22 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">14 гайдов</span>
+  <span class="guide-count">15 гайдов</span>
 </div>
 
 <div class="guide-grid">
+<div class="guide-card guide-card-pet-wrap">
+  <a class="guide-card-pet" href="{{ '/guides/pitomcy/' | relative_url }}">
+    <div class="guide-pet-cover"><span>🐾</span><b>WAR PETS</b></div>
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🐾 PVE · ПИТОМЦЫ</div>
+      <h3>Питомцы</h3>
+      <p>Полный гайд по захвату, характеристикам, талантам, навыкам, регенерации и сборке.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+</div>
+
 
   <a class="guide-card" href="{{ '/guides/magma/' | relative_url }}">
     <img src="https://i.postimg.cc/vZkKrtkQ/Magma.jpg" alt="Магма">
