@@ -14,7 +14,7 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">13 гайдов</span>
+  <span class="guide-count">14 гайдов</span>
 </div>
 
 <div class="guide-grid">
@@ -135,6 +135,16 @@ title: COD Guides
       <div class="guide-card-tag">⚡ PVE · ИСПОЛИН</div>
       <h3>Громовой дракон</h3>
       <p>Шаровые молнии, магниты, заряды, полярность и восемь фаз боя.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/ledyanoi-gigant/' | relative_url }}">
+    <img src="https://i.postimg.cc/QCJC4R2M/Zastavka.jpg" alt="Ледяной гигант">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🧊 PVE · ИСПОЛИН</div>
+      <h3>Ледяной гигант</h3>
+      <p>Сосульки, массовые атаки, снежные камни и смертельный снежный ком.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
