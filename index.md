@@ -195,7 +195,7 @@ title: COD Guides
 <div class="guide-grid pets-grid">
 <div class="guide-card guide-card-pet-wrap" data-category="pets">
   <a class="guide-card-pet" href="{{ '/guides/pitomcy/' | relative_url }}">
-    <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-7.png" alt="Питомцы Call of Dragons">
+    <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-7.png" alt="Питомцы Call of Dragons" onerror="this.onerror=null;this.src='{{ '/assets/img/pets-category-fallback.svg' | relative_url }}';">
     <div class="guide-card-body">
       <div class="guide-card-tag">🐾 PVE · ПИТОМЦЫ</div>
       <h3>Питомцы</h3>
