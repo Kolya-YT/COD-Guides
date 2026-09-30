@@ -14,7 +14,7 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">5 гайдов</span>
+  <span class="guide-count">6 гайдов</span>
 </div>
 
 <div class="guide-grid">
@@ -55,6 +55,16 @@ title: COD Guides
       <div class="guide-card-tag">🦾 PVE · ИСПОЛИН</div>
       <h3>Мехастраж</h3>
       <p>Пять зон, телепорты, столбы и шесть случайных атак.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/vosstavshiy-gigant/' | relative_url }}">
+    <img src="https://i.postimg.cc/zGXTHvmB/eh-Vic5h-Jua-Id-SRT-7Gfuf-Vvkh4x-Pv-c453Bk-P0zp-B9XVo5m6H9sdi7bq8T0ny9KI9VGi-Ggzm-Iq-Nr-HAv-N4h825ek.jpg" alt="Восставший гигант">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">💀 PVE · ИСПОЛИН</div>
+      <h3>Восставший гигант</h3>
+      <p>Некрогигант и Гигант, смена сторон, четыре атаки, некротоки и ярость.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
