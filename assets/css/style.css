@@ -185,11 +185,12 @@
 
 
 /* PET BUILD COST */
-.pet-build-cost{display:flex;align-items:center;gap:8px;margin:0 0 10px;padding:7px 9px;background:#10151c;border:1px solid #252c36;border-radius:10px;color:#7f8998;font-size:10px;line-height:1}
-.pet-build-cost span{margin-right:auto;color:#8f99a8;font-weight:700}
+.pet-build-cost{display:inline-flex;align-items:center;gap:7px;margin:0 0 10px;padding:5px 8px;background:#0c1118;border:1px solid #303846;border-radius:999px;color:#8f99a8;font-size:9px;line-height:1;box-shadow:0 3px 10px #0004}
+.pet-build-cost span{color:#7f8998;font-weight:700}
 .pet-build-cost b{color:#e7c66a;font-size:10px;white-space:nowrap}
-.pet-build-cost i{display:inline-flex;align-items:center;gap:4px;font-style:normal;color:#f0c96b;font-size:10px;white-space:nowrap}.pet-build-cost i img{width:14px;height:14px;object-fit:contain;vertical-align:middle}
-@media(max-width:700px){.pet-build-cost{gap:6px;padding:7px 8px}.pet-build-cost b,.pet-build-cost i{font-size:9px}}
+.pet-build-cost i{display:inline-flex;align-items:center;gap:3px;font-style:normal;color:#f0c96b;font-size:10px;white-space:nowrap}.pet-build-cost i img{width:13px;height:13px;object-fit:contain;vertical-align:middle}
+.pet-build-card>.pet-build-cost{align-self:flex-start}
+@media(max-width:700px){.pet-build-cost{gap:5px;padding:5px 7px}.pet-build-cost b,.pet-build-cost i{font-size:9px}.pet-build-cost i img{width:12px;height:12px}}
 
 
 /* PET BUILD QUICK GUIDE */
@@ -205,3 +206,5 @@
 .pet-build-pet-icon.is-text::after{content:attr(data-pet-emoji);filter:drop-shadow(0 2px 5px #0008)}
 
 .pet-build-tooltip-title{font-weight:900;color:#fff;margin-bottom:7px}.pet-build-tooltip-levels{display:grid;gap:3px}.pet-build-tooltip-levels span{display:flex;justify-content:space-between;gap:12px;padding:3px 5px;border-radius:5px;color:#8e98a7}.pet-build-tooltip-levels span.is-current{background:#252018;color:#fff}.pet-build-tooltip-levels b{color:#cbd1da}.pet-build-tooltip-levels em{font-style:normal;color:#f0c96b;white-space:nowrap}.pet-build-tooltip-levels img{width:12px;height:12px;vertical-align:-2px}
+
+.pet-build-skill img{font-size:0!important;color:transparent!important;text-indent:-9999px;overflow:hidden}.pet-build-skill.is-broken{background:linear-gradient(135deg,#252b36,#11161e)}.pet-build-skill.is-broken::before{content:"🐾";display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:16px;text-indent:0}.pet-build-skill.is-broken img{display:none!important}
