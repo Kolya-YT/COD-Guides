@@ -14,7 +14,7 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">4 гайда</span>
+  <span class="guide-count">5 гайдов</span>
 </div>
 
 <div class="guide-grid">
@@ -45,6 +45,16 @@ title: COD Guides
       <div class="guide-card-tag">🐍 PVE · ИСПОЛИН</div>
       <h3>Гидра</h3>
       <p>Отрава, красные камни маны, миазмы и ядовитые расщелины.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/mehastrazh/' | relative_url }}">
+    <img src="https://i.postimg.cc/YqJ1rVnn/Straz.png" alt="Мехастраж">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🦾 PVE · ИСПОЛИН</div>
+      <h3>Мехастраж</h3>
+      <p>Пять зон, телепорты, столбы и шесть случайных атак.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
