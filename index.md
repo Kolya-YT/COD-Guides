@@ -14,7 +14,7 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">3 гайда</span>
+  <span class="guide-count">4 гайда</span>
 </div>
 
 <div class="guide-grid">
@@ -35,6 +35,16 @@ title: COD Guides
       <div class="guide-card-tag">🐻 PVE · ИСПОЛИН</div>
       <h3>Гигантский Урсус</h3>
       <p>Дистанция, рывок, красная зона, оглушение, камни лечения и ярость.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/hydra/' | relative_url }}">
+    <img src="https://i.postimg.cc/W3nYGvzW/OLwcc-Aee-Fc6X04p9Gn0Mw-Jj-SCe4TMBPs0q-RS-8Jem3Cti1v-VNX4e-VZcn-Wx9DO6vrw-Zn-LVhne9l-Qh-C6r-Ory-Sa-C.jpg" alt="Гидра">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🐍 PVE · ИСПОЛИН</div>
+      <h3>Гидра</h3>
+      <p>Отрава, красные камни маны, миазмы и ядовитые расщелины.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
