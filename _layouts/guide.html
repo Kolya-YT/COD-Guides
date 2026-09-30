@@ -4,17 +4,44 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#090b10">
+<meta name="description" content="{{ page.description | default: site.description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="COD Guides">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="article:modified_time" content="{{ page.updated }}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
 <title>{{ page.title }} — COD Guides</title>
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v=20260930-3">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v=20260930-4">
+<script defer src="{{ '/assets/js/site.js' | relative_url }}?v=20260930-1"></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Article",
+  "headline":{{ page.title | jsonify }},
+  "description":{{ page.description | default: site.description | jsonify }},
+  "dateModified":{{ page.updated | jsonify }},
+  "mainEntityOfPage":{"@type":"WebPage","@id":{{ page.url | absolute_url | jsonify }}},
+  "publisher":{"@type":"Organization","name":"COD Guides","url":"{{ site.url }}{{ site.baseurl }}"}
+}
+</script>
 </head>
 <body>
 <header class="top"><a href="{{ '/' | relative_url }}" class="brand">🔥 COD <b>GUIDES</b></a><a href="{{ '/' | relative_url }}" class="back">← Назад</a></header>
 <main class="page">
   <article class="guide">
-    <div class="guide-head">      {% if page.category %}<div class="eyebrow">{{ page.category }}</div>{% endif %}
+    <div class="guide-head">
+      {% if page.category %}<div class="eyebrow">{{ page.category }}</div>{% endif %}
       <h1>{{ page.title }}</h1>
       {% if page.description %}<p>{{ page.description }}</p>{% endif %}
-      {% if page.updated %}<div class="updated">Обновлено: {{ page.updated }}</div>{% endif %}
+      <div class="guide-actions">
+        {% if page.updated %}<div class="updated">Обновлено: {{ page.updated }}</div>{% endif %}
+        <button class="share-btn" type="button" data-share>📤 Поделиться</button>
+      </div>
     </div>
     {% if page.toc %}
     <div class="toc">
