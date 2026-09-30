@@ -28,7 +28,7 @@ title: COD Guides
 <div class="guide-grid">
 <div class="guide-card guide-card-pet-wrap">
   <a class="guide-card-pet" href="{{ '/guides/pitomcy/' | relative_url }}">
-    <div class="guide-pet-cover"><span>🐾</span><b>WAR PETS</b></div>
+    <img src="https://img-cdn.2game.vn/2023/09/07/Call-of-Dragon-4.png" alt="Питомцы Call of Dragons">
     <div class="guide-card-body">
       <div class="guide-card-tag">🐾 PVE · ПИТОМЦЫ</div>
       <h3>Питомцы</h3>
