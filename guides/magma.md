@@ -1,11 +1,11 @@
 ---
 title: "🌋 Магма"
-description: "Понятный разбор механики Магмы с визуальными схемами и пошаговыми действиями."
+description: "Разбор Магмы с реальными скриншотами боя, метками, переходами и ключевыми механиками."
 category: "CALL OF DRAGONS · PVE"
 updated: "30 апреля 2026"
 ---
 
-![Магма — обложка]({{ '/assets/guides/magma/cover.svg' | relative_url }})
+![Магма — обложка]({{ '/assets/guides/magma/site-cover.webp' | relative_url }})
 
 ## 🌋 Общая суть {#mechanics}
 
@@ -31,7 +31,7 @@ updated: "30 апреля 2026"
 
 > ⚠️ Следите за красными зонами исполинов и не заводите войска внутрь опасной зоны без необходимости.
 
-![Расстановка четырёх групп]({{ '/assets/guides/magma/groups.svg' | relative_url }})
+![Расстановка четырёх групп]({{ '/assets/guides/magma/site-groups.webp' | relative_url }})
 
 ---
 
@@ -50,7 +50,7 @@ updated: "30 апреля 2026"
 - 🏹 Отряды дальнего боя атакуют исполина, стараясь избегать АоЕ.
 - 🧙 Если используете магов, следите, чтобы войска находились **в зоне исполина**. Если стоять вне зоны, урон значительно снижается.
 
-![Пример зоны атаки исполина]({{ '/assets/guides/magma/phase1.svg' | relative_url }})
+![Пример зоны атаки исполина]({{ '/assets/guides/magma/site-phase1.webp' | relative_url }})
 
 ---
 
@@ -66,7 +66,7 @@ updated: "30 апреля 2026"
 
 > ☠️ **Шестая метка сразу убивает отряд.**
 
-![Пример меток]({{ '/assets/guides/magma/marks.svg' | relative_url }})
+![Пример меток]({{ '/assets/guides/magma/site-marks.jpg' | relative_url }})
 
 ### Что делать
 
@@ -74,7 +74,7 @@ updated: "30 апреля 2026"
 
 Именно после перехода необходимо **забрать камень лечения вместе с танком**.
 
-![Переход между исполинами]({{ '/assets/guides/magma/rotation.svg' | relative_url }})
+![Переход между исполинами]({{ '/assets/guides/magma/site-rotation.webp' | relative_url }})
 
 ### 🛡️ Действия танка
 
