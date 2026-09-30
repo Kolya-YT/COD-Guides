@@ -126,6 +126,8 @@ updated: "30 апреля 2026"
 
 ![Оригинальные аколиты](https://i.postimg.cc/gjxSLwsZ/Akkolity.jpg)
 
+![Оригинальная GIF-анимация аколитов](https://i.postimg.cc/GtvDfdhx/Akkolity-gif.gif)
+
 ---
 
 ## ⛽ Ключевые механики {#tips}
