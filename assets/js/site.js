@@ -97,13 +97,13 @@
 
 /* PET BUILD IMAGE FALLBACK */
 (() => {
-  const fallback = 'https://callofdragonsguides.com/wp-content/uploads/2023/11/Follow-Up.png';
   document.querySelectorAll('.pet-build-skill img').forEach((img) => {
-    img.addEventListener('error', () => {
-      if (img.dataset.fallbackApplied) return;
-      img.dataset.fallbackApplied = '1';
-      img.src = fallback;
-    }, {once:false});
+    const markBroken = () => {
+      const cell = img.closest('.pet-build-skill');
+      if (cell) cell.classList.add('is-broken');
+    };
+    if (img.complete && img.naturalWidth === 0) markBroken();
+    img.addEventListener('error', markBroken);
   });
 })();
 
