@@ -14,7 +14,7 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">6 гайдов</span>
+  <span class="guide-count">7 гайдов</span>
 </div>
 
 <div class="guide-grid">
@@ -65,6 +65,16 @@ title: COD Guides
       <div class="guide-card-tag">💀 PVE · ИСПОЛИН</div>
       <h3>Восставший гигант</h3>
       <p>Некрогигант и Гигант, смена сторон, четыре атаки, некротоки и ярость.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/sumrachnyi-drakon/' | relative_url }}">
+    <img src="https://i.postimg.cc/PJqNfsmF/Sumracnyj-drakon.jpg" alt="Сумрачный дракон">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🐲 PVE · ИСПОЛИН</div>
+      <h3>Сумрачный дракон</h3>
+      <p>Тёмные круги, страх, пять стихийных атак и возврат в прошлое.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
