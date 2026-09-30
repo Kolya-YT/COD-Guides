@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/</loc>
+  </url>
+  {% for guide in site.guides %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ guide.url }}</loc>
+    {% if guide.updated %}<lastmod>{{ guide.updated | date: "%Y-%m-%d" }}</lastmod>{% endif %}
+  </url>
+  {% endfor %}
+</urlset>
