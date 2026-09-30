@@ -14,7 +14,7 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">10 гайдов</span>
+  <span class="guide-count">11 гайдов</span>
 </div>
 
 <div class="guide-grid">
@@ -105,6 +105,16 @@ title: COD Guides
       <div class="guide-card-tag">🦅 PVE · ИСПОЛИН</div>
       <h3>Космический Рух</h3>
       <p>Земля, четыре пруда воды, зоны атак и правильное перемещение по логову.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/haribda/' | relative_url }}">
+    <img src="https://i.postimg.cc/J7y9ncJy/Glavnaa.png" alt="Харибда">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🐍 PVE · ИСПОЛИН</div>
+      <h3>Харибда</h3>
+      <p>Щит, столбы, синие сферы, ловушки и связанные линии.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
