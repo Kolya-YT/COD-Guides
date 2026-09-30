@@ -177,7 +177,7 @@
     tip.style.top=top+'px';
   };
 
-  const hide=()=>{ tip.style.display='none'; };
+  const hide=()=>{ tip.style.display='none'; tip.dataset.owner=''; };
 
   document.querySelectorAll('.pet-build-skill').forEach(el=>{
     const title=el.getAttribute('title') || '';
@@ -189,5 +189,11 @@
     el.addEventListener('focus',()=>show(el));
     el.addEventListener('mouseleave',hide);
     el.addEventListener('blur',hide);
+    el.addEventListener('click',(e)=>{
+      e.preventDefault();
+      e.stopPropagation();
+      const opened=tip.style.display==='block' && tip.dataset.owner===String([...document.querySelectorAll('.pet-build-skill')].indexOf(el));
+      if(opened){hide();tip.dataset.owner='';}else{tip.dataset.owner=String([...document.querySelectorAll('.pet-build-skill')].indexOf(el));show(el);}
+    });
   });
 })();
