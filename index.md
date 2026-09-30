@@ -14,7 +14,7 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">12 гайдов</span>
+  <span class="guide-count">13 гайдов</span>
 </div>
 
 <div class="guide-grid">
@@ -125,6 +125,16 @@ title: COD Guides
       <div class="guide-card-tag">🔥 PVE · ИСПОЛИН</div>
       <h3>Пламенея</h3>
       <p>Копии легионов, преимущество типов, лавовые щиты и Пылающие небеса.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/gromovoi-drakon/' | relative_url }}">
+    <img src="https://i.postimg.cc/SNphcxrf/drakon.png" alt="Громовой дракон">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">⚡ PVE · ИСПОЛИН</div>
+      <h3>Громовой дракон</h3>
+      <p>Шаровые молнии, магниты, заряды, полярность и восемь фаз боя.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
