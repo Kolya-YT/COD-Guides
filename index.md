@@ -14,7 +14,7 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">9 гайдов</span>
+  <span class="guide-count">10 гайдов</span>
 </div>
 
 <div class="guide-grid">
@@ -95,6 +95,16 @@ title: COD Guides
       <div class="guide-card-tag">🟢 PVE · ИСПОЛИН</div>
       <h3>Миазмовый гигант</h3>
       <p>Очищающие камни, миазмы, пруды гнили и ядовитый натиск.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/kosmicheskiy-ruh/' | relative_url }}">
+    <img src="https://i.postimg.cc/kgw6B154/Zastavka.png" alt="Космический Рух">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🦅 PVE · ИСПОЛИН</div>
+      <h3>Космический Рух</h3>
+      <p>Земля, четыре пруда воды, зоны атак и правильное перемещение по логову.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
