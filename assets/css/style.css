@@ -230,3 +230,9 @@
   .pet-build-damage b{font-size:9px}
   .pet-build-skill-stars{font-size:6px;line-height:7px}
 }
+
+/* PET BUILD EXTRA STATS */
+.pet-build-extra{display:flex;align-items:center;justify-content:flex-start;gap:8px;flex-wrap:wrap;margin:-3px 0 10px;padding:0 3px;color:#737e8e;font-size:8px;line-height:1.2;font-weight:700}
+.pet-build-extra span{white-space:nowrap}
+.pet-build-extra b{color:#d9dee6;font-size:9px;margin-left:2px}
+@media(max-width:700px){.pet-build-extra{gap:6px;font-size:7px}.pet-build-extra b{font-size:8px}}
