@@ -21,6 +21,80 @@ toc:
 
 <div class="guide-note"><strong>🟢 Актуально на 30 сентября 2026 года.</strong> Названия питомцев приведены по русскому клиенту. Механики описаны по текущей системе игры и последним доступным изменениям.</div>
 
+## 🔥 Актуальные связки: командир + питомец {#builds}
+
+Здесь собраны **готовые связки**, которые можно использовать как основу для сборки питомца. Это не абсолютный рейтинг: выбор зависит от поколения героев, режима и доступных навыков. Составы ниже сверены с актуальными билдами CoD Fan. urlИсточник сборок CoD Fanhttps://codfan.com/builds
+
+<div class="pet-build-grid">
+
+  <article class="pet-build-card pet-build-marksman">
+    <div class="pet-build-top"><span class="pet-build-type">🏹 СТРЕЛКИ · OPEN FIELD</span><span class="pet-build-badge">АКТУАЛЬНАЯ</span></div>
+    <div class="pet-build-heroes"><strong>Магграт</strong><b>+</b><strong>Зайда</strong></div>
+    <div class="pet-build-pet"><div class="pet-build-pet-icon" style="background-image:url('https://res.cloudinary.com/dbmyv6u9r/image/upload/q_auto/f_webp/COD/Shadow_Manticore_cxobkr')"></div><div><small>Питомец</small><strong>Сумрачная мантикора</strong></div></div>
+    <div class="pet-build-skills"><span>Варварство 5</span><span>Улучш. Варварство 5</span><span>Интенсив. Варварство 5</span><span>Цепной удар 5</span><span>Улучш. Цепной удар 5</span><span>Рёв крови</span><span>Смертельный укус</span><span>Гневный рёв</span></div>
+    <div class="pet-build-stats"><b>Фокус:</b> критический урон · физический урон · лечение от механики питомца</div>
+  </article>
+
+  <article class="pet-build-card pet-build-magic">
+    <div class="pet-build-top"><span class="pet-build-type">🔮 МАГИ · OPEN FIELD</span><span class="pet-build-badge">ОСНОВА</span></div>
+    <div class="pet-build-heroes"><strong>Лилиия</strong><b>+</b><strong>Велин</strong></div>
+    <div class="pet-build-pet"><div class="pet-build-pet-icon" style="background-image:url('https://res.cloudinary.com/dbmyv6u9r/image/upload/q_auto/f_webp/COD/Sapphire_Faedrake_il0uov')"></div><div><small>Питомец</small><strong>Сапфировый дракон-фея</strong></div></div>
+    <div class="pet-build-skills"><span>Цветение боли 5</span><span>Улучш. Цветение боли 5</span><span>Интенсив. Цветение боли 5</span><span>Улучш. Повторный удар</span><span>Повторный удар</span><span>Магическая удача</span><span>Магические духи</span><span>Резонанс</span></div>
+    <div class="pet-build-stats"><b>Фокус:</b> Интеллект · Дух · Удача · магический урон</div>
+  </article>
+
+  <article class="pet-build-card pet-build-cav">
+    <div class="pet-build-top"><span class="pet-build-type">🐎 КАВАЛЕРИЯ · PVP</span><span class="pet-build-badge">55510</span></div>
+    <div class="pet-build-heroes"><strong>Эмрис</strong><b>+</b><strong>Бакши</strong></div>
+    <div class="pet-build-pet"><div class="pet-build-pet-icon" style="background-image:url('https://res.cloudinary.com/dbmyv6u9r/image/upload/q_auto/f_webp/COD/Golden_Roc_i6wp6s')"></div><div><small>Питомец</small><strong>Золотой рух</strong></div></div>
+    <div class="pet-build-skills"><span>Изобилие 5</span><span>Улучш. Изобилие 5</span><span>Гневный рёв</span><span>Рёв крови</span><span>Смертельный укус</span><span>Яростная атака</span><span>Интенсив. Яростная атака</span><span>Зуб и коготь</span></div>
+    <div class="pet-build-stats"><b>Фокус:</b> Ловкость · Ярость/Passion · стабильный цикл навыка</div>
+  </article>
+
+  <article class="pet-build-card pet-build-cav">
+    <div class="pet-build-top"><span class="pet-build-type">🐎 КАВАЛЕРИЯ · G5</span><span class="pet-build-badge">АКТУАЛЬНАЯ</span></div>
+    <div class="pet-build-heroes"><strong>Агнар</strong><b>+</b><strong>Фрейя</strong></div>
+    <div class="pet-build-pet"><div class="pet-build-pet-icon" style="background-image:url('https://res.cloudinary.com/dbmyv6u9r/image/upload/q_auto/f_webp/COD/Bullionbeast_spqul7')"></div><div><small>Питомец</small><strong>Денежный зверь</strong></div></div>
+    <div class="pet-build-skills"><span>Удача 5</span><span>Улучш. Удача 5</span><span>Смертельный укус</span><span>Яростная атака</span><span>Интенсив. Яростная атака</span><span>Гневный рёв</span><span>Рёв крови</span><span>Зуб и коготь</span></div>
+    <div class="pet-build-stats"><b>Фокус:</b> Ловкость · урон · ярость · метка Auspicious Mark</div>
+  </article>
+
+  <article class="pet-build-card pet-build-inf">
+    <div class="pet-build-top"><span class="pet-build-type">🛡️ ПЕХОТА · OPEN FIELD</span><span class="pet-build-badge">СТАБИЛЬНАЯ</span></div>
+    <div class="pet-build-heroes"><strong>Мадлен</strong><b>+</b><strong>Гарвуд</strong></div>
+    <div class="pet-build-pet"><div class="pet-build-pet-icon" style="background-image:url('https://res.cloudinary.com/dbmyv6u9r/image/upload/q_auto/f_webp/COD/Venomous_Lizard_zkaabp')"></div><div><small>Питомец</small><strong>Ядовитый ящер</strong></div></div>
+    <div class="pet-build-skills"><span>Заражение 5</span><span>Интенсив. Заражение 5</span><span>Зуб и коготь</span><span>Смертельный укус</span><span>Контрудар</span><span>Улучш. Контрудар</span><span>Гневный рёв</span><span>Рёв крови</span></div>
+    <div class="pet-build-stats"><b>Фокус:</b> Сила · живучесть · контратаки · постоянное заражение</div>
+  </article>
+
+  <article class="pet-build-card pet-build-marksman">
+    <div class="pet-build-top"><span class="pet-build-type">🏹 СТРЕЛКИ · BEHEMOTH</span><span class="pet-build-badge">ОФИЦИАЛЬНАЯ</span></div>
+    <div class="pet-build-heroes"><strong>Нико</strong><b>+</b><strong>Киннара</strong></div>
+    <div class="pet-build-pet"><div class="pet-build-pet-icon" style="background-image:url('https://res.cloudinary.com/dbmyv6u9r/image/upload/q_auto/f_webp/COD/Snowpeak_Roc_wcasbh')"></div><div><small>Питомец</small><strong>Снежный рух</strong></div></div>
+    <div class="pet-build-skills"><span>Концентрация 5</span><span>Улучш. Концентрация 5</span><span>Интенсив. Концентрация 5</span><span>Цепной удар</span><span>Гневный рёв</span><span>Рёв крови</span><span>Смертельный укус</span><span>Интенсив. Цепной удар</span></div>
+    <div class="pet-build-stats"><b>Фокус:</b> Удача · физический урон · DEF Break · крит</div>
+  </article>
+
+  <article class="pet-build-card pet-build-magic">
+    <div class="pet-build-top"><span class="pet-build-type">🔮 МАГИ · CONTROL</span><span class="pet-build-badge">ОФИЦИАЛЬНАЯ</span></div>
+    <div class="pet-build-heroes"><strong>Танделин</strong><b>+</b><strong>Магграт</strong></div>
+    <div class="pet-build-pet"><div class="pet-build-pet-icon" style="background-image:url('https://res.cloudinary.com/dbmyv6u9r/image/upload/q_auto/f_webp/COD/Seraphic_Faedrake_malzad')"></div><div><small>Питомец</small><strong>Ангельский дракон-фея</strong></div></div>
+    <div class="pet-build-skills"><span>Источник души 5</span><span>Улучш. Источник души</span><span>Интенсив. Источник души</span><span>Повторный удар</span><span>Магическая удача</span><span>Магические духи</span><span>Резонанс</span><span>Зуб и коготь</span></div>
+    <div class="pet-build-stats"><b>Фокус:</b> магия · контроль · выживаемость и поддержка</div>
+  </article>
+
+  <article class="pet-build-card pet-build-inf">
+    <div class="pet-build-top"><span class="pet-build-type">🛡️ ПЕХОТА · G2</span><span class="pet-build-badge">OPEN FIELD</span></div>
+    <div class="pet-build-heroes"><strong>Гореш</strong><b>+</b><strong>Скогул</strong></div>
+    <div class="pet-build-pet"><div class="pet-build-pet-icon" style="background-image:url('https://res.cloudinary.com/dbmyv6u9r/image/upload/q_auto/f_webp/COD/Venomous_Lizard_zkaabp')"></div><div><small>Питомец</small><strong>Ядовитый ящер</strong></div></div>
+    <div class="pet-build-skills"><span>Заражение</span><span>Интенсив. Заражение</span><span>Контрудар</span><span>Улучш. Контрудар</span><span>Гневный рёв</span><span>Рёв крови</span><span>Смертельный укус</span><span>Зуб и коготь</span></div>
+    <div class="pet-build-stats"><b>Фокус:</b> контратака · выживаемость · постоянное давление</div>
+  </article>
+
+</div>
+
+> 💡 **Как выбирать:** сначала выбери связку героя, затем питомца под её механику. Не переносите дорогие карточки навыков в нового питомца только потому, что он новее — проверьте, активирует ли ваша связка его талант и ключевые навыки.
+
 ## 🐾 Как работают питомцы {#mechanics}
 
 Боевой питомец — это **часть легиона**, а не отдельный управляемый отряд.
