@@ -1,4 +1,5 @@
 ---
+layout: guide
 title: "Гигант"
 description: "Полный разбор боя с Гигантом: фронтальные атаки, Отголоски, тролли, щит, артефакты и ярость."
 category: "CALL OF DRAGONS · PVE"
