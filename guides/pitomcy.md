@@ -19,14 +19,7 @@ toc:
   - { label: "Частые ошибки", href: "#mistakes" }
 ---
 
-<div class="pet-hero"><div class="pet-hero-copy"><div class="pet-hero-kicker">CALL OF DRAGONS · WAR PETS</div><h2>🐾 Питомцы</h2><p>Разбираем питомцев по роли, таланту и связке с героем — чтобы было понятно, кого захватывать, как собирать и когда использовать восстановление.</p><div class="pet-hero-tags"><span>⭐ Талант</span><span>📊 Характеристики</span><span>🎴 Навыки</span><span>⚔️ Синергия</span></div></div></div>
-<div class="pet-quick-grid"><div class="pet-quick"><b>🎯 Сначала</b><span>Определи задачу и тип легиона</span></div><div class="pet-quick"><b>⭐ Потом</b><span>Проверь талант и масштабирование</span></div><div class="pet-quick"><b>🎴 Затем</b><span>Собери навыки под одну механику</span></div><div class="pet-quick"><b>🔄 В конце</b><span>Используй восстановление для поиска нужных статов</span></div></div>
-> 💡 <strong>Главный принцип:</strong> питомец выбирается не по редкости. Сначала смотри на талант и его синергию с героем, затем на характеристики и навыки.
-
 <div class="guide-note"><strong>🟢 Актуально на 30 сентября 2026 года.</strong> Названия питомцев приведены по русскому клиенту. Механики описаны по текущей системе игры и последним доступным изменениям.</div>
-
-<div class="pet-section-lead"><span class="pet-section-icon">🐾</span><div><b>Питомец = часть легиона</b><small>Он автоматически участвует в бою и усиливает конкретную механику героя.</small></div></div>
-<div class="pet-role-grid"><div class="pet-role"><strong>🛡️ Пехота</strong><span>Выживаемость, щиты, контратаки и длительный бой.</span><em>G4–G5 связки</em></div><div class="pet-role"><strong>🐎 Кавалерия</strong><span>Ярость, скорость, взрывной урон и ослабления.</span><em>Урон + темп</em></div><div class="pet-role"><strong>🏹 Стрелки</strong><span>Физический урон, крит, коррозия и накопление стаков.</span><em>Дальний бой</em></div><div class="pet-role"><strong>🔮 Маги</strong><span>Магический урон, навыки и специальные эффекты.</span><em>Интеллект</em></div></div>
 
 ## 🐾 Как работают питомцы {#mechanics}
 
@@ -373,21 +366,6 @@ toc:
 </div>
 
 ---
-
-<div class="pet-catalog-head"><div><span class="home-kicker">БЫСТРЫЙ СПРАВОЧНИК</span><h3>🐾 Все питомцы</h3><p>Не рейтинг. Здесь главное — быстро понять роль, талант и подходящий тип легиона.</p></div><div class="pet-legend"><span>🛡️ Пехота</span><span>🐎 Кавалерия</span><span>🏹 Стрелки</span><span>🔮 Маги</span></div></div>
-
-<section class="pet-builder" id="builder">
-<div class="pet-builder-head"><div><span class="home-kicker">WAR PET BUILDER</span><h2>🧩 Конструктор питомца</h2><p>Собери питомца: выбери вид, характеристики и до 8 навыков. Локальная сборка сохраняется на устройстве.</p></div><button type="button" class="pet-builder-reset" data-pet-reset>↺ Сбросить</button></div>
-<div class="pet-builder-layout">
-<div class="pet-builder-main">
-<div class="pet-builder-card"><div class="pet-builder-title">🐾 Питомец</div><select class="pet-select" data-pet-select aria-label="Выбор питомца"></select><div class="pet-selected"><div class="pet-selected-icon" data-pet-icon>🐾</div><div><strong data-pet-name>Выберите питомца</strong><span data-pet-talent>Талант</span><small data-pet-role>—</small></div></div></div>
-<div class="pet-builder-card"><div class="pet-builder-title">📊 Характеристики</div><div class="pet-stat-grid" data-pet-stats></div></div>
-<div class="pet-builder-card"><div class="pet-builder-title">⭐ Талант</div><div class="pet-talent-box"><div class="pet-talent-icon" data-talent-icon>⭐</div><div><strong data-talent-name>—</strong><p data-talent-desc>Выберите питомца.</p></div></div></div>
-<div class="pet-builder-card"><div class="pet-builder-title">🎴 Навыки <span>до 8 слотов</span></div><div class="pet-skill-grid" data-pet-skills></div></div>
-</div>
-<aside class="pet-builder-side"><div class="pet-builder-card pet-build-summary"><div class="pet-builder-title">📋 Сборка</div><div class="pet-summary-main"><span data-summary-pet>Питомец не выбран</span><b data-summary-score>0/8</b></div><div class="pet-summary-row"><span>🎴 Навыков</span><b data-summary-skills>0</b></div><div class="pet-summary-row"><span>📊 Характеристик</span><b data-summary-stats>0</b></div><div class="pet-summary-row"><span>⚠️ Предупреждений</span><b data-summary-warnings>0</b></div><div class="pet-summary-bar"><span data-summary-bar></span></div><div class="pet-build-note" data-build-note>Выбери питомца и начни сборку.</div></div>
-<div class="pet-builder-card"><div class="pet-builder-title">🎯 Проверка</div><ul class="pet-builder-checks"><li data-check="pet">🐾 Выбран питомец</li><li data-check="talent">⭐ Проверен талант</li><li data-check="stats">📊 Есть характеристики</li><li data-check="skills">🎴 Есть навыки</li><li data-check="cap">✅ Сборка без предупреждений</li></ul></div></aside>
-</div></section>
 
 ## 🐾 Все питомцы {#catalog}
 
