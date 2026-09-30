@@ -97,13 +97,38 @@
 
 /* PET BUILD SKILL TOOLTIPS */
 (() => {
-  document.querySelectorAll('.pet-build-skill[title]').forEach((el) => {
+  let tip = document.querySelector('.pet-build-skill-tooltip');
+  if (!tip) {
+    tip = document.createElement('div');
+    tip.className = 'pet-build-skill-tooltip';
+    document.body.appendChild(tip);
+  }
+
+  const show = (el) => {
+    const name = el.dataset.skillName || el.getAttribute('title') || '';
     const card = el.closest('.pet-build-card');
-    const cost = card?.querySelector('.pet-build-cost')?.textContent.replace(/\s+/g,' ').trim();
-    if (!cost || el.dataset.tooltipReady) return;
-    el.dataset.skillName = el.getAttribute('title') || '';
-    el.setAttribute('title', el.dataset.skillName + '\n' + cost);
-    el.setAttribute('aria-label', el.dataset.skillName + '. ' + cost);
-    el.dataset.tooltipReady = '1';
+    const cost = card?.querySelector('.pet-build-cost')?.textContent.replace(/\s+/g, ' ').trim() || '';
+    tip.textContent = name + (cost ? ' · ' + cost : '');
+    tip.style.display = 'block';
+    const r = el.getBoundingClientRect();
+    const tw = tip.offsetWidth;
+    const th = tip.offsetHeight;
+    let left = r.left + r.width / 2 - tw / 2;
+    let top = r.top - th - 8;
+    left = Math.max(6, Math.min(left, window.innerWidth - tw - 6));
+    if (top < 6) top = r.bottom + 8;
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  };
+
+  const hide = () => { tip.style.display = 'none'; };
+
+  document.querySelectorAll('.pet-build-skill').forEach((el) => {
+    if (!el.dataset.skillName) {
+      el.dataset.skillName = el.getAttribute('title') || el.querySelector('img')?.alt || 'Навык';
+      el.removeAttribute('title');
+    }
+    el.addEventListener('mouseenter', () => show(el));
+    el.addEventListener('mouseleave', hide);
   });
 })();
