@@ -14,7 +14,7 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">8 гайдов</span>
+  <span class="guide-count">9 гайдов</span>
 </div>
 
 <div class="guide-grid">
@@ -85,6 +85,16 @@ title: COD Guides
       <div class="guide-card-tag">🐻 PVE · ИСПОЛИН</div>
       <h3>Лихоурсус</h3>
       <p>Фиолетовые поля, тёмный рывок, оглушение, камни лечения и ярость.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/miazmovyi-gigant/' | relative_url }}">
+    <img src="https://i.postimg.cc/Gt5nfcBB/Miazm.png" alt="Миазмовый гигант">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🟢 PVE · ИСПОЛИН</div>
+      <h3>Миазмовый гигант</h3>
+      <p>Очищающие камни, миазмы, пруды гнили и ядовитый натиск.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
