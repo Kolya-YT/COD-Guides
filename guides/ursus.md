@@ -4,6 +4,12 @@ title: "🐻 Гигантский урсус"
 description: "Разбор механик Гигантского урсуса: базовые атаки, рывок, оглушение, ярость и камни лечения."
 category: "CALL OF DRAGONS · PVE"
 updated: "25 апреля 2026"
+toc:
+  - { label: "Механика", href: "#mechanics" }
+  - { label: "Фазы", href: "#phase1" }
+  - { label: "Рывок", href: "#charge" }
+  - { label: "Ярость", href: "#rage" }
+  - { label: "Советы", href: "#tips" }
 ---
 
 ![Гигантский урсус](https://i.postimg.cc/L6My7V0c/Vs-I44t-Bx3bjl6Mj-Oqwj-KM9h-Z1ADOky-MBn3el-WVQUd-Wd-Der-Zo-Ldy-Or-Y25bg-a-Cb-Dee-QA3Icbd-Zlzfq-GCOhp.jpg)
