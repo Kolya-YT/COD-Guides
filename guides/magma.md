@@ -52,6 +52,11 @@ updated: "30 апреля 2026"
 
 ![Пример зоны атаки исполина]({{ '/assets/guides/magma/site-phase1.webp' | relative_url }})
 
+<figure class="game-gif">
+  <img src="https://i.postimg.cc/vZxgB5nF/Ataka.gif" alt="Магма — базовая атака исполина">
+  <figcaption>🎬 Реальный пример атаки и расположения войск в бою.</figcaption>
+</figure>
+
 ---
 
 ## 🏷️ Фаза 2: Метки {#marks}
@@ -115,6 +120,11 @@ updated: "30 апреля 2026"
 Он призывает **аколитов (ящериц)**. Если аколиты доходят до толстяка, они восстанавливают ему **2,5% HP**.
 
 ![Аколиты на арене]({{ '/assets/guides/magma/acolytes.svg' | relative_url }})
+
+<figure class="game-gif">
+  <img src="https://i.postimg.cc/GtvDfdhx/Akkolity-gif.gif" alt="Магма — аколиты">
+  <figcaption>🎬 Реальный пример появления и движения аколитов.</figcaption>
+</figure>
 
 ### ⚠️ Приоритет аколитов
 
