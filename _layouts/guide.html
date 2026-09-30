@@ -11,7 +11,7 @@
 <header class="top"><a href="{{ '/' | relative_url }}" class="brand">🔥 COD <b>GUIDES</b></a><a href="{{ '/' | relative_url }}" class="back">← Все гайды</a></header>
 <main class="page">
   <article class="guide">
-    <div class="guide-head">
+    <div class="guide-head"><a href="{{ '/' | relative_url }}" class="guide-back">← Назад к гайдам</a>
       {% if page.category %}<div class="eyebrow">{{ page.category }}</div>{% endif %}
       <h1>{{ page.title }}</h1>
       {% if page.description %}<p>{{ page.description }}</p>{% endif %}
