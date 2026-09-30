@@ -105,7 +105,7 @@
     const card = el.closest('.pet-build-card');
     const cost = money(card);
     if (cost && !el.dataset.tooltipReady) {
-      el.title = el.title + '\\A' + cost;
+      el.title = el.title + '\n' + cost;
       el.dataset.tooltipReady = '1';
     }
   });
