@@ -40,3 +40,27 @@
 .guide-back{display:inline-flex;align-items:center;gap:7px;margin-bottom:22px;padding:9px 14px;border:1px solid #343b48;border-radius:10px;background:#171c24;color:#d9dee6;text-decoration:none;font-size:13px;font-weight:700;transition:.18s}
 .guide-back:hover{border-color:#ff7137;color:#fff;background:#211914}
 @media(max-width:600px){.guide-back{margin-bottom:20px;padding:9px 13px;font-size:13px}.guide-head h1{font-size:clamp(38px,10vw,58px)}}
+
+/* SEARCH */
+.home-search{padding:0 34px 4px}
+.search-box{display:flex;align-items:center;gap:11px;max-width:100%;padding:13px 16px;background:#11151c;border:1px solid #2c3440;border-radius:14px;transition:border-color .18s,box-shadow .18s}
+.search-box:focus-within{border-color:#ff7137;box-shadow:0 0 0 3px #ff713722}
+.search-box>span{font-size:18px}
+.search-box input{width:100%;border:0;outline:0;background:transparent;color:#f4f5f7;font:inherit;font-size:15px}
+.search-box input::placeholder{color:#6f7988}
+.search-hint{padding:7px 2px 0;color:#687281;font-size:11px}
+.guide-card[hidden]{display:none}
+.guide-grid.is-searching:after{content:"Ничего не найдено 😕";grid-column:1/-1;padding:35px 20px;text-align:center;color:#818b99;background:#10141b;border:1px dashed #303846;border-radius:16px}
+.guide-actions{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.share-btn{border:1px solid #ff7137;border-radius:10px;background:#211914;color:#ff9a69;padding:8px 13px;font:800 13px/1.2 inherit;cursor:pointer;white-space:nowrap;transition:.18s}
+.share-btn:hover{background:#2b1c14;color:#fff}
+@media(max-width:700px){
+ .home-search{padding:0 20px 3px}
+ .search-box{padding:12px 14px}
+ .guide-actions{align-items:flex-start}
+ .share-btn{padding:8px 11px;font-size:12px}
+}
+@media(max-width:420px){
+ .guide-actions{flex-direction:column}
+ .share-btn{width:100%}
+}
