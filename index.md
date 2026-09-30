@@ -14,7 +14,7 @@ title: COD Guides
     <div class="home-kicker">РАЗДЕЛ</div>
     <h2>🌋 PvE</h2>
   </div>
-  <span class="guide-count">2 гайда</span>
+  <span class="guide-count">3 гайда</span>
 </div>
 
 <div class="guide-grid">
@@ -35,6 +35,16 @@ title: COD Guides
       <div class="guide-card-tag">🐻 PVE · ИСПОЛИН</div>
       <h3>Гигантский Урсус</h3>
       <p>Дистанция, рывок, красная зона, оглушение, камни лечения и ярость.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/giant/' | relative_url }}">
+    <img src="https://i.postimg.cc/hPLmGkbH/s-D7-7k-ayx-AVs-GPN6w-TPn-E0UMZ-4j-LTJa-Kn-Br8h-Wx2IW0o-R7qrd3D6scl-Uf-OK9WSVy-BHGBUu-Pmhd-L8pm-OXXy.jpg" alt="Гигант">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">👹 PVE · ИСПОЛИН</div>
+      <h3>Гигант</h3>
+      <p>Атаки, тролли, щит, артефакты, камни лечения и ярость.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
