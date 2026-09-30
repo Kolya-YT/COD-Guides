@@ -20,7 +20,7 @@
     <div class="toc">
       <strong>📌 В этом гайде</strong>
       {% for item in page.toc %}
-      <a href="{{ item.href }}">{{ item.label }}</a>
+      <a href="{{ item.href }}">{{ item.label | default: item.title }}</a>
       {% endfor %}
     </div>
     {% endif %}
