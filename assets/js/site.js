@@ -114,7 +114,7 @@
 
 /* PET BUILD SKILL TOOLTIPS — 3★ UI */
 (() => {
-  const amberIcon = 'https://kraken-chronicles.com/img/warpets/amber.png';
+  const amberIcon = '<span class="pet-amber-icon">◆</span>';
   const costs = {
     barbarism:[0,0,0], advanced_barbarism:['a','a','a'], intense_barbarism:[960,5771,28000],
     concentration:[0,0,0], advanced_concentration:['a','a','a'], intense_concentration:[625,5031,17618],
@@ -161,7 +161,7 @@
       arr.forEach((v,i) => {
         const lvl=i+1;
         const value = v === 'a'
-          ? '<img src="' + amberIcon + '" alt=""> 4 янтаря'
+          ? amberIcon + ' 4 янтаря'
           : (v.toLocaleString('ru-RU') + ' 🪙');
         html += '<span class="' + (lvl===3 ? 'is-current' : '') + '"><b>' + stars(lvl) + '</b><em>' + value + '</em></span>';
       });
