@@ -38,8 +38,8 @@ toc:
 ## 🗺️ Как получить питомца {#capture}
 
 <figure class="guide-image">
-  <img src="https://img-cdn.2game.vn/2023/09/07/Call-of-Dragon-4.png" alt="Характеристики и регенерация боевого питомца" loading="lazy">
-  <figcaption>Окно характеристик и регенерации питомца</figcaption>
+  <img src="https://img-cdn.2game.vn/2023/09/07/Call-of-Dragon-4.png" alt="Выбор боевого питомца Call of Dragons" loading="lazy">
+  <figcaption>Выбор боевого питомца</figcaption>
 </figure>
 
 Питомцев можно находить на карте мира. После победы над питомцем появляется возможность его захватить; для захвата используется <strong>Warrant</strong>.
@@ -70,8 +70,13 @@ toc:
 ## ⭐ Талант и обычные навыки {#skills}
 
 <figure class="guide-image">
-  <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-9-1024x576.png" alt="Талант и характеристики боевого питомца" loading="lazy">
-  <figcaption>Пример окна таланта и характеристик питомца</figcaption>
+  <img src="https://cdn.cod.guide/wp-content/uploads/2023/09/1-star-talent-skill-war-pet-3-1024x420.jpg" alt="Талант и навык боевого питомца" loading="lazy">
+  <figcaption>Пример описания Talent Skill питомца</figcaption>
+</figure>
+
+<figure class="guide-image">
+  <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-9-1024x576.png" alt="Характеристики и навыки боевого питомца" loading="lazy">
+  <figcaption>Характеристики, талант и навыки питомца</figcaption>
 </figure>
 
 У питомца есть главный <strong>Talent Skill</strong> — уникальный талант его подвида. Он определяет основную механику питомца и не заменяется обычным навыком другого питомца.
