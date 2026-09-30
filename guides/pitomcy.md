@@ -21,26 +21,6 @@ toc:
 
 <div class="guide-note"><strong>🟢 Актуально на 30 сентября 2026 года.</strong> Названия питомцев приведены по русскому клиенту. Механики описаны по текущей системе игры и последним доступным изменениям.</div>
 
-<figure class="pet-guide-image">
-  <img src="https://img-cdn.2game.vn/2023/10/09/Call-of-Dragon-Pet-1.jpg" alt="Интерфейс боевого питомца в Call of Dragons" referrerpolicy="no-referrer">
-  <figcaption>Карточка питомца: характеристики, талант и навыки.</figcaption>
-</figure>
-
-<div class="pet-gallery">
-  <figure class="pet-gallery-card">
-    <img src="https://img-cdn.2game.vn/2023/10/09/Call-of-Dragon-Pet-1.jpg" alt="Карточка боевого питомца Call of Dragons" referrerpolicy="no-referrer">
-    <figcaption>Карточка питомца</figcaption>
-  </figure>
-  <figure class="pet-gallery-card">
-    <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-5.png" alt="Захват питомца Call of Dragons" referrerpolicy="no-referrer">
-    <figcaption>Захват питомца</figcaption>
-  </figure>
-  <figure class="pet-gallery-card">
-    <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-7.png" alt="Приют питомцев Call of Dragons" referrerpolicy="no-referrer">
-    <figcaption>Приют питомцев</figcaption>
-  </figure>
-</div>
-
 ## 🐾 Как работают питомцы {#mechanics}
 
 Боевой питомец — это **часть легиона**, а не отдельный управляемый отряд.
