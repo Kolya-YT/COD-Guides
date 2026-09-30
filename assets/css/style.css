@@ -236,3 +236,34 @@
 .pet-build-extra span{white-space:nowrap}
 .pet-build-extra b{color:#d9dee6;font-size:9px;margin-left:2px}
 @media(max-width:700px){.pet-build-extra{gap:6px;font-size:7px}.pet-build-extra b{font-size:8px}}
+
+/* PET BUILDS — FINAL POLISH */
+.pet-build-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pet-build-card{padding:15px 15px 13px;border-radius:16px}
+.pet-build-top{margin-bottom:10px}
+.pet-build-heroes{display:grid!important;grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr)!important;align-items:center!important;gap:7px!important;margin-bottom:10px!important}
+.pet-build-heroes>b{text-align:center!important}
+.pet-build-hero{display:flex!important;align-items:center!important;gap:8px!important;min-width:0!important;padding:6px 8px!important;background:#10151c!important;border:1px solid #252d38!important;border-radius:11px!important}
+.pet-build-heroes .pet-build-hero img{display:block!important;flex:0 0 44px!important;width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;max-width:44px!important;max-height:44px!important;margin:0!important;padding:0!important;object-fit:cover!important;border:0!important;border-radius:9px!important;box-shadow:none!important}
+.pet-build-hero strong{font-size:13px!important;line-height:1.1!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}
+.pet-build-metrics{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:7px!important;margin:0 0 7px!important}
+.pet-build-metrics .pet-build-cost,.pet-build-damage{width:100%!important;justify-content:flex-start!important;margin:0!important;min-height:29px!important;padding:5px 7px!important}
+.pet-build-cost span,.pet-build-damage span{font-size:8px!important}
+.pet-build-cost b,.pet-build-damage b{font-size:9px!important}
+.pet-build-extra{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:4px!important;margin:0 0 8px!important;padding:0!important}
+.pet-build-extra span{display:flex!important;justify-content:center!important;align-items:center!important;gap:2px!important;padding:4px 3px!important;background:#0b1016!important;border:1px solid #202833!important;border-radius:7px!important;font-size:7px!important;white-space:nowrap!important}
+.pet-build-extra b{font-size:8px!important}
+.pet-build-pet{min-height:55px!important;margin-bottom:9px!important;padding:7px 8px!important}
+.pet-build-pet-icon{width:44px!important;height:44px!important;border-radius:10px!important}
+.pet-build-pet strong{font-size:12px!important}
+.pet-build-skills{grid-template-columns:repeat(8,30px)!important;grid-template-rows:30px!important;gap:4px!important}
+.pet-build-skill{width:30px!important;height:30px!important;min-width:30px!important;min-height:30px!important;max-width:30px!important;max-height:30px!important}
+.pet-build-stats{margin-top:8px!important;font-size:10px!important;line-height:1.45!important;color:#b7bec9!important}
+.pet-build-stats b{color:#fff!important}
+@media(max-width:700px){
+  .pet-build-grid{grid-template-columns:1fr!important}
+  .pet-build-card{padding:13px!important}
+  .pet-build-heroes .pet-build-hero img{width:40px!important;height:40px!important;min-width:40px!important;min-height:40px!important;max-width:40px!important;max-height:40px!important}
+  .pet-build-skills{grid-template-columns:repeat(8,30px)!important;gap:3px!important}
+  .pet-build-skill{width:30px!important;height:30px!important;min-width:30px!important;min-height:30px!important;max-width:30px!important;max-height:30px!important}
+}
