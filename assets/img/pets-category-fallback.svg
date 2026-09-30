@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#173b2a"/><stop offset=".55" stop-color="#6e9f4a"/><stop offset="1" stop-color="#d0b65d"/></linearGradient>
+  <radialGradient id="sun"><stop stop-color="#fff3b0" stop-opacity=".75"/><stop offset="1" stop-color="#fff3b0" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="930" cy="120" r="190" fill="url(#sun)"/>
+<g fill="#285334" opacity=".8">
+  <path d="M0 630V350Q120 260 220 390T430 350T650 400T870 330T1200 380V630Z"/>
+  <path d="M0 630V470Q130 380 260 480T520 450T800 470T1200 430V630Z"/>
+</g>
+<g fill="#173b2a" opacity=".75">
+  <path d="M80 520l55-180 55 180zM230 540l70-240 70 240zM1020 540l65-220 65 220zM900 550l50-170 50 170z"/>
+</g>
+<g transform="translate(600 320)">
+  <circle r="105" fill="#f2c76b" opacity=".96"/>
+  <circle r="88" fill="#fff1bd" opacity=".95"/>
+  <path d="M-45-20Q-5-90 45-20Q90 25 48 68Q0 110-48 68Q-90 25-45-20Z" fill="#d47b43"/>
+  <circle cx="-28" cy="5" r="10" fill="#173b2a"/><circle cx="28" cy="5" r="10" fill="#173b2a"/>
+  <path d="M-18 38Q0 55 18 38" fill="none" stroke="#173b2a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M-70-35L-115-85L-82-92L-42-55ZM70-35L115-85L82-92L42-55Z" fill="#a95a35"/>
+</g>
+<text x="60" y="90" font-family="Arial,sans-serif" font-size="46" font-weight="700" fill="#fff">CALL OF DRAGONS</text>
+<text x="60" y="145" font-family="Arial,sans-serif" font-size="58" font-weight="800" fill="#fff">🐾 ПИТОМЦЫ</text>
+<text x="60" y="195" font-family="Arial,sans-serif" font-size="26" fill="#fff" opacity=".9">Гайд по захвату, талантам и навыкам</text>
+</svg>
