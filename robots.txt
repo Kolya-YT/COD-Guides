@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kolya-yt.github.io/COD-Guides/sitemap.xml
