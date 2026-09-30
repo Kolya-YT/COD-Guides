@@ -136,3 +136,18 @@
 
 /* PET CARD THUMBNAILS */
 .pet-card{position:relative;min-height:118px;padding-left:92px}.pet-thumb{position:absolute;left:14px;top:14px;width:64px;height:64px;border-radius:14px;border:1px solid #3a424f;background-image:var(--pet-image),url("../img/pet-sprite.jpg?v=20260930-3");background-repeat:no-repeat;background-size:contain,440px 528px;background-position:center,var(--pet-pos);background-color:#171c24;box-shadow:0 8px 20px #0006}.pet-card small{display:block}.pet-card small b{color:#ffad7d}.pet-thumb-drake{background-image:url("https://www.allclash.com/wp-content/uploads/2026/07/best-thunderdrake-build-in-call-of-dragons.jpg");background-size:cover;background-position:center}@media(max-width:600px){.pet-card{padding-left:84px;min-height:104px}.pet-thumb{left:12px;top:13px;width:60px;height:60px;background-size:412px 494px;background-position:var(--pet-pos-mobile)}}
+
+
+/* WAR PET BUILD CARDS */
+.pet-build-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:22px 0 30px}
+.pet-build-card{position:relative;overflow:hidden;padding:16px;background:linear-gradient(145deg,#151a22,#0f1319);border:1px solid #2c3440;border-radius:17px;box-shadow:0 8px 24px #0004}
+.pet-build-card:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:#ff7137}
+.pet-build-card.pet-build-magic:before{background:#8d73ff}.pet-build-card.pet-build-inf:before{background:#65a77b}.pet-build-card.pet-build-cav:before{background:#e5ad57}.pet-build-card.pet-build-marksman:before{background:#5c9bea}
+.pet-build-top{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:12px}.pet-build-type{color:#8f99a8;font-size:9px;font-weight:900;letter-spacing:.08em}.pet-build-badge{padding:4px 7px;border:1px solid #3a424e;border-radius:999px;color:#ffad7d;background:#211914;font-size:8px;font-weight:900;white-space:nowrap}
+.pet-build-heroes{display:flex;align-items:center;gap:8px;font-size:18px;margin-bottom:12px}.pet-build-heroes b{color:#ff7137;font-size:14px}
+.pet-build-pet{display:flex;align-items:center;gap:10px;padding:9px;background:#0d1117;border:1px solid #252c36;border-radius:12px;margin-bottom:10px}
+.pet-build-pet-icon{width:52px;height:52px;flex:none;border-radius:12px;background-position:center;background-size:contain;background-repeat:no-repeat;background-color:#171c24;border:1px solid #343c48}
+.pet-build-pet small{display:block;color:#707b8a;font-size:9px;text-transform:uppercase;letter-spacing:.08em}.pet-build-pet strong{display:block;color:#fff;font-size:13px;margin-top:2px}
+.pet-build-skills{display:flex;flex-wrap:wrap;gap:5px}.pet-build-skills span{padding:5px 7px;background:#1a2029;border:1px solid #303846;border-radius:7px;color:#cbd1da;font-size:9px;line-height:1.1}
+.pet-build-stats{margin-top:11px;padding-top:9px;border-top:1px solid #252c36;color:#8e98a7;font-size:10px;line-height:1.45}.pet-build-stats b{color:#ffad7d}
+@media(max-width:700px){.pet-build-grid{grid-template-columns:1fr;gap:11px}.pet-build-card{padding:14px}.pet-build-heroes{font-size:17px}}
