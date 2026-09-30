@@ -1,0 +1,14 @@
+title: "COD Guides"
+description: "Гайды по Call of Dragons"
+markdown: kramdown
+permalink: pretty
+collections:
+  guides:
+    output: true
+    permalink: /guides/:name/
+defaults:
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
