@@ -26,6 +26,21 @@ toc:
   <figcaption>Карточка питомца: характеристики, талант и навыки.</figcaption>
 </figure>
 
+<div class="pet-gallery">
+  <figure class="pet-gallery-card">
+    <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-9-1024x576.png" alt="Карточка боевого питомца Call of Dragons" loading="lazy">
+    <figcaption>Карточка питомца</figcaption>
+  </figure>
+  <figure class="pet-gallery-card">
+    <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-5.png" alt="Захват питомца Call of Dragons" loading="lazy">
+    <figcaption>Захват питомца</figcaption>
+  </figure>
+  <figure class="pet-gallery-card">
+    <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-7.png" alt="Приют питомцев Call of Dragons" loading="lazy">
+    <figcaption>Приют питомцев</figcaption>
+  </figure>
+</div>
+
 ## 🐾 Как работают питомцы {#mechanics}
 
 Боевой питомец — это **часть легиона**, а не отдельный управляемый отряд.
