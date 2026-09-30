@@ -95,6 +95,18 @@
 })();
 
 
+/* PET BUILD IMAGE FALLBACK */
+(() => {
+  const fallback = 'https://callofdragonsguides.com/wp-content/uploads/2023/11/Follow-Up.png';
+  document.querySelectorAll('.pet-build-skill img').forEach((img) => {
+    img.addEventListener('error', () => {
+      if (img.dataset.fallbackApplied) return;
+      img.dataset.fallbackApplied = '1';
+      img.src = fallback;
+    }, {once:false});
+  });
+})();
+
 /* PET BUILD SKILL TOOLTIPS */
 (() => {
   let tip = document.querySelector('.pet-build-skill-tooltip');
