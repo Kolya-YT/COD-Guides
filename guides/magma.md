@@ -1,4 +1,5 @@
 ---
+layout: guide
 title: "🌋 Магма"
 description: "Разбор Магмы с реальными скриншотами боя, метками, переходами и ключевыми механиками."
 category: "CALL OF DRAGONS · PVE"
