@@ -21,6 +21,11 @@ toc:
 
 <div class="guide-note"><strong>🟢 Актуально на 30 сентября 2026 года.</strong> Названия питомцев приведены по русскому клиенту. Механики описаны по текущей системе игры и последним доступным изменениям.</div>
 
+<figure class="pet-guide-image">
+  <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-9-1024x576.png" alt="Интерфейс боевого питомца в Call of Dragons" loading="lazy">
+  <figcaption>Карточка питомца: характеристики, талант и навыки.</figcaption>
+</figure>
+
 ## 🐾 Как работают питомцы {#mechanics}
 
 Боевой питомец — это **часть легиона**, а не отдельный управляемый отряд.
@@ -60,6 +65,11 @@ toc:
 
 ## 🗺️ Захват и автозахват {#capture}
 
+<figure class="pet-guide-image">
+  <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-2.png" alt="Поиск боевых питомцев на карте Call of Dragons" loading="lazy">
+  <figcaption>Поиск питомца на карте через меню зверей.</figcaption>
+</figure>
+
 Старая механика, где питомца сначала атаковали обычным легионом, больше не используется.
 
 Сейчас питомца можно **захватить, перетащив к нему легион**. В игре также есть **автозахват**.
@@ -93,6 +103,11 @@ toc:
 ---
 
 ## 🏠 Приют питомцев {#sanctuary}
+
+<figure class="pet-guide-image">
+  <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-7.png" alt="Приют питомцев Call of Dragons" loading="lazy">
+  <figcaption>Приют питомцев: здесь находятся пойманные питомцы и взаимодействие с ними.</figcaption>
+</figure>
 
 Приют питомцев — место, где управляют пойманными питомцами.
 
@@ -172,6 +187,11 @@ toc:
 ---
 
 ## 📊 Характеристики {#attributes}
+
+<figure class="pet-guide-image">
+  <img src="https://codtool.net/wp-content/uploads/2025/01/cach-hoc-skill-dai-bang-tuyet-call-of-dragons3.jpg" alt="Характеристики и навыки боевого питомца Call of Dragons" loading="lazy">
+  <figcaption>Пример карточки питомца с характеристиками и слотами навыков.</figcaption>
+</figure>
 
 У питомцев есть шесть характеристик:
 
