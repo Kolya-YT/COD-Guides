@@ -191,3 +191,12 @@
 .pet-build-cost b{color:#e7c66a;font-size:10px;white-space:nowrap}
 .pet-build-cost i{font-style:normal;color:#b79cff;font-size:10px;white-space:nowrap}
 @media(max-width:700px){.pet-build-cost{gap:6px;padding:7px 8px}.pet-build-cost b,.pet-build-cost i{font-size:9px}}
+
+
+/* PET BUILD QUICK GUIDE */
+.pet-build-quick-guide{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:8px 0 28px;padding:14px;background:#0d1117;border:1px solid #252c36;border-radius:14px}
+.pet-build-quick-guide>div{padding:10px 11px;background:#11161e;border:1px solid #252c36;border-radius:10px}
+.pet-build-quick-guide b{display:block;color:#f3f5f8;font-size:11px;margin-bottom:5px}
+.pet-build-quick-guide span{display:block;color:#858f9e;font-size:10px;line-height:1.4}
+@media(max-width:800px){.pet-build-quick-guide{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:500px){.pet-build-quick-guide{grid-template-columns:1fr}}
