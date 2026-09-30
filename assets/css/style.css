@@ -148,14 +148,12 @@
 .pet-build-pet{display:flex;align-items:center;gap:10px;padding:9px;background:#0d1117;border:1px solid #252c36;border-radius:12px;margin-bottom:10px}
 .pet-build-pet-icon{width:52px;height:52px;flex:none;border-radius:12px;background-position:center;background-size:contain;background-repeat:no-repeat;background-color:#171c24;border:1px solid #343c48}
 .pet-build-pet small{display:block;color:#707b8a;font-size:9px;text-transform:uppercase;letter-spacing:.08em}.pet-build-pet strong{display:block;color:#fff;font-size:13px;margin-top:2px}
-.pet-build-skills{display:flex;flex-wrap:wrap;gap:5px}.pet-build-skills span{padding:5px 7px;background:#1a2029;border:1px solid #303846;border-radius:7px;color:#cbd1da;font-size:9px;line-height:1.1}
-.pet-build-stats{margin-top:11px;padding-top:9px;border-top:1px solid #252c36;color:#8e98a7;font-size:10px;line-height:1.45}.pet-build-stats b{color:#ffad7d}
-@media(max-width:700px){.pet-build-grid{grid-template-columns:1fr;gap:11px}.pet-build-card{padding:14px}.pet-build-heroes{font-size:17px}}
-
-.pet-build-heroes{display:flex;align-items:center;gap:7px;font-size:0;margin-bottom:12px}.pet-build-hero{display:flex;align-items:center;gap:7px;font-size:18px}.pet-build-hero img{width:42px;height:42px;border-radius:50%;object-fit:cover;background:#171c24;border:1px solid #3a424f;box-shadow:0 3px 10px #0007}.pet-build-hero strong{font-size:16px}.pet-build-heroes>b{font-size:16px;color:#ff7137;margin:0 2px}
-.pet-build-skills{display:grid;grid-template-columns:repeat(8,38px);grid-auto-rows:38px;justify-content:space-between;gap:6px;align-items:center}
-.pet-build-skill{position:relative;width:38px;height:38px;padding:2px;box-sizing:border-box;background:#0b0f15;border:1px solid #384150;border-radius:9px;box-shadow:0 3px 8px #0006;min-width:0;min-height:0}
-.pet-build-skill img{display:block;width:100%;height:100%;object-fit:cover;border-radius:6px}.pet-build-skill:hover{border-color:#ff7137;transform:translateY(-2px)}.pet-build-skill[title]::after{content:attr(title);position:absolute;z-index:20;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%);padding:5px 7px;background:#0b0e13;border:1px solid #3a424f;border-radius:6px;color:#e8ebef;font-size:9px;line-height:1.2;white-space:nowrap;opacity:0;pointer-events:none;transition:.12s}.pet-build-skill:hover::after{opacity:1}
+.pet-build-skills{display:grid;grid-template-columns:repeat(8,32px);grid-auto-rows:32px;justify-content:space-between;gap:5px;align-items:start}
+.pet-build-skill{position:relative;display:block;width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important;padding:2px!important;box-sizing:border-box;background:#0b0f15;border:1px solid #384150;border-radius:7px;box-shadow:0 3px 8px #0006;line-height:0}
+.pet-build-skill img{display:block;width:100%;height:100%;object-fit:cover;border-radius:5px}
+.pet-build-skill:hover{border-color:#ff7137;transform:translateY(-2px);z-index:30}
+.pet-build-skill[title]::after{content:attr(title);position:absolute;z-index:50;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%);padding:6px 8px;background:#0b0e13;border:1px solid #3a424f;border-radius:7px;color:#e8ebef;font-size:9px;font-weight:700;line-height:1.3;white-space:pre;opacity:0;pointer-events:none;transition:.12s;box-shadow:0 8px 20px #0008}
+.pet-build-skill:hover::after{opacity:1}
 @media(max-width:700px){.pet-build-hero img{width:38px;height:38px}.pet-build-hero strong{font-size:14px}.pet-build-skills{grid-template-columns:repeat(8,34px);grid-auto-rows:34px;gap:4px;justify-content:space-between}.pet-build-skill{width:34px;height:34px;min-width:0;min-height:0}.pet-build-skill-text{min-height:34px;font-size:8px}}
 
 /* WAR PET BUILD CATEGORIES */
@@ -189,7 +187,7 @@
 .pet-build-cost{display:flex;align-items:center;gap:8px;margin:0 0 10px;padding:7px 9px;background:#10151c;border:1px solid #252c36;border-radius:10px;color:#7f8998;font-size:10px;line-height:1}
 .pet-build-cost span{margin-right:auto;color:#8f99a8;font-weight:700}
 .pet-build-cost b{color:#e7c66a;font-size:10px;white-space:nowrap}
-.pet-build-cost i{font-style:normal;color:#b79cff;font-size:10px;white-space:nowrap}
+.pet-build-cost i{display:inline-flex;align-items:center;gap:4px;font-style:normal;color:#f0c96b;font-size:10px;white-space:nowrap}.pet-build-cost i img{width:14px;height:14px;object-fit:contain;vertical-align:middle}
 @media(max-width:700px){.pet-build-cost{gap:6px;padding:7px 8px}.pet-build-cost b,.pet-build-cost i{font-size:9px}}
 
 
