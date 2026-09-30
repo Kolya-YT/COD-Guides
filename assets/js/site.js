@@ -97,13 +97,18 @@
 
 /* PET BUILD IMAGE FALLBACK */
 (() => {
+  const fallback = (img) => {
+    const cell = img.closest('.pet-build-skill');
+    if (!cell) return;
+    cell.classList.add('is-broken');
+    img.style.display = 'none';
+    const label = (cell.dataset.skillName || cell.getAttribute('title') || 'Навык').trim();
+    const initials = label.replace(/[«»]/g,'').split(/\\s+/).filter(Boolean).slice(0,2).map(x=>x[0]).join('').toUpperCase() || '★';
+    cell.style.setProperty('--skill-fallback', JSON.stringify(initials));
+  };
   document.querySelectorAll('.pet-build-skill img').forEach((img) => {
-    const markBroken = () => {
-      const cell = img.closest('.pet-build-skill');
-      if (cell) cell.classList.add('is-broken');
-    };
-    if (img.complete && img.naturalWidth === 0) markBroken();
-    img.addEventListener('error', markBroken);
+    if (img.complete && img.naturalWidth === 0) fallback(img);
+    img.addEventListener('error', () => fallback(img), {once:true});
   });
 })();
 
