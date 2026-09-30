@@ -183,3 +183,11 @@
 .pet-build-category-section .pet-build-grid{margin-top:0}
 .pet-build-skill-text{width:100%;height:auto;aspect-ratio:auto;min-height:38px;padding:6px 7px;display:flex;align-items:center;justify-content:center;font-size:9px;line-height:1.1;text-align:center}
 @media(max-width:600px){.pet-build-category-grid{grid-template-columns:1fr;gap:10px}.pet-build-category{min-height:160px}.pet-build-category-content{left:16px;right:16px;bottom:15px}.pet-build-category strong{font-size:27px}.pet-build-category-section{margin:26px 0 34px}}
+
+
+/* PET BUILD COST */
+.pet-build-cost{display:flex;align-items:center;gap:8px;margin:0 0 10px;padding:7px 9px;background:#10151c;border:1px solid #252c36;border-radius:10px;color:#7f8998;font-size:10px;line-height:1}
+.pet-build-cost span{margin-right:auto;color:#8f99a8;font-weight:700}
+.pet-build-cost b{color:#e7c66a;font-size:10px;white-space:nowrap}
+.pet-build-cost i{font-style:normal;color:#b79cff;font-size:10px;white-space:nowrap}
+@media(max-width:700px){.pet-build-cost{gap:6px;padding:7px 8px}.pet-build-cost b,.pet-build-cost i{font-size:9px}}
