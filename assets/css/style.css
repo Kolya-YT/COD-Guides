@@ -71,3 +71,8 @@
 .guide-pet-cover{display:flex;align-items:center;justify-content:center;gap:12px;aspect-ratio:16/9;background:radial-gradient(circle at 50% 30%,rgba(255,132,67,.28),transparent 48%),linear-gradient(135deg,#171c27,#0d1016);border-bottom:1px solid #292f39}
 .guide-pet-cover span{font-size:58px;filter:drop-shadow(0 8px 18px #0008)}
 .guide-pet-cover b{font-size:22px;letter-spacing:.12em;color:#ff8750}
+
+.guide-image{margin:28px auto;max-width:820px}
+.guide-image img{display:block;width:100%;max-width:820px;margin:0;border-radius:16px;border:1px solid #2b313c;box-shadow:0 18px 45px #0007}
+.guide-image figcaption{padding:9px 4px 0;color:#747e8d;font-size:11px;text-align:center}
+@media(max-width:600px){.guide-image{margin:22px -2px}.guide-image img{border-radius:12px}.guide-image figcaption{font-size:10px}}
