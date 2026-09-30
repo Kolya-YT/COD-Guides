@@ -97,16 +97,13 @@
 
 /* PET BUILD SKILL TOOLTIPS */
 (() => {
-  const money = (card) => {
-    const row = card?.querySelector('.pet-build-cost');
-    return row ? row.textContent.replace(/\s+/g,' ').trim() : '';
-  };
   document.querySelectorAll('.pet-build-skill[title]').forEach((el) => {
     const card = el.closest('.pet-build-card');
-    const cost = money(card);
-    if (cost && !el.dataset.tooltipReady) {
-      el.title = el.title + '\n' + cost;
-      el.dataset.tooltipReady = '1';
-    }
+    const cost = card?.querySelector('.pet-build-cost')?.textContent.replace(/\s+/g,' ').trim();
+    if (!cost || el.dataset.tooltipReady) return;
+    el.dataset.skillName = el.getAttribute('title') || '';
+    el.setAttribute('title', el.dataset.skillName + '\n' + cost);
+    el.setAttribute('aria-label', el.dataset.skillName + '. ' + cost);
+    el.dataset.tooltipReady = '1';
   });
 })();
