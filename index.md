@@ -17,14 +17,6 @@ title: COD Guides
   <div class="search-hint">Ищи по названию, описанию или механике</div>
 </div>
 
-<div class="home-search">
-  <label class="search-box">
-    <span>🔎</span>
-    <input type="search" data-guide-search placeholder="Найти гайд или механику..." autocomplete="off" enterkeyhint="search">
-  </label>
-  <div class="search-hint">Ищи по названию, описанию или механике</div>
-</div>
-
 <div class="category-nav" role="tablist" aria-label="Категории гайдов">
   <button class="category-btn is-active" type="button" data-category-filter="all">Все</button>
   <button class="category-btn" type="button" data-category-filter="giants">🌋 Исполины</button>
