@@ -4,6 +4,13 @@ title: "🌋 Магма"
 description: "Разбор Магмы с реальными скриншотами боя, метками, переходами и ключевыми механиками."
 category: "CALL OF DRAGONS · PVE"
 updated: "30 апреля 2026"
+toc:
+  - { label: "Механика", href: "#mechanics" }
+  - { label: "Группы", href: "#groups" }
+  - { label: "Фазы", href: "#phases" }
+  - { label: "Метки", href: "#marks" }
+  - { label: "Аколиты", href: "#acolytes" }
+  - { label: "Советы", href: "#tips" }
 ---
 
 ![Магма — оригинальная обложка](https://i.postimg.cc/vZkKrtkQ/Magma.jpg)
