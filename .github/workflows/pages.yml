@@ -20,9 +20,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
@@ -39,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://kolya-yt.github.io/COD-Guides/
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
