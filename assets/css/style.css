@@ -103,3 +103,7 @@
 .pet-gallery-card figcaption{padding:9px 10px;color:#a7afba;font-size:12px;font-weight:700;text-align:center}
 @media(max-width:700px){.pet-gallery{grid-template-columns:1fr 1fr}.pet-gallery-card figcaption{font-size:11px}}
 @media(max-width:430px){.pet-gallery{grid-template-columns:1fr}}
+
+
+/* PET CARD THUMBNAILS */
+.pet-card{position:relative;min-height:118px;padding-left:92px}.pet-thumb{position:absolute;left:14px;top:14px;width:64px;height:64px;border-radius:14px;border:1px solid #3a424f;background-image:url("../img/pet-sprite.jpg");background-repeat:no-repeat;background-size:440px 528px;background-position:calc(-88px * var(--pet-x) - 6px) calc(-88px * var(--pet-y) - 4px);box-shadow:0 8px 20px #0006}.pet-card small{display:block}.pet-card small b{color:#ffad7d}.pet-thumb-drake{background-image:url("https://www.allclash.com/wp-content/uploads/2026/07/best-thunderdrake-build-in-call-of-dragons.jpg");background-size:cover;background-position:center}@media(max-width:600px){.pet-card{padding-left:84px;min-height:104px}.pet-thumb{left:12px;top:13px;width:60px;height:60px;background-size:412px 494px;background-position:calc(-82.4px * var(--pet-x) - 5px) calc(-82.4px * var(--pet-y) - 4px)}}
