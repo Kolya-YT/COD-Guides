@@ -196,3 +196,7 @@
 .pet-build-quick-guide span{display:block;color:#858f9e;font-size:10px;line-height:1.4}
 @media(max-width:800px){.pet-build-quick-guide{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:500px){.pet-build-quick-guide{grid-template-columns:1fr}}
+
+/* PET BUILD TEXT PET FALLBACK */
+.pet-build-pet-icon.is-text{display:flex;align-items:center;justify-content:center;background:#111820!important;font-size:29px;line-height:1}
+.pet-build-pet-icon.is-text::after{content:attr(data-pet-emoji);filter:drop-shadow(0 2px 5px #0008)}
