@@ -280,3 +280,48 @@
 .pet-build-skill .pet-build-skill-art{position:absolute!important;inset:2px!important;width:auto!important;height:auto!important;padding:0!important;background-image:none!important;background:#111722!important;border-radius:5px!important;overflow:hidden!important}
 .pet-build-skill .pet-build-skill-art img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;margin:0!important;padding:0!important;border:0!important;border-radius:5px!important;object-fit:cover!important;box-shadow:none!important}
 .pet-build-skill .pet-build-skill-art.is-broken-art{background:linear-gradient(135deg,#252b36,#11161e)!important}
+
+
+/* SITE POLISH — animations only, existing design preserved */
+@keyframes siteFadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes siteFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes siteGlow{0%,100%{opacity:.18;transform:scale(1)}50%{opacity:.28;transform:scale(1.04)}}
+@keyframes siteShimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@keyframes sitePulse{0%,100%{box-shadow:0 0 0 0 rgba(255,113,55,0)}50%{box-shadow:0 0 0 5px rgba(255,113,55,.07)}}
+
+body{animation:siteFadeIn .45s ease both}
+body:before{animation:siteGlow 7s ease-in-out infinite;transform-origin:85% 0}
+.top{transition:background .25s ease,box-shadow .25s ease,border-color .25s ease}
+.top:hover{box-shadow:0 8px 28px #0005}
+.brand{transition:opacity .2s ease,transform .2s ease}.brand:hover{opacity:.92;transform:translateX(2px)}
+.back,.share-btn,.category-btn{transition:transform .2s ease,border-color .2s ease,background .2s ease,color .2s ease,box-shadow .2s ease}
+.back:hover,.share-btn:hover,.category-btn:hover{transform:translateY(-1px);box-shadow:0 7px 20px #0005}
+.page>.guide{animation:siteFadeUp .55s cubic-bezier(.22,.8,.25,1) both}
+.home-hero{animation:siteFadeUp .55s cubic-bezier(.22,.8,.25,1) both}
+.home-hero:before{content:"";position:absolute;inset:-35%;background:radial-gradient(circle,rgba(255,113,55,.10),transparent 45%);pointer-events:none;animation:siteGlow 8s ease-in-out infinite}
+.home-tools{animation:siteFadeUp .55s .08s cubic-bezier(.22,.8,.25,1) both}
+.search-box{transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}.search-box:focus-within{transform:translateY(-1px)}
+.guide-card{will-change:transform;transition:transform .25s cubic-bezier(.22,.8,.25,1),border-color .25s ease,box-shadow .25s ease}
+.guide-card:hover{transform:translateY(-5px)}
+.guide-card>img{transition:transform .5s cubic-bezier(.22,.8,.25,1),filter .35s ease}
+.guide-card:hover>img{transform:scale(1.025);filter:saturate(1.06)}
+.guide-open b{display:inline-block;transition:transform .22s ease}.guide-card:hover .guide-open b{transform:translateX(4px)}
+.content img,.guide-image img,.game-gif img{transition:transform .35s ease,box-shadow .35s ease,filter .35s ease}
+.content img:hover,.guide-image img:hover,.game-gif img:hover{transform:translateY(-2px);box-shadow:0 22px 50px #0008;filter:saturate(1.03)}
+.toc a{transition:transform .18s ease,border-color .18s ease,background .18s ease,color .18s ease}.toc a:hover{transform:translateY(-1px);border-color:#ff7137;background:#211914;color:#ff9a69}
+.content h2{scroll-margin-top:100px}
+.content a{transition:color .18s ease}.content a:hover{color:#ffb08a}
+.home-section-head{animation:siteFadeUp .5s ease both}
+.home-empty{animation:siteFadeUp .45s ease both}
+
+/* Soft loading shimmer for guide thumbnails before images finish */
+.guide-card>img{background:linear-gradient(110deg,#11151c 30%,#1a2029 45%,#11151c 60%);background-size:200% 100%;animation:siteShimmer 2.4s linear infinite}
+.guide-card>img[src]{animation:siteShimmer 2.4s linear infinite}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+}
+@media(max-width:700px){
+  .guide-card:hover{transform:translateY(-2px)}
+  .content img:hover,.guide-image img:hover,.game-gif img:hover{transform:none}
+}
