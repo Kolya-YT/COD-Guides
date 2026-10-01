@@ -28,16 +28,7 @@ title: COD Guides
   <button class="category-btn" type="button" data-category-filter="giants">🌋 Исполины</button>
   </div>
 
-<section class="latest-updates" aria-labelledby="latest-title">
-  <div class="latest-head">
-    <div>
-      <div class="home-kicker">CALL OF DRAGONS · UPDATES</div>
-      <h2 id="latest-title">✨ Последние обновления</h2>
-    </div>
-    <span class="guide-count">3 последних</span>
-  </div>
-  <div class="latest-list" data-latest-list></div>
-</section>
+
 
 <div class="home-section-head" data-section="giants">
   <div>
