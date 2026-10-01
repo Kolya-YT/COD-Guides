@@ -95,20 +95,34 @@
 })();
 
 
-/* PET BUILD IMAGE FALLBACK */
+/* PET BUILD SKILL ART — real CoD Fan icons */
 (() => {
-  const fallback = (img) => {
-    const cell = img.closest('.pet-build-skill');
-    if (!cell) return;
-    cell.classList.add('is-broken');
-    img.style.display = 'none';
-    const label = (cell.dataset.skillName || cell.getAttribute('title') || 'Навык').trim();
-    const initials = label.replace(/[«»]/g,'').split(/\\s+/).filter(Boolean).slice(0,2).map(x=>x[0]).join('').toUpperCase() || '★';
-    cell.style.setProperty('--skill-fallback', JSON.stringify(initials));
+  const normalizeSlug = (el) => {
+    let slug = (el.querySelector('.pet-build-skill-art')?.dataset.skillIcon || '').trim();
+    const title = (el.getAttribute('title') || '').trim();
+    if (!slug) return '';
+    if (/^Улучш\\./i.test(title) && !slug.startsWith('advanced_')) slug = 'advanced_' + slug;
+    if (/^Интенсив\\./i.test(title) && !slug.startsWith('intense_')) slug = 'intense_' + slug;
+    return slug;
   };
-  document.querySelectorAll('.pet-build-skill img').forEach((img) => {
-    if (img.complete && img.naturalWidth === 0) fallback(img);
-    img.addEventListener('error', () => fallback(img), {once:true});
+
+  document.querySelectorAll('.pet-build-skill').forEach((cell) => {
+    const art = cell.querySelector('.pet-build-skill-art');
+    if (!art) return;
+    const slug = normalizeSlug(cell);
+    if (!slug) return;
+    art.dataset.skillIcon = slug;
+    art.innerHTML = '';
+    const img = document.createElement('img');
+    img.src = 'https://codfan.com/img/warpets/skills/' + slug + '.png?v=1.1.0';
+    img.alt = '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    art.appendChild(img);
+    img.addEventListener('error', () => {
+      cell.classList.add('is-broken');
+      art.classList.add('is-broken-art');
+    }, {once:true});
   });
 })();
 
@@ -136,12 +150,7 @@
     outburst:[0,0,0], advanced_outburst:['a','a','a'], intense_outburst:[756,5742,28000]
   };
 
-  const slug = (el) => {
-    const img = el?.querySelector('img');
-    const src = img?.getAttribute('src') || '';
-    const m = src.match(/skills\/([^.?]+)\.png/);
-    return m ? m[1] : '';
-  };
+  const slug = (el) => el?.querySelector('.pet-build-skill-art')?.dataset.skillIcon || '';
 
   let tip = document.querySelector('.pet-build-skill-tooltip');
   if (!tip) {
