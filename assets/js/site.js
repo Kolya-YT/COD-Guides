@@ -406,7 +406,7 @@
 
   const stats = document.querySelector('[data-guide-stats]');
   const views = document.querySelector('[data-guide-views]');
-  const code = '{{ site.goatcounter_code }}';
+  const code = stats?.dataset.goatcounterCode || '';
   if (stats && views && code) {
     const path = location.pathname;
     fetch('https://' + code + '.goatcounter.com/counter/' + encodeURIComponent(path) + '.json', {credentials:'omit'})
