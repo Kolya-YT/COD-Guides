@@ -404,9 +404,5 @@
     });
   }
 
-  // Umami handles pageview tracking. View totals are fetched separately from a server-side job.
-  const stats = document.querySelector('[data-guide-stats]');
-  const views = document.querySelector('[data-guide-views]');
-  if (stats && views) stats.hidden = true;
 
 })();
