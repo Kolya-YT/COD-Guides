@@ -404,37 +404,9 @@
     });
   }
 
+  // Umami handles pageview tracking. View totals are fetched separately from a server-side job.
   const stats = document.querySelector('[data-guide-stats]');
   const views = document.querySelector('[data-guide-views]');
-  const code = stats?.dataset.goatcounterCode?.trim() || '';
+  if (stats && views) stats.hidden = true;
 
-  if (stats && views && code) {
-    const loadViews = () => {
-      if (!window.goatcounter?.visit_count) return false;
-
-      // GoatCounter generates the counter itself; this avoids the failing
-      // direct JSON request and keeps the counter compatible with its API.
-      window.goatcounter.visit_count({
-        append: '[data-guide-views]',
-        path: location.pathname,
-        type: 'html',
-        no_branding: true,
-        attr: {
-          style: 'display:inline'
-        },
-        style: 'div { display:inline !important; width:auto !important; height:auto !important; min-width:0 !important; min-height:0 !important; border:0 !important; padding:0 !important; margin:0 !important; background:transparent !important; color:inherit !important; font:inherit !important; } #gcvc-views { color:inherit !important; font:inherit !important; }'
-      });
-
-      stats.hidden = false;
-      return true;
-    };
-
-    if (!loadViews()) {
-      let tries = 0;
-      const timer = setInterval(() => {
-        tries += 1;
-        if (loadViews() || tries >= 50) clearInterval(timer);
-      }, 200);
-    }
-  }
 })();
