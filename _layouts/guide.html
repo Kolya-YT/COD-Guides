@@ -66,13 +66,14 @@
     {% endfor %}
     {% assign prev_index = guide_index | minus: 1 %}
     {% assign next_index = guide_index | plus: 1 %}
+    {% assign last_index = guides.size | minus: 1 %}
     <nav class="guide-nav" aria-label="Навигация по гайдам">
       <a class="guide-nav-link guide-nav-prev{% if guide_index == 0 %} is-disabled{% endif %}" href="{% if guide_index > 0 %}{{ guides[prev_index].url | relative_url }}{% else %}#{% endif %}">
         <small>← Предыдущий</small><strong>{% if guide_index > 0 %}{{ guides[prev_index].title }}{% else %}Это первый гайд{% endif %}</strong>
       </a>
       <a class="guide-nav-home" href="{{ '/' | relative_url }}" aria-label="Все гайды">⌂</a>
-      <a class="guide-nav-link guide-nav-next{% if guide_index >= guides.size | minus: 1 %} is-disabled{% endif %}" href="{% if guide_index < guides.size | minus: 1 %}{{ guides[next_index].url | relative_url }}{% else %}#{% endif %}">
-        <small>Следующий →</small><strong>{% if guide_index < guides.size | minus: 1 %}{{ guides[next_index].title }}{% else %}Это последний гайд{% endif %}</strong>
+      <a class="guide-nav-link guide-nav-next{% if guide_index == last_index %} is-disabled{% endif %}" href="{% if guide_index < last_index %}{{ guides[next_index].url | relative_url }}{% else %}#{% endif %}">
+        <small>Следующий →</small><strong>{% if guide_index < last_index %}{{ guides[next_index].title }}{% else %}Это последний гайд{% endif %}</strong>
       </a>
     </nav>
   </article>
