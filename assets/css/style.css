@@ -540,3 +540,21 @@ html[data-theme="light"] .guide-card-tag{color:#c6531f}
 html[data-theme="light"] .guide-count{color:#687587}
 html[data-theme="light"] .updated{color:#6b7787}
 html[data-theme="light"] footer{color:#6b7787}
+
+
+/* THEME / SEARCH CONTRAST FIX */
+.theme-toggle.desktop-theme-toggle{display:inline-flex}
+@media(max-width:700px){.theme-toggle.desktop-theme-toggle{display:none}}
+.search-count{display:inline-block;margin-top:5px;padding:3px 8px;border-radius:999px;background:#211914;border:1px solid #ff7137;color:#ff9a69;font-weight:900}
+.search-count.is-empty{color:#ff8b7a;border-color:#c95545;background:#281513}
+.category-btn{color:#d7dde6;border-color:#394352}
+.category-btn.is-active{color:#fff;background:#2a1c15;border-color:#ff7137;box-shadow:0 0 0 2px rgba(255,113,55,.14)}
+html[data-theme="light"] .search-count{background:#fff1e8;color:#a94717;border-color:#e98755}
+html[data-theme="light"] .category-btn{background:#fff;color:#465365;border-color:#cbd3de}
+html[data-theme="light"] .category-btn.is-active{background:#fff0e6;color:#a94717;border-color:#e8793f;box-shadow:0 0 0 2px rgba(232,121,63,.14)}
+html[data-theme="light"] .toc a.is-current{background:#fff0e6;color:#a94717;border-color:#e8793f}
+html[data-theme="light"] .content h2,html[data-theme="light"] .content h3{color:#17202b}
+html[data-theme="light"] .content p,html[data-theme="light"] .content li{color:#465365}
+html[data-theme="light"] .content strong{color:#17202b}
+html[data-theme="light"] .updated{color:#667385}
+html[data-theme="light"] .eyebrow,html[data-theme="light"] .toc strong{color:#c6531f}
