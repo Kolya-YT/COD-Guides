@@ -387,3 +387,36 @@
     setTimeout(() => target.classList.remove('is-clicked'), 360);
   });
 })();
+
+
+/* SMART NAVIGATION + MOBILE BAR + REAL VIEW COUNTER */
+(() => {
+  const body = document.body;
+  const mobileNav = document.querySelector('[data-mobile-nav]');
+  if (mobileNav) {
+    mobileNav.querySelectorAll('[data-mobile-action]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const action = btn.dataset.mobileAction;
+        if (action === 'top') window.scrollTo({top:0,behavior:'smooth'});
+        if (action === 'toc') document.querySelector('.toc')?.scrollIntoView({behavior:'smooth',block:'start'});
+        if (action === 'search') document.querySelector('[data-guide-search]')?.focus();
+      });
+    });
+  }
+
+  const stats = document.querySelector('[data-guide-stats]');
+  const views = document.querySelector('[data-guide-views]');
+  const code = '{{ site.goatcounter_code }}';
+  if (stats && views && code) {
+    const path = location.pathname;
+    fetch('https://' + code + '.goatcounter.com/counter/' + encodeURIComponent(path) + '.json', {credentials:'omit'})
+      .then(r => r.ok ? r.json() : Promise.reject(r))
+      .then(data => {
+        if (data?.count != null) {
+          views.textContent = data.count;
+          stats.hidden = false;
+        }
+      })
+      .catch(() => {});
+  }
+})();
