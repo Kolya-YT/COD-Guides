@@ -23,11 +23,8 @@ title: COD Guides
       <kbd>⌕</kbd>
     </label>
     <div class="search-hint">Ищи по названию, описанию или механике</div>
-    <div class="category-nav" role="tablist" aria-label="Категории гайдов">
-  <button class="category-btn is-active" type="button" data-category-filter="all">Все</button>
-  <button class="category-btn" type="button" data-category-filter="giants">🌋 Исполины</button>
+    <div class="search-result-count" data-search-count hidden></div>
   </div>
-
 
 
 <div class="home-section-head" data-section="giants">
