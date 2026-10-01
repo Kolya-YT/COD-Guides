@@ -376,7 +376,7 @@
 })();
 
 
-/* SMART NAVIGATION + MOBILE BAR + REAL VIEW COUNTER */
+/* SMART NAVIGATION + MOBILE BAR */
 (() => {
   const body = document.body;
   const mobileNav = document.querySelector('[data-mobile-nav]');
@@ -398,18 +398,24 @@
 (() => {
   const root = document.documentElement;
   const buttons = [...document.querySelectorAll('[data-theme-toggle]')];
-  const theme = () => root.dataset.theme === 'light' ? 'light' : 'dark';
-  const paint = () => buttons.forEach(btn => {
-    const light = theme() === 'light';
-    btn.textContent = light ? '☀️' : '🌙';
-    btn.setAttribute('aria-label', light ? 'Включить тёмную тему' : 'Включить светлую тему');
-    btn.title = light ? 'Тёмная тема' : 'Светлая тема';
-  });
+  const getTheme = () => root.dataset.theme === 'light' ? 'light' : 'dark';
+  const paint = () => {
+    const light = getTheme() === 'light';
+    buttons.forEach(btn => {
+      btn.textContent = light ? '☀️' : '🌙';
+      btn.setAttribute('aria-label', light ? 'Включить тёмную тему' : 'Включить светлую тему');
+      btn.title = light ? 'Тёмная тема' : 'Светлая тема';
+    });
+  };
   buttons.forEach(btn => btn.addEventListener('click', () => {
-    const next = theme() === 'light' ? 'dark' : 'light';
-    root.dataset.theme = next;
-    try { localStorage.setItem('cod-theme', next); } catch(e) {}
+    root.dataset.theme = getTheme() === 'light' ? 'dark' : 'light';
+    try { localStorage.setItem('cod-theme', root.dataset.theme); } catch(e) {}
     paint();
   }));
   paint();
+})();
+
+/* REMOVE OBSOLETE CATEGORY FILTER PILLS */
+(() => {
+  document.querySelectorAll('.category-nav,[data-category-filter]').forEach(el => el.remove());
 })();
