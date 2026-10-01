@@ -489,3 +489,54 @@ html[data-theme="light"] .guide-nav-link strong{color:#18232e}
 html[data-theme="light"] .content blockquote{color:#4b4038;background:#fff5ee}
 html[data-theme="light"] .content .note{color:#4b4038;background:#fff5ee}
 html[data-theme="light"] .content .danger{color:#5b3530;background:#fff0ee}
+
+
+/* UI FIXES — single mobile theme control + readable search state */
+.search-result-count{margin:8px 2px 0;color:#aeb6c2;font-size:13px;font-weight:800}
+.search-result-count.is-empty{color:#ff9a69}
+@media(max-width:700px){
+  .desktop-theme-toggle{display:none!important}
+}
+@media(min-width:701px){
+  .mobile-nav [data-theme-toggle]{display:none}
+}
+
+/* Stronger theme-aware text and selected states */
+html[data-theme="dark"] .search-result-count{color:#aeb6c2}
+html[data-theme="light"] body{color:#18212c}
+html[data-theme="light"] .guide h2,
+html[data-theme="light"] .guide h3,
+html[data-theme="light"] .content h2,
+html[data-theme="light"] .content h3,
+html[data-theme="light"] .home-section-head h2{color:#18212c}
+html[data-theme="light"] .content p,
+html[data-theme="light"] .content li,
+html[data-theme="light"] .content td,
+html[data-theme="light"] .content blockquote,
+html[data-theme="light"] .guide-head p,
+html[data-theme="light"] .home-hero p{color:#4d5968}
+html[data-theme="light"] .content strong,
+html[data-theme="light"] .guide-card h3,
+html[data-theme="light"] .latest-copy strong,
+html[data-theme="light"] .home-empty strong{color:#18212c}
+html[data-theme="light"] .content a,
+html[data-theme="light"] .guide-open,
+html[data-theme="light"] .eyebrow,
+html[data-theme="light"] .home-kicker{color:#c6531f}
+html[data-theme="light"] .toc strong{color:#c6531f}
+html[data-theme="light"] .toc a{color:#465364}
+html[data-theme="light"] .toc a.is-current{background:#fff0e7;border-color:#e56d32;color:#b84c1d;box-shadow:0 0 0 3px rgba(229,109,50,.12)}
+html[data-theme="light"] .guide-nav-link{color:#334052}
+html[data-theme="light"] .guide-nav-link small{color:#687587}
+html[data-theme="light"] .guide-nav-link strong{color:#18212c}
+html[data-theme="light"] .search-result-count{color:#4d5968}
+html[data-theme="light"] .search-result-count.is-empty{color:#b84c1d}
+html[data-theme="light"] .search-box{background:#fff;border-color:#cfd7e1}
+html[data-theme="light"] .search-box:focus-within{border-color:#e56d32;box-shadow:0 0 0 3px rgba(229,109,50,.14)}
+html[data-theme="light"] .search-box input{color:#18212c}
+html[data-theme="light"] .search-box input::placeholder{color:#7c8897}
+html[data-theme="light"] .search-hint{color:#6b7787}
+html[data-theme="light"] .guide-card-tag{color:#c6531f}
+html[data-theme="light"] .guide-count{color:#687587}
+html[data-theme="light"] .updated{color:#6b7787}
+html[data-theme="light"] footer{color:#6b7787}
