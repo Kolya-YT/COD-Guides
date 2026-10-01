@@ -15,7 +15,6 @@ defaults:
     values:
       layout: "guide"
 
-# GoatCounter site code (for real pageview counters). Example: "abc123"
-goatcounter_code: "abdce"
+# Umami analytics is configured in the layouts.
 
 # Pages asset refresh
