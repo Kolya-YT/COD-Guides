@@ -15,6 +15,4 @@ defaults:
     values:
       layout: "guide"
 
-# Umami analytics is configured in the layouts.
-
 # Pages asset refresh
