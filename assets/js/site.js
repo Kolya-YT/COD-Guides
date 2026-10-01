@@ -234,3 +234,36 @@
     });
   });
 })();
+
+
+/* SITE POLISH — reveal elements as they enter the viewport */
+(() => {
+  if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+  const selectors = '.guide-card,.content h2,.content h3,.content blockquote,.content table,.content .note,.content .danger,.flow,.game-gif,.guide-image,.home-empty';
+  const items = [...document.querySelectorAll(selectors)];
+  if (!items.length || !('IntersectionObserver' in window)) return;
+
+  items.forEach((el, index) => {
+    el.classList.add('scroll-reveal');
+    el.style.setProperty('--reveal-delay', Math.min((index % 4) * 55, 165) + 'ms');
+  });
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-revealed');
+      obs.unobserve(entry.target);
+    });
+  }, {threshold:0.08, rootMargin:'0px 0px -35px 0px'});
+
+  items.forEach(el => observer.observe(el));
+})();
+
+/* Subtle header state while scrolling */
+(() => {
+  const header = document.querySelector('.top');
+  if (!header) return;
+  const update = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+  update();
+  window.addEventListener('scroll', update, {passive:true});
+})();
