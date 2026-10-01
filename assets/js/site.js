@@ -267,3 +267,123 @@
   update();
   window.addEventListener('scroll', update, {passive:true});
 })();
+
+
+/* SEARCH UX — shortcut, result counter and quick clear */
+(() => {
+  const input = document.querySelector('[data-guide-search]');
+  if (!input) return;
+  let counter = document.querySelector('[data-search-count]');
+  if (!counter) {
+    const hint = document.querySelector('.search-hint');
+    if (hint) {
+      counter = document.createElement('span');
+      counter.className = 'search-count';
+      counter.dataset.searchCount = '';
+      hint.appendChild(counter);
+    }
+  }
+  const updateCount = () => {
+    const cards = [...document.querySelectorAll('.guide-card')];
+    const query = input.value.trim();
+    const visible = cards.filter(card => !card.hidden).length;
+    if (counter) counter.textContent = query ? ' · Найдено: ' + visible : '';
+  };
+  input.addEventListener('input', updateCount);
+  document.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      input.focus();
+      input.select();
+    }
+    if (e.key === 'Escape' && document.activeElement === input) {
+      input.value = '';
+      input.dispatchEvent(new Event('input', {bubbles:true}));
+      input.blur();
+    }
+  });
+  updateCount();
+})();
+
+/* LATEST UPDATES — generated from the guide cards */
+(() => {
+  const list = document.querySelector('[data-latest-list]');
+  if (!list) return;
+  const cards = [...document.querySelectorAll('.guide-card[data-updated]')];
+  const months = {января:0,февраля:1,марта:2,апреля:3,мая:4,июня:5,июля:6,августа:7,сентября:8,октября:9,ноября:10,декабря:11};
+  const parseDate = value => {
+    const [day,month,year] = value.split(' ');
+    return new Date(Number(year), months[month] ?? 0, Number(day));
+  };
+  cards.sort((a,b) => parseDate(b.dataset.updated)-parseDate(a.dataset.updated)).slice(0,3).forEach(card => {
+    const link = card.getAttribute('href');
+    const title = card.querySelector('h3')?.textContent?.trim() || 'Гайд';
+    const tag = card.querySelector('.guide-card-tag')?.textContent?.trim() || '';
+    const item = document.createElement('a');
+    item.className = 'latest-item';
+    item.href = link;
+    item.innerHTML = '<span class="latest-dot"></span><span class="latest-copy"><strong>'+title+'</strong><small>'+tag+'</small></span><time>'+card.dataset.updated+'</time><b>→</b>';
+    list.appendChild(item);
+  });
+})();
+
+/* READING PROGRESS */
+(() => {
+  const bar = document.querySelector('[data-reading-progress]');
+  if (!bar) return;
+  const update = () => {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - window.innerHeight;
+    const value = max > 0 ? Math.min(100, Math.max(0, window.scrollY / max * 100)) : 0;
+    bar.style.width = value + '%';
+  };
+  update();
+  window.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+})();
+
+/* ACTIVE TOC — highlight the section currently on screen */
+(() => {
+  const toc = document.querySelector('.toc');
+  if (!toc) return;
+  const links = [...toc.querySelectorAll('a[href^="#"]')];
+  const entries = links.map(link => ({link, heading: document.getElementById(link.getAttribute('href').slice(1))})).filter(x => x.heading);
+  if (!entries.length || !('IntersectionObserver' in window)) return;
+  const visible = new Set();
+  const paint = () => {
+    let current = entries.find(x => visible.has(x.heading)) || entries.find(x => x.heading.getBoundingClientRect().top >= 68);
+    if (!current && window.scrollY > 120) current = entries[entries.length - 1];
+    links.forEach(link => link.classList.toggle('is-current', current?.link === link));
+  };
+  const observer = new IntersectionObserver(items => {
+    items.forEach(item => item.isIntersecting ? visible.add(item.target) : visible.delete(item.target));
+    paint();
+  }, {rootMargin:'-18% 0px -68% 0px', threshold:0});
+  entries.forEach(x => observer.observe(x.heading));
+  window.addEventListener('scroll', paint, {passive:true});
+  paint();
+})();
+
+/* MOBILE BACK TO TOP */
+(() => {
+  const button = document.querySelector('[data-back-top]');
+  if (!button) return;
+  const update = () => button.classList.toggle('is-visible', window.scrollY > 420);
+  button.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+  window.addEventListener('scroll', update, {passive:true});
+  update();
+})();
+
+/* MICRO-INTERACTIONS — tiny click ripple, no layout changes */
+(() => {
+  document.addEventListener('click', e => {
+    const target = e.target.closest('button,.guide-card,.latest-item,.back');
+    if (!target || window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+    const rect = target.getBoundingClientRect();
+    target.style.setProperty('--click-x', (e.clientX - rect.left) + 'px');
+    target.style.setProperty('--click-y', (e.clientY - rect.top) + 'px');
+    target.classList.remove('is-clicked');
+    requestAnimationFrame(() => target.classList.add('is-clicked'));
+    setTimeout(() => target.classList.remove('is-clicked'), 360);
+  });
+})();
