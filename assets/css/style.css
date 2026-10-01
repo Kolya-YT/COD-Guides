@@ -325,3 +325,7 @@ body:before{animation:siteGlow 7s ease-in-out infinite;transform-origin:85% 0}
   .guide-card:hover{transform:translateY(-2px)}
   .content img:hover,.guide-image img:hover,.game-gif img:hover{transform:none}
 }
+
+.scroll-reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease var(--reveal-delay,0ms),transform .55s cubic-bezier(.22,.8,.25,1) var(--reveal-delay,0ms)}
+.scroll-reveal.is-revealed{opacity:1;transform:none}
+.top.is-scrolled{background:rgba(9,11,16,.94);border-bottom-color:#303744;box-shadow:0 8px 28px #0005}
