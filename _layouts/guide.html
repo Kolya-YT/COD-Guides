@@ -44,14 +44,6 @@
         <button class="share-btn" type="button" data-share>📤 Поделиться</button>
       </div>
     </div>
-    {% if page.toc %}
-    <div class="toc">
-      <strong>📌 В этом гайде</strong>
-      {% for item in page.toc %}
-      <a href="{{ item.href }}">{{ item.label | default: item.title }}</a>
-      {% endfor %}
-    </div>
-    {% endif %}
     <div class="content">{{ content }}</div>
 
     {% assign guides = site.guides | sort: "path" %}
@@ -89,7 +81,7 @@
     {% endif %}
   </article>
 </main>
-<nav class="mobile-nav" data-mobile-nav aria-label="Мобильная навигация"><a href="{{ '/' | relative_url }}" class="mobile-nav-item">⌂<span>Главная</span></a><button type="button" class="mobile-nav-item" data-mobile-action="toc">☰<span>Оглавление</span></button><button type="button" class="mobile-nav-item" data-mobile-action="top">↑<span>Наверх</span></button></nav>
+<nav class="mobile-nav" data-mobile-nav aria-label="Мобильная навигация"><a href="{{ '/' | relative_url }}" class="mobile-nav-item">⌂<span>Главная</span></a><button type="button" class="mobile-nav-item" data-mobile-action="top">↑<span>Наверх</span></button></nav>
 <footer>🔥 COD Guides · Call of Dragons</footer>
 </body>
 </html>
