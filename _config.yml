@@ -16,6 +16,6 @@ defaults:
       layout: "guide"
 
 # GoatCounter site code (for real pageview counters). Example: "abc123"
-goatcounter_code: ""
+goatcounter_code: "abdce"
 
 # Pages asset refresh
