@@ -42,7 +42,11 @@
       {% if page.description %}<p>{{ page.description }}</p>{% endif %}
       <div class="guide-actions">
         {% if page.updated %}<div class="updated">Обновлено: {{ page.updated }}</div>{% endif %}
-        <div class="guide-stats" data-guide-stats data-goatcounter-code="{{ site.goatcounter_code }}" hidden>👁️ <span data-guide-views></span> просмотров</div>
+        {% assign guide_stat_path = site.baseurl | append: page.url %}
+        {% assign guide_views = site.data.view_counts[guide_stat_path] %}
+        {% if guide_views != nil %}
+          <div class="guide-stats" data-guide-stats>👁️ <span data-guide-views>{{ guide_views }}</span> просмотров</div>
+        {% endif %}
         <button class="share-btn" type="button" data-share>📤 Поделиться</button>
       </div>
     </div>
