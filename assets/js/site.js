@@ -410,36 +410,25 @@
 
   if (stats && views && code) {
     const loadViews = () => {
-      // GoatCounter itself knows the canonical path it recorded.
-      const path = window.goatcounter?.get_data?.()?.p || location.pathname;
-      const endpoint = 'https://' + code + '.goatcounter.com/counter/' + encodeURIComponent(path) + '.json';
+      if (!window.goatcounter?.visit_count) return false;
 
-      fetch(endpoint, {credentials: 'omit', cache: 'no-store'})
-        .then(response => {
-          if (!response.ok) throw new Error('GoatCounter HTTP ' + response.status);
-          return response.json();
-        })
-        .then(data => {
-          if (data && data.count != null) {
-            views.textContent = String(data.count);
-            stats.hidden = false;
-          }
-        })
-        .catch(() => {
-          // count.js is async, so retry after it has initialized.
-        });
+      // GoatCounter generates the counter itself; this avoids the failing
+      // direct JSON request and keeps the counter compatible with its API.
+      window.goatcounter.visit_count({
+        append: '[data-guide-views]',
+        no_branding: true,
+        style: 'div { display:inline; border:0; padding:0; margin:0; background:transparent; color:inherit; font:inherit; }'
+      });
+
+      stats.hidden = false;
+      return true;
     };
 
-    if (window.goatcounter?.get_data) {
-      loadViews();
-    } else {
+    if (!loadViews()) {
       let tries = 0;
       const timer = setInterval(() => {
         tries += 1;
-        if (window.goatcounter?.get_data || tries >= 30) {
-          clearInterval(timer);
-          loadViews();
-        }
+        if (loadViews() || tries >= 50) clearInterval(timer);
       }, 200);
     }
   }
