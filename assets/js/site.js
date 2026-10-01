@@ -406,17 +406,41 @@
 
   const stats = document.querySelector('[data-guide-stats]');
   const views = document.querySelector('[data-guide-views]');
-  const code = stats?.dataset.goatcounterCode || '';
+  const code = stats?.dataset.goatcounterCode?.trim() || '';
+
   if (stats && views && code) {
-    const path = location.pathname;
-    fetch('https://' + code + '.goatcounter.com/counter/' + encodeURIComponent(path) + '.json', {credentials:'omit'})
-      .then(r => r.ok ? r.json() : Promise.reject(r))
-      .then(data => {
-        if (data?.count != null) {
-          views.textContent = data.count;
-          stats.hidden = false;
+    const loadViews = () => {
+      // GoatCounter itself knows the canonical path it recorded.
+      const path = window.goatcounter?.get_data?.()?.p || location.pathname;
+      const endpoint = 'https://' + code + '.goatcounter.com/counter/' + encodeURIComponent(path) + '.json';
+
+      fetch(endpoint, {credentials: 'omit', cache: 'no-store'})
+        .then(response => {
+          if (!response.ok) throw new Error('GoatCounter HTTP ' + response.status);
+          return response.json();
+        })
+        .then(data => {
+          if (data && data.count != null) {
+            views.textContent = String(data.count);
+            stats.hidden = false;
+          }
+        })
+        .catch(() => {
+          // count.js is async, so retry after it has initialized.
+        });
+    };
+
+    if (window.goatcounter?.get_data) {
+      loadViews();
+    } else {
+      let tries = 0;
+      const timer = setInterval(() => {
+        tries += 1;
+        if (window.goatcounter?.get_data || tries >= 30) {
+          clearInterval(timer);
+          loadViews();
         }
-      })
-      .catch(() => {});
+      }, 200);
+    }
   }
 })();
