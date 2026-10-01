@@ -406,3 +406,45 @@ body:before{animation:siteGlow 7s ease-in-out infinite;transform-origin:85% 0}
   .guide-nav-link small{font-size:9px}
   .guide-nav-link strong{font-size:10px}
 }
+
+/* THEME SWITCHER */
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;padding:0;border:1px solid #303744;border-radius:11px;background:#11151c;color:#cbd2dc;font:900 17px/1 system-ui;cursor:pointer;transition:.18s}
+.theme-toggle:hover{border-color:#ff7137;color:#ff9a69;background:#211914}
+.top-actions{display:flex;align-items:center;gap:8px}
+html[data-theme="light"] body{background:#f3f5f8;color:#17202b}
+html[data-theme="light"] body:before{background:radial-gradient(circle at 85% 0,rgba(255,95,30,.10),transparent 32%)}
+html[data-theme="light"] .top{background:rgba(243,245,248,.92);border-bottom-color:#d9dee6}
+html[data-theme="light"] .brand{color:#17202b}
+html[data-theme="light"] .back{background:#fff4ed;border-color:#ff9a69;color:#c6531f}
+html[data-theme="light"] .theme-toggle{background:#fff;border-color:#d4dbe4;color:#44505f}
+html[data-theme="light"] .guide{background:#fff;border-color:#dce2e9;box-shadow:0 20px 60px rgba(25,35,50,.10)}
+html[data-theme="light"] .guide-head{background:linear-gradient(135deg,#fff,#f4f6f9)}
+html[data-theme="light"] .guide h1{color:#17202b}
+html[data-theme="light"] .guide-head p,html[data-theme="light"] .content p,html[data-theme="light"] .content li{color:#536070}
+html[data-theme="light"] .toc{background:#f7f9fb;border-bottom-color:#dce2e9}
+html[data-theme="light"] .toc a{background:#fff;border-color:#d7dee7;color:#4c5868}
+html[data-theme="light"] .content strong,html[data-theme="light"] .guide-nav-link strong{color:#17202b}
+html[data-theme="light"] .content code{background:#edf1f5;color:#253140}
+html[data-theme="light"] .content table,html[data-theme="light"] .latest-updates,html[data-theme="light"] .pet-role,html[data-theme="light"] .pet-step,html[data-theme="light"] .pet-card,html[data-theme="light"] .guide-card,html[data-theme="light"] .latest-item{background:#f8fafc;border-color:#d9e0e8}
+html[data-theme="light"] .content th{color:#b95520}
+html[data-theme="light"] .content td{color:#566273;border-bottom-color:#dce2e9}
+html[data-theme="light"] .content blockquote,html[data-theme="light"] .content .note{background:#fff5ed;color:#5d493d;border-color:#e7b58e}
+html[data-theme="light"] .content .danger{background:#fff1ef;border-color:#e4aaa2}
+html[data-theme="light"] .flow,html[data-theme="light"] .pet-flow,html[data-theme="light"] .home-tools{background:#fff;border-color:#d9e0e8}
+html[data-theme="light"] .home-hero{background:linear-gradient(135deg,#fff,#f0f3f7 68%);border-color:#dce2e9}
+html[data-theme="light"] .home-hero p{color:#536070}
+html[data-theme="light"] .home-hero-meta span,html[data-theme="light"] .search-box,html[data-theme="light"] .category-btn,html[data-theme="light"] .guide-count,html[data-theme="light"] .guide-nav-link,html[data-theme="light"] .guide-nav-home{background:#fff;border-color:#d5dde6}
+html[data-theme="light"] .search-box input{color:#17202b}
+html[data-theme="light"] .search-box input::placeholder{color:#8792a0}
+html[data-theme="light"] .category-btn{color:#536070}
+html[data-theme="light"] .category-btn.is-active{background:#fff1e8;color:#c6531f}
+html[data-theme="light"] .guide-card h3,html[data-theme="light"] .latest-copy strong{color:#17202b}
+html[data-theme="light"] .guide-card p,html[data-theme="light"] .latest-copy small{color:#697687}
+html[data-theme="light"] .latest-item:hover,html[data-theme="light"] .guide-card:hover{background:#fff}
+html[data-theme="light"] .guide-nav{border-top-color:#d9e0e8}
+html[data-theme="light"] .mobile-nav{background:rgba(255,255,255,.96);border-color:#d2dae4;box-shadow:0 14px 40px rgba(25,35,50,.16)}
+html[data-theme="light"] .mobile-nav-item{color:#718092}
+html[data-theme="light"] .mobile-nav-item:hover,html[data-theme="light"] .mobile-nav-item:focus-visible,html[data-theme="light"] .mobile-nav-item.is-active{color:#c6531f;background:#fff1e8}
+html[data-theme="light"] .back-top{background:#fff4ed;color:#c6531f;border-color:#ff9a69}
+html[data-theme="light"] footer{color:#7a8796}
+@media(max-width:700px){.mobile-nav{grid-template-columns:repeat(4,1fr)!important;left:8px;right:8px;bottom:8px;padding:5px;gap:3px}.mobile-nav-item{min-height:48px;font-size:17px}.mobile-nav-item span{font-size:8px}}
