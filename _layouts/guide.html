@@ -58,24 +58,39 @@
     {% endif %}
     <div class="content">{{ content }}</div>
 
-    {% assign guides = site.guides %}
+    {% assign guides = site.guides | sort: "path" %}
+    {% assign guide_index = nil %}
     {% for guide in guides %}
-      {% if guide.url == page.url %}
+      {% if guide.path == page.path %}
         {% assign guide_index = forloop.index0 %}
       {% endif %}
     {% endfor %}
-    {% assign prev_index = guide_index | minus: 1 %}
-    {% assign next_index = guide_index | plus: 1 %}
-    {% assign last_index = guides.size | minus: 1 %}
-    <nav class="guide-nav" aria-label="Навигация по гайдам">
-      <a class="guide-nav-link guide-nav-prev{% if guide_index == 0 %} is-disabled{% endif %}" href="{% if guide_index > 0 %}{{ guides[prev_index].url | relative_url }}{% else %}#{% endif %}">
-        <small>← Предыдущий</small><strong>{% if guide_index > 0 %}{{ guides[prev_index].title }}{% else %}Это первый гайд{% endif %}</strong>
-      </a>
-      <a class="guide-nav-home" href="{{ '/' | relative_url }}" aria-label="Все гайды">⌂</a>
-      <a class="guide-nav-link guide-nav-next{% if guide_index == last_index %} is-disabled{% endif %}" href="{% if guide_index < last_index %}{{ guides[next_index].url | relative_url }}{% else %}#{% endif %}">
-        <small>Следующий →</small><strong>{% if guide_index < last_index %}{{ guides[next_index].title }}{% else %}Это последний гайд{% endif %}</strong>
-      </a>
-    </nav>
+    {% if guide_index != nil %}
+      {% assign prev_index = guide_index | minus: 1 %}
+      {% assign next_index = guide_index | plus: 1 %}
+      {% assign last_index = guides.size | minus: 1 %}
+      <nav class="guide-nav" aria-label="Навигация по гайдам">
+        {% if guide_index > 0 %}
+          <a class="guide-nav-link guide-nav-prev" href="{{ guides[prev_index].url | relative_url }}">
+            <small>← Предыдущий</small><strong>{{ guides[prev_index].title }}</strong>
+          </a>
+        {% else %}
+          <a class="guide-nav-link guide-nav-prev is-disabled" href="#">
+            <small>← Предыдущий</small><strong>Это первый гайд</strong>
+          </a>
+        {% endif %}
+        <a class="guide-nav-home" href="{{ '/' | relative_url }}" aria-label="Все гайды">⌂</a>
+        {% if guide_index < last_index %}
+          <a class="guide-nav-link guide-nav-next" href="{{ guides[next_index].url | relative_url }}">
+            <small>Следующий →</small><strong>{{ guides[next_index].title }}</strong>
+          </a>
+        {% else %}
+          <a class="guide-nav-link guide-nav-next is-disabled" href="#">
+            <small>Следующий →</small><strong>Это последний гайд</strong>
+          </a>
+        {% endif %}
+      </nav>
+    {% endif %}
   </article>
 </main>
 <nav class="mobile-nav" data-mobile-nav aria-label="Мобильная навигация"><a href="{{ '/' | relative_url }}" class="mobile-nav-item">⌂<span>Главная</span></a><button type="button" class="mobile-nav-item" data-mobile-action="toc">☰<span>Оглавление</span></button><button type="button" class="mobile-nav-item" data-mobile-action="top">↑<span>Наверх</span></button></nav>
