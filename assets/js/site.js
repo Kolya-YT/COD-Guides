@@ -97,12 +97,27 @@
 
 /* PET BUILD SKILL ART — real CoD Fan icons with filename fallback */
 (() => {
-  const normalizeSlug = (el) => (el.querySelector('.pet-build-skill-art')?.dataset.skillIcon || '').trim();
+  const normalizeSlug = (el) => {
+    let slug = (el.querySelector('.pet-build-skill-art')?.dataset.skillIcon || '').trim();
+    const title = (el.getAttribute('title') || '').trim();
+
+    // Some build entries reuse the base icon slug for Advanced/Intense skills.
+    // Prefer the real variant file, then fall back to the base skill icon.
+    if (/^Улучш\./i.test(title) && !slug.startsWith('advanced_')) {
+      slug = 'advanced_' + slug;
+    } else if (/^Интенсив\./i.test(title) && !slug.startsWith('intense_')) {
+      slug = 'intense_' + slug;
+    }
+    return slug;
+  };
+
   const candidates = (slug) => {
     const out = [];
     const add = (x) => { if (x && !out.includes(x)) out.push(x); };
     add(slug);
     add(slug.replaceAll('_', '-'));
+
+    // If a variant image does not exist (e.g. Follow-Up), use the base icon.
     if (slug.startsWith('advanced_') || slug.startsWith('intense_')) {
       const base = slug.replace(/^(advanced|intense)_/, '');
       add(base);
