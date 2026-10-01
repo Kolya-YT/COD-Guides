@@ -185,7 +185,7 @@ title: COD Guides
     <div class="guide-card-body">
       <div class="guide-card-tag">🐻 PVE · ИСПОЛИН</div>
       <h3>Лютомедведь</h3>
-      <p>Dark Rush, Darkseal, оглушение, Frenzy и окно −40% DEF.</p>
+      <p>Тёмный рывок, печати тьмы, оглушение и окно −40% защиты.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
@@ -195,7 +195,7 @@ title: COD Guides
     <div class="guide-card-body">
       <div class="guide-card-tag">🔥 PVE · ИСПОЛИН</div>
       <h3>Огненный дракон</h3>
-      <p>Shattering Flame, смена танков, огненные зоны и Бездонные ящеры.</p>
+      <p>Пылающее разрушение, смена танков, огненные зоны и Бездонные ящеры.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
@@ -205,7 +205,7 @@ title: COD Guides
     <div class="guide-card-body">
       <div class="guide-card-tag">❄️ PVE · ИСПОЛИН</div>
       <h3>Ледяной дракон</h3>
-      <p>Frost Curse, Cold Front, Winter's Reckoning и ледяные поля.</p>
+      <p>Ледяное проклятие, Холодный фронт, Зимний приговор и ледяные поля.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
@@ -215,7 +215,7 @@ title: COD Guides
     <div class="guide-card-body">
       <div class="guide-card-tag">⚡ PVE · ИСПОЛИН</div>
       <h3>Громовой Рух</h3>
-      <p>Вода, Electric Blast, Storm Cage, Soar и сбор Manastone.</p>
+      <p>Вода, электрические метки, грозовые клетки, полёт и сбор манакамней.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
