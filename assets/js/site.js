@@ -398,11 +398,31 @@
       btn.addEventListener('click', () => {
         const action = btn.dataset.mobileAction;
         if (action === 'top') window.scrollTo({top:0,behavior:'smooth'});
-        if (action === 'toc') document.querySelector('.toc')?.scrollIntoView({behavior:'smooth',block:'start'});
+        if (action === 'toc') (document.querySelector('.toc') || document.querySelector('.content'))?.scrollIntoView({behavior:'smooth',block:'start'});
         if (action === 'search') document.querySelector('[data-guide-search]')?.focus();
       });
     });
   }
 
 
+})();
+
+/* THEME — persistent light/dark mode */
+(() => {
+  const root = document.documentElement;
+  const buttons = [...document.querySelectorAll('[data-theme-toggle]')];
+  const theme = () => root.dataset.theme === 'light' ? 'light' : 'dark';
+  const paint = () => buttons.forEach(btn => {
+    const light = theme() === 'light';
+    btn.textContent = light ? '☀️' : '🌙';
+    btn.setAttribute('aria-label', light ? 'Включить тёмную тему' : 'Включить светлую тему');
+    btn.title = light ? 'Тёмная тема' : 'Светлая тема';
+  });
+  buttons.forEach(btn => btn.addEventListener('click', () => {
+    const next = theme() === 'light' ? 'dark' : 'light';
+    root.dataset.theme = next;
+    try { localStorage.setItem('cod-theme', next); } catch(e) {}
+    paint();
+  }));
+  paint();
 })();
