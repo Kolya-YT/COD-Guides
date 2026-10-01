@@ -9,7 +9,7 @@ title: COD Guides
     <h1>Гайды по <span>Call of Dragons</span></h1>
     <p>Разбираем исполинов и игровые механики простым языком — без лишней воды.</p>
     <div class="home-hero-meta">
-      <span>🌋 14 исполинов</span>
+      <span>🌋 18 исполинов</span>
       <span>📱 Удобно с телефона</span>
     </div>
   </div>
@@ -32,7 +32,7 @@ title: COD Guides
     <div class="home-kicker">CALL OF DRAGONS · PVE</div>
     <h2>🌋 Исполины</h2>
   </div>
-  <span class="guide-count" data-count="giants">14 гайдов</span>
+  <span class="guide-count" data-count="giants">18 гайдов</span>
 </div>
 
 <div class="guide-grid" data-category="giants">
@@ -175,6 +175,47 @@ title: COD Guides
       <div class="guide-card-tag">👹 PVE · ИСПОЛИН</div>
       <h3>Гигант</h3>
       <p>Атаки, тролли, щит, артефакты, камни лечения и ярость.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+
+  <a class="guide-card" href="{{ '/guides/direbear/' | relative_url }}" data-updated="1 октября 2026">
+    <img src="https://codfan.com/img/behemots/direbear.png?v=1.1.0" alt="Лютомедведь">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🐻 PVE · ИСПОЛИН</div>
+      <h3>Лютомедведь</h3>
+      <p>Dark Rush, Darkseal, оглушение, Frenzy и окно −40% DEF.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/ognennyi-drakon/' | relative_url }}" data-updated="1 октября 2026">
+    <img src="https://codfan.com/img/behemots/flame_dragon.png" alt="Огненный дракон">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🔥 PVE · ИСПОЛИН</div>
+      <h3>Огненный дракон</h3>
+      <p>Shattering Flame, смена танков, огненные зоны и Бездонные ящеры.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/ledyanoi-drakon/' | relative_url }}" data-updated="1 октября 2026">
+    <img src="https://codfan.com/img/behemots/frost_dragon.png" alt="Ледяной дракон">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">❄️ PVE · ИСПОЛИН</div>
+      <h3>Ледяной дракон</h3>
+      <p>Frost Curse, Cold Front, Winter's Reckoning и ледяные поля.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/gromovoi-ruh/' | relative_url }}" data-updated="1 октября 2026">
+    <img src="https://codfan.com/img/behemots/thunder_roc.png" alt="Громовой Рух">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">⚡ PVE · ИСПОЛИН</div>
+      <h3>Громовой Рух</h3>
+      <p>Вода, Electric Blast, Storm Cage, Soar и сбор Manastone.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
