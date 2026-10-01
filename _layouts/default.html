@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
 <title>{{ page.title | default: site.title }} — COD Guides</title>
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v=20261001-2">
-<script defer src="{{ '/assets/js/site.js' | relative_url }}?v=20261001-3"></script>
+<script defer src="{{ '/assets/js/site.js' | relative_url }}?v=20261001-4"></script>
 </head>
 <body><div class="reading-progress" data-reading-progress aria-hidden="true"></div><button class="back-top" data-back-top type="button" aria-label="Наверх">↑</button>
 <header class="top">
@@ -25,6 +25,7 @@
 <main class="page home-page">
   {{ content }}
 </main>
+<nav class="mobile-nav" data-mobile-nav aria-label="Мобильная навигация"><a href="{{ '/' | relative_url }}" class="mobile-nav-item is-active">⌂<span>Главная</span></a><button type="button" class="mobile-nav-item" data-mobile-action="search">⌕<span>Поиск</span></button><button type="button" class="mobile-nav-item" data-mobile-action="top">↑<span>Наверх</span></button></nav>
 <footer>🔥 COD Guides · Call of Dragons</footer>
 </body>
 </html>
