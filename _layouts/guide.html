@@ -17,7 +17,8 @@
 <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
 <title>{{ page.title }} — COD Guides</title>
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v=20261001-2">
-<script defer src="{{ '/assets/js/site.js' | relative_url }}?v=20261001-7"></script>
+<script defer src="{{ '/assets/js/site.js' | relative_url }}?v=20261001-8"></script>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="ae881afe-4d3a-4813-8750-4247bb5b1934"></script>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -29,10 +30,7 @@
   "publisher":{"@type":"Organization","name":"COD Guides","url":"{{ site.url }}{{ site.baseurl }}"}
 }
 </script>
-<script>
-{% if site.goatcounter_code and site.goatcounter_code != "" %}window.goatcounter={};{% endif %}
-</script>
-{% if site.goatcounter_code and site.goatcounter_code != "" %}<script data-goatcounter="https://{{ site.goatcounter_code }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>{% endif %}
+{% endif %}
 </head>
 <body><div class="reading-progress" data-reading-progress aria-hidden="true"></div><button class="back-top" data-back-top type="button" aria-label="Наверх">↑</button>
 <header class="top"><a href="{{ '/' | relative_url }}" class="brand">🔥 COD <b>GUIDES</b></a><a href="{{ '/' | relative_url }}" class="back">← Назад</a></header>
