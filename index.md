@@ -7,10 +7,9 @@ title: COD Guides
   <div class="home-hero-copy">
     <div class="home-kicker">CALL OF DRAGONS · GUIDE HUB</div>
     <h1>Гайды по <span>Call of Dragons</span></h1>
-    <p>Разбираем исполинов, питомцев и игровые механики простым языком — без лишней воды.</p>
+    <p>Разбираем исполинов и игровые механики простым языком — без лишней воды.</p>
     <div class="home-hero-meta">
       <span>🌋 14 исполинов</span>
-      <span>🐾 Питомцы</span>
       <span>📱 Удобно с телефона</span>
     </div>
   </div>
@@ -27,7 +26,6 @@ title: COD Guides
     <div class="category-nav" role="tablist" aria-label="Категории гайдов">
   <button class="category-btn is-active" type="button" data-category-filter="all">Все</button>
   <button class="category-btn" type="button" data-category-filter="giants">🌋 Исполины</button>
-  <button class="category-btn" type="button" data-category-filter="pets">🐾 Питомцы</button>
   </div>
 
 <div class="home-section-head" data-section="giants">
@@ -182,28 +180,6 @@ title: COD Guides
     </div>
   </a>
 
-</div>
-
-<div class="home-section-head pets-section-head" data-section="pets">
-  <div>
-    <div class="home-kicker">CALL OF DRAGONS · WAR PETS</div>
-    <h2>🐾 Питомцы</h2>
-  </div>
-  <span class="guide-count" data-count="pets">1 гайд</span>
-</div>
-
-<div class="guide-grid pets-grid">
-<div class="guide-card guide-card-pet-wrap" data-category="pets">
-  <a class="guide-card-pet" href="{{ '/guides/pitomcy/' | relative_url }}">
-    <img src="https://cdn-www.bluestacks.com/bs-images/call-of-dragons-war-pets-guide-vi-7.png" alt="Питомцы Call of Dragons" onerror="this.onerror=null;this.src='{{ '/assets/img/pets-category-fallback.svg' | relative_url }}';">
-    <div class="guide-card-body">
-      <div class="guide-card-tag">🐾 PVE · ПИТОМЦЫ</div>
-      <h3>Питомцы</h3>
-      <p>Полный гайд по захвату, характеристикам, талантам, навыкам, восстановлению и сборке.</p>
-      <span class="guide-open">Открыть гайд <b>→</b></span>
-    </div>
-  </a>
-</div>
 </div>
 
 <div class="home-empty" data-search-empty hidden>
