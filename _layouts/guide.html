@@ -54,35 +54,46 @@
     <div class="content">{{ content }}</div>
 
     {% assign guides = site.guides | sort: "path" %}
-    {% assign guide_index = nil %}
+    {% assign current_guide = nil %}
+    {% assign previous_guide = nil %}
+    {% assign next_guide = nil %}
+    {% assign found_current = false %}
+
     {% for guide in guides %}
-      {% if guide.path == page.path %}
-        {% assign guide_index = forloop.index0 %}
+      {% if found_current %}
+        {% if next_guide == nil %}
+          {% assign next_guide = guide %}
+        {% endif %}
+      {% elsif guide.url == page.url or guide.path == page.path %}
+        {% assign current_guide = guide %}
+        {% assign found_current = true %}
+      {% else %}
+        {% assign previous_guide = guide %}
       {% endif %}
     {% endfor %}
-    {% if guide_index != nil %}
-      {% assign prev_index = guide_index | minus: 1 %}
-      {% assign next_index = guide_index | plus: 1 %}
-      {% assign last_index = guides.size | minus: 1 %}
+
+    {% if current_guide != nil %}
       <nav class="guide-nav" aria-label="Навигация по гайдам">
-        {% if guide_index > 0 %}
-          <a class="guide-nav-link guide-nav-prev" href="{{ guides[prev_index].url | relative_url }}">
-            <small>← Предыдущий</small><strong>{{ guides[prev_index].title }}</strong>
+        {% if previous_guide != nil %}
+          <a class="guide-nav-link guide-nav-prev" href="{{ previous_guide.url | relative_url }}">
+            <small>← Предыдущий гайд</small><strong>{{ previous_guide.title }}</strong>
           </a>
         {% else %}
-          <a class="guide-nav-link guide-nav-prev is-disabled" href="#">
-            <small>← Предыдущий</small><strong>Это первый гайд</strong>
-          </a>
+          <span class="guide-nav-link guide-nav-prev is-disabled">
+            <small>← Предыдущий гайд</small><strong>Это первый гайд</strong>
+          </span>
         {% endif %}
+
         <a class="guide-nav-home" href="{{ '/' | relative_url }}" aria-label="Все гайды">⌂</a>
-        {% if guide_index < last_index %}
-          <a class="guide-nav-link guide-nav-next" href="{{ guides[next_index].url | relative_url }}">
-            <small>Следующий →</small><strong>{{ guides[next_index].title }}</strong>
+
+        {% if next_guide != nil %}
+          <a class="guide-nav-link guide-nav-next" href="{{ next_guide.url | relative_url }}">
+            <small>Следующий гайд →</small><strong>{{ next_guide.title }}</strong>
           </a>
         {% else %}
-          <a class="guide-nav-link guide-nav-next is-disabled" href="#">
-            <small>Следующий →</small><strong>Это последний гайд</strong>
-          </a>
+          <span class="guide-nav-link guide-nav-next is-disabled">
+            <small>Следующий гайд →</small><strong>Это последний гайд</strong>
+          </span>
         {% endif %}
       </nav>
     {% endif %}
