@@ -53,7 +53,7 @@
     {% endif %}
     <div class="content">{{ content }}</div>
 
-    {% assign guides = site.guides | sort: "path" %}
+    {% assign guides = site.pages | where_exp: "item", "item.path contains 'guides/'" | sort: "path" %}
     {% assign current_guide = nil %}
     {% assign previous_guide = nil %}
     {% assign next_guide = nil %}
@@ -64,7 +64,7 @@
         {% if next_guide == nil %}
           {% assign next_guide = guide %}
         {% endif %}
-      {% elsif guide.url == page.url or guide.path == page.path %}
+      {% elsif guide.path == page.path or guide.url == page.url %}
         {% assign current_guide = guide %}
         {% assign found_current = true %}
       {% else %}
