@@ -95,15 +95,20 @@
 })();
 
 
-/* PET BUILD SKILL ART — real CoD Fan icons */
+/* PET BUILD SKILL ART — real CoD Fan icons with filename fallback */
 (() => {
-  const normalizeSlug = (el) => {
-    let slug = (el.querySelector('.pet-build-skill-art')?.dataset.skillIcon || '').trim();
-    const title = (el.getAttribute('title') || '').trim();
-    if (!slug) return '';
-    if (/^Улучш\\./i.test(title) && !slug.startsWith('advanced_')) slug = 'advanced_' + slug;
-    if (/^Интенсив\\./i.test(title) && !slug.startsWith('intense_')) slug = 'intense_' + slug;
-    return slug;
+  const normalizeSlug = (el) => (el.querySelector('.pet-build-skill-art')?.dataset.skillIcon || '').trim();
+  const candidates = (slug) => {
+    const out = [];
+    const add = (x) => { if (x && !out.includes(x)) out.push(x); };
+    add(slug);
+    add(slug.replaceAll('_', '-'));
+    if (slug.startsWith('advanced_') || slug.startsWith('intense_')) {
+      const base = slug.replace(/^(advanced|intense)_/, '');
+      add(base);
+      add(base.replaceAll('_', '-'));
+    }
+    return out;
   };
 
   document.querySelectorAll('.pet-build-skill').forEach((cell) => {
@@ -113,16 +118,24 @@
     if (!slug) return;
     art.dataset.skillIcon = slug;
     art.innerHTML = '';
+
+    const list = candidates(slug);
+    let index = 0;
     const img = document.createElement('img');
-    img.src = 'https://codfan.com/img/warpets/skills/' + slug + '.png?v=1.1.0';
     img.alt = '';
     img.loading = 'lazy';
     img.decoding = 'async';
+    const loadNext = () => {
+      if (index >= list.length) {
+        cell.classList.add('is-broken');
+        art.classList.add('is-broken-art');
+        return;
+      }
+      img.src = 'https://codfan.com/img/warpets/skills/' + list[index++] + '.png?v=1.1.0';
+    };
+    img.addEventListener('error', loadNext);
     art.appendChild(img);
-    img.addEventListener('error', () => {
-      cell.classList.add('is-broken');
-      art.classList.add('is-broken-art');
-    }, {once:true});
+    loadNext();
   });
 })();
 
