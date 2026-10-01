@@ -416,8 +416,13 @@
       // direct JSON request and keeps the counter compatible with its API.
       window.goatcounter.visit_count({
         append: '[data-guide-views]',
+        path: location.pathname,
+        type: 'html',
         no_branding: true,
-        style: 'div { display:inline; border:0; padding:0; margin:0; background:transparent; color:inherit; font:inherit; }'
+        attr: {
+          style: 'display:inline'
+        },
+        style: 'div { display:inline !important; width:auto !important; height:auto !important; min-width:0 !important; min-height:0 !important; border:0 !important; padding:0 !important; margin:0 !important; background:transparent !important; color:inherit !important; font:inherit !important; } #gcvc-views { color:inherit !important; font:inherit !important; }'
       });
 
       stats.hidden = false;
