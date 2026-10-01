@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: "Direbear"
+title: "🐻 Лютомедведь (Direbear)"
 description: "Полный разбор Direbear: Dark Rush, Darkseal, Frenzy, окно -40% DEF, камни лечения и ярость."
 category: "CALL OF DRAGONS · PVE"
 updated: "1 октября 2026"
