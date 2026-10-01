@@ -29,6 +29,10 @@
   "publisher":{"@type":"Organization","name":"COD Guides","url":"{{ site.url }}{{ site.baseurl }}"}
 }
 </script>
+<script>
+{% if site.goatcounter_code and site.goatcounter_code != "" %}window.goatcounter={};{% endif %}
+</script>
+{% if site.goatcounter_code and site.goatcounter_code != "" %}<script data-goatcounter="https://{{ site.goatcounter_code }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>{% endif %}
 </head>
 <body><div class="reading-progress" data-reading-progress aria-hidden="true"></div><button class="back-top" data-back-top type="button" aria-label="Наверх">↑</button>
 <header class="top"><a href="{{ '/' | relative_url }}" class="brand">🔥 COD <b>GUIDES</b></a><a href="{{ '/' | relative_url }}" class="back">← Назад</a></header>
@@ -40,6 +44,7 @@
       {% if page.description %}<p>{{ page.description }}</p>{% endif %}
       <div class="guide-actions">
         {% if page.updated %}<div class="updated">Обновлено: {{ page.updated }}</div>{% endif %}
+        <div class="guide-stats" data-guide-stats hidden>👁️ <span data-guide-views>—</span> просмотров</div>
         <button class="share-btn" type="button" data-share>📤 Поделиться</button>
       </div>
     </div>
@@ -52,6 +57,24 @@
     </div>
     {% endif %}
     <div class="content">{{ content }}</div>
+
+    {% assign guides = site.guides %}
+    {% for guide in guides %}
+      {% if guide.url == page.url %}
+        {% assign guide_index = forloop.index0 %}
+      {% endif %}
+    {% endfor %}
+    {% assign prev_index = guide_index | minus: 1 %}
+    {% assign next_index = guide_index | plus: 1 %}
+    <nav class="guide-nav" aria-label="Навигация по гайдам">
+      <a class="guide-nav-link guide-nav-prev{% if guide_index == 0 %} is-disabled{% endif %}" href="{% if guide_index > 0 %}{{ guides[prev_index].url | relative_url }}{% else %}#{% endif %}">
+        <small>← Предыдущий</small><strong>{% if guide_index > 0 %}{{ guides[prev_index].title }}{% else %}Это первый гайд{% endif %}</strong>
+      </a>
+      <a class="guide-nav-home" href="{{ '/' | relative_url }}" aria-label="Все гайды">⌂</a>
+      <a class="guide-nav-link guide-nav-next{% if guide_index >= guides.size | minus: 1 %} is-disabled{% endif %}" href="{% if guide_index < guides.size | minus: 1 %}{{ guides[next_index].url | relative_url }}{% else %}#{% endif %}">
+        <small>Следующий →</small><strong>{% if guide_index < guides.size | minus: 1 %}{{ guides[next_index].title }}{% else %}Это последний гайд{% endif %}</strong>
+      </a>
+    </nav>
   </article>
 </main>
 <footer>🔥 COD Guides · Call of Dragons</footer>
