@@ -471,3 +471,21 @@ html[data-theme="light"] .content blockquote{color:#5a4a40}
 html[data-theme="light"] .content .note{color:#57483e}
 html[data-theme="light"] .content .danger{color:#633d38}
 html[data-theme="light"] footer{color:#718092}
+
+/* MOBILE THEME: keep only the bottom-bar switcher */
+@media(max-width:700px){.desktop-theme-toggle{display:none!important}}
+/* LIGHT THEME — stronger readable text */
+html[data-theme="light"] .guide-head p{color:#465463}
+html[data-theme="light"] .content h2,html[data-theme="light"] .content h3{color:#18232e}
+html[data-theme="light"] .content p,html[data-theme="light"] .content li{color:#465463}
+html[data-theme="light"] .content strong{color:#18232e}
+html[data-theme="light"] .content td{color:#465463}
+html[data-theme="light"] .content th{color:#a94418}
+html[data-theme="light"] .toc a{color:#3f4d5b}
+html[data-theme="light"] .toc a.is-current{color:#a94418;background:#fff0e7}
+html[data-theme="light"] .updated{color:#62707f}
+html[data-theme="light"] .guide-nav-link small{color:#62707f}
+html[data-theme="light"] .guide-nav-link strong{color:#18232e}
+html[data-theme="light"] .content blockquote{color:#4b4038;background:#fff5ee}
+html[data-theme="light"] .content .note{color:#4b4038;background:#fff5ee}
+html[data-theme="light"] .content .danger{color:#5b3530;background:#fff0ee}
