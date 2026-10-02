@@ -590,3 +590,6 @@ html[data-theme="light"] .guide-nav-link strong{color:#17202b}
 html[data-theme="light"] .guide-nav-link:hover{background:#fff7f2;border-color:#ff9a69}
 html[data-theme="light"] .guide-nav-home{color:#c6531f}
 html[data-theme="light"] .search-result-count{color:#c6531f}
+
+.image-missing{min-height:220px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#121720,#0d1117);border:1px dashed #343c48;border-radius:16px;color:#7f8997;font-size:13px;text-align:center;padding:20px}
+html[data-theme="light"] .image-missing{background:linear-gradient(135deg,#f5f7fa,#edf1f5);border-color:#d5dde6;color:#687687}
