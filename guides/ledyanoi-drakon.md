@@ -14,7 +14,7 @@ toc:
   - { label: "Советы", href: "#tips" }
 ---
 
-![Ледяной дракон — Call of Dragons](https://codfan.com/img/behemoths/portrait/frost_dragon.png?v=1.1.0)
+![Ледяной дракон — Call of Dragons]({{ '/assets/guides/behemoths/frost-dragon-cover.svg' | relative_url }})
 
 ## ❄️ Общая механика {#mechanics}
 
@@ -43,7 +43,7 @@ toc:
 
 > ⚠️ Самая опасная ситуация — замереть внутри другой ледяной зоны.
 
-![Ледяная тюрьма](https://codfan.com/img/behemoths/skills/frost_dragon_4.png?v=1.1.0)
+![Ледяная тюрьма]({{ '/assets/guides/behemoths/frost-front.svg' | relative_url }})
 
 ## 🌨️ Холодный фронт {#front}
 
@@ -61,7 +61,7 @@ toc:
 
 🏃 Заранее выйдите за край ледяной области и оставайтесь там до окончания механики.
 
-![Холодный фронт](https://codfan.com/img/behemoths/skills/frost_dragon_10.png?v=1.1.0)
+![Холодный фронт]({{ '/assets/guides/behemoths/frost-front.svg' | relative_url }})
 
 ## 💀 Зимний приговор {#reckoning}
 
@@ -87,7 +87,7 @@ toc:
 
 > 🚨 Не ставьте ледяные области на пути движения рейда.
 
-![Ледяные ящеры](https://codfan.com/img/behemoths/skills/frost_dragon_11.png?v=1.1.0)
+![Ледяные ящеры]({{ '/assets/guides/behemoths/frost-front.svg' | relative_url }})
 
 ## 🧩 Советы {#tips}
 
