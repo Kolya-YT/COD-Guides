@@ -15,7 +15,7 @@ toc:
   - { label: "Советы", href: "#tips" }
 ---
 
-![Огненный дракон — Call of Dragons](https://codfan.com/img/behemoths/portrait/flame_dragon.png?v=1.1.0)
+![Огненный дракон — Call of Dragons]({{ '/assets/guides/behemoths/flame-dragon-cover.svg' | relative_url }})
 
 ## 🔥 Общая механика {#mechanics}
 
@@ -55,7 +55,7 @@ toc:
 4. Через 30 секунд его стаки исчезают.
 5. Танки повторяют цикл.
 
-![Пылающее разрушение](https://codfan.com/img/behemoths/skills/flame_dragon_1.png?v=1.1.0)
+![Пылающее разрушение]({{ '/assets/guides/behemoths/flame-stacks.svg' | relative_url }})
 
 ## 🧭 Позиционирование {#position}
 
@@ -95,7 +95,7 @@ toc:
 
 Накладывает **Страх** — отряды временно двигаются неконтролируемо.
 
-![Теневой огненный рывок](https://codfan.com/img/behemoths/skills/flame_dragon_7.png?v=1.1.0)
+![Теневой огненный рывок]({{ '/assets/guides/behemoths/flame-stacks.svg' | relative_url }})
 
 ## 🦎 Бездонные ящеры {#lizards}
 
@@ -120,7 +120,7 @@ toc:
 
 Если ящеры стоят рядом, они усиливают атаку и защиту друг друга.
 
-![Бездонные ящеры](https://codfan.com/img/behemoths/skills/flame_dragon_21.png?v=1.1.0)
+![Бездонные ящеры]({{ '/assets/guides/behemoths/flame-stacks.svg' | relative_url }})
 
 ## 💀 Ярость {#rage}
 
