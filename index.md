@@ -181,7 +181,7 @@ title: COD Guides
 
 
   <a class="guide-card" href="{{ '/guides/direbear/' | relative_url }}" data-updated="1 октября 2026">
-    <img src="https://codfan.com/img/behemoths/portrait/direbear.png?v=1.1.0" alt="Лютомедведь">
+    <img src="{{ '/assets/guides/behemoths/direbear-cover.svg' | relative_url }}" alt="Лютомедведь">
     <div class="guide-card-body">
       <div class="guide-card-tag">🐻 PVE · ИСПОЛИН</div>
       <h3>Лютомедведь</h3>
@@ -191,7 +191,7 @@ title: COD Guides
   </a>
 
   <a class="guide-card" href="{{ '/guides/ognennyi-drakon/' | relative_url }}" data-updated="1 октября 2026">
-    <img src="https://codfan.com/img/behemoths/portrait/flame_dragon.png?v=1.1.0" alt="Огненный дракон">
+    <img src="{{ '/assets/guides/behemoths/flame-dragon-cover.svg' | relative_url }}" alt="Огненный дракон">
     <div class="guide-card-body">
       <div class="guide-card-tag">🔥 PVE · ИСПОЛИН</div>
       <h3>Огненный дракон</h3>
@@ -201,7 +201,7 @@ title: COD Guides
   </a>
 
   <a class="guide-card" href="{{ '/guides/ledyanoi-drakon/' | relative_url }}" data-updated="1 октября 2026">
-    <img src="https://codfan.com/img/behemoths/portrait/frost_dragon.png?v=1.1.0" alt="Ледяной дракон">
+    <img src="{{ '/assets/guides/behemoths/frost-dragon-cover.svg' | relative_url }}" alt="Ледяной дракон">
     <div class="guide-card-body">
       <div class="guide-card-tag">❄️ PVE · ИСПОЛИН</div>
       <h3>Ледяной дракон</h3>
@@ -211,7 +211,7 @@ title: COD Guides
   </a>
 
   <a class="guide-card" href="{{ '/guides/gromovoi-ruh/' | relative_url }}" data-updated="1 октября 2026">
-    <img src="https://codfan.com/img/behemoths/portrait/thunder_roc.png?v=1.1.0" alt="Громовой Рух">
+    <img src="{{ '/assets/guides/behemoths/thunder-roc-cover.svg' | relative_url }}" alt="Громовой Рух">
     <div class="guide-card-body">
       <div class="guide-card-tag">⚡ PVE · ИСПОЛИН</div>
       <h3>Громовой Рух</h3>
