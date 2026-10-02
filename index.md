@@ -32,7 +32,7 @@ title: COD Guides
     <div class="home-kicker">CALL OF DRAGONS · PVE</div>
     <h2>🌋 Исполины</h2>
   </div>
-  <span class="guide-count" data-count="giants">18 гайдов</span>
+  <span class="guide-count" data-count="giants">17 гайдов</span>
 </div>
 
 <div class="guide-grid" data-category="giants">
@@ -179,7 +179,7 @@ title: COD Guides
     </div>
   </a>
   <a class="guide-card" href="{{ '/guides/ognennyi-drakon/' | relative_url }}" data-updated="1 октября 2026">
-    <img src="{{ '/assets/guides/behemoths/flame-dragon-cover.svg' | relative_url }}" alt="Огненный дракон">
+    <img src="https://callofdragonsguides.com/wp-content/uploads/2023/01/Flame-Dragon-Call-of-Dragons-1024x576.png" alt="Огненный дракон">
     <div class="guide-card-body">
       <div class="guide-card-tag">🔥 PVE · ИСПОЛИН</div>
       <h3>Огненный дракон</h3>
@@ -189,7 +189,7 @@ title: COD Guides
   </a>
 
   <a class="guide-card" href="{{ '/guides/ledyanoi-drakon/' | relative_url }}" data-updated="1 октября 2026">
-    <img src="{{ '/assets/guides/behemoths/frost-dragon-cover.svg' | relative_url }}" alt="Ледяной дракон">
+    <img src="https://callofdragonsguides.com/wp-content/uploads/2023/09/Frost-Dragon-Guide-Call-of-Dragons-1120x630.jpg" alt="Ледяной дракон">
     <div class="guide-card-body">
       <div class="guide-card-tag">❄️ PVE · ИСПОЛИН</div>
       <h3>Ледяной дракон</h3>
@@ -199,7 +199,7 @@ title: COD Guides
   </a>
 
   <a class="guide-card" href="{{ '/guides/gromovoi-ruh/' | relative_url }}" data-updated="1 октября 2026">
-    <img src="{{ '/assets/guides/behemoths/thunder-roc-cover.svg' | relative_url }}" alt="Громовой Рух">
+    <img src="https://callofdragonsguides.com/wp-content/uploads/2023/01/Thunder-Roc-Guide-1120x630.jpg" alt="Громовой Рух">
     <div class="guide-card-body">
       <div class="guide-card-tag">⚡ PVE · ИСПОЛИН</div>
       <h3>Громовой Рух</h3>
