@@ -15,7 +15,7 @@ toc:
   - { label: "Советы", href: "#tips" }
 ---
 
-![Лютомедведь — Call of Dragons](https://codfan.com/img/behemoths/portrait/direbear.png?v=1.1.0)
+![Лютомедведь — Call of Dragons]({{ '/assets/guides/behemoths/direbear-cover.svg' | relative_url }})
 
 ## 🐻 Общая механика {#mechanics}
 
@@ -66,7 +66,7 @@ toc:
 >
 > 🔴 **Неправильно:** убегать назад по линии рывка.
 
-![Тёмный рывок — схема уклонения](https://codfan.com/img/behemoths/skills/direbear_4.png?v=1.1.0)
+![Тёмный рывок — схема уклонения]({{ '/assets/guides/behemoths/direbear-dodge.svg' | relative_url }})
 
 ## 🟣 Печать тьмы {#darkseal}
 
@@ -80,7 +80,7 @@ toc:
 
 **Сначала выйди из зоны, затем снимай её.** Не стой в печати ради рассеивания.
 
-![Печать тьмы](https://codfan.com/img/behemoths/skills/direbear_9.png?v=1.1.0)
+![Печать тьмы]({{ '/assets/guides/behemoths/direbear-seal.svg' | relative_url }})
 
 ## 💎 Камни лечения {#stones}
 
