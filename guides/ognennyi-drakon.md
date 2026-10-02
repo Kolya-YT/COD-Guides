@@ -15,7 +15,7 @@ toc:
   - { label: "Чек-лист", href: "#tips" }
 ---
 
-![Огненный дракон — Call of Dragons](../assets/guides/heroes/ognennyi-drakon-hero.svg)
+![Огненный дракон — Call of Dragons](https://callofdragonsguides.com/wp-content/uploads/2023/01/Flame-Dragon-Call-of-Dragons-1024x576.png)
 
 ### 🎬 Визуальная схема боя
 
