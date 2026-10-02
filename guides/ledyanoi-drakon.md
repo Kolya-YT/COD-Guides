@@ -15,7 +15,7 @@ toc:
   - { label: "Чек-лист", href: "#tips" }
 ---
 
-![Ледяной дракон — Call of Dragons](../assets/guides/heroes/ledyanoi-drakon-hero.svg)
+![Ледяной дракон — Call of Dragons](https://callofdragonsguides.com/wp-content/uploads/2023/09/Frost-Dragon-Guide-Call-of-Dragons-1120x630.jpg)
 
 ### 🎬 Визуальная схема боя
 
