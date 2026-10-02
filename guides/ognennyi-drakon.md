@@ -17,6 +17,11 @@ toc:
 
 ![Огненный дракон — Call of Dragons](https://cdn.cod.guide/wp-content/uploads/2023/01/Flame-Dragon-Call-of-Dragons-1024x576.png)
 
+### 🎬 Визуальная схема боя
+
+![Визуализация механик Огненного дракона](../assets/guides/mechanics/ognennyi-drakon.svg)
+
+
 ## 🔥 Главное {#mechanics}
 
 Бой строится вокруг **Пылающего разрушения**. Передние атаки дракона накладывают стаки, а на 10 стаках следующий удар становится смертельным.
