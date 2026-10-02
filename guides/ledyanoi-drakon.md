@@ -17,6 +17,11 @@ toc:
 
 ![Ледяной дракон — Call of Dragons](https://callofdragonsguides.com/wp-content/uploads/2023/09/Frost-Dragon-Guide-Call-of-Dragons-1120x630.jpg)
 
+### 🎬 Визуальная схема боя
+
+![Визуализация механик Ледяного дракона](../assets/guides/mechanics/ledyanoi-drakon.svg)
+
+
 ## ❄️ Главное {#mechanics}
 
 Бой строится вокруг **Ледяного проклятия**. Стаки замедляют легион, а на 10 стаках он получает заморозку на 3 секунды.
