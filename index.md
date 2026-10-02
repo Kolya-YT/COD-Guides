@@ -9,7 +9,7 @@ title: COD Guides
     <h1>Гайды по <span>Call of Dragons</span></h1>
     <p>Разбираем исполинов и игровые механики простым языком — без лишней воды.</p>
     <div class="home-hero-meta">
-      <span>🌋 18 исполинов · 17 гайдов</span>
+      <span>🌋 17 исполинов · 17 гайдов</span>
       <span>📱 Удобно с телефона</span>
     </div>
   </div>
