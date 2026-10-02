@@ -59,6 +59,8 @@ toc:
 
 ## 🧭 Позиционирование {#position}
 
+![Иллюстрация механики]({{ '/assets/guides/behemoths/flame-position.svg' | relative_url }})
+
 У дракона нет полностью безопасной стороны.
 
 - 🔥 Передняя дуга — когти и огненный рывок.
@@ -123,6 +125,8 @@ toc:
 ![Бездонные ящеры]({{ '/assets/guides/behemoths/flame-lizards.svg' | relative_url }})
 
 ## 💀 Ярость {#rage}
+
+![Иллюстрация механики]({{ '/assets/guides/behemoths/flame-rage.svg' | relative_url }})
 
 Через **10 минут** Огненный дракон применяет смертельную атаку и уничтожает все легионы в логове.
 
