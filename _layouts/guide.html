@@ -59,28 +59,29 @@
     {% endif %}
     <div class="content">{{ content }}</div>
 
-    {% assign guides = site.pages | where_exp: "item", "item.path contains 'guides/'" | sort: "path" %}
-    {% assign current_guide = nil %}
+    {% assign guide_paths = "guides/giant.md|guides/ursus.md|guides/lihoursus.md|guides/direbear.md|guides/hydra.md|guides/magma.md|guides/mehastrazh.md|guides/miazmovyi-gigant.md|guides/ledyanoi-gigant.md|guides/ledyanoi-drakon.md|guides/ognennyi-drakon.md|guides/plameneya.md|guides/gromovoi-drakon.md|guides/gromovoi-ruh.md|guides/kosmicheskiy-ruh.md|guides/sumrachnyi-drakon.md|guides/haribda.md|guides/vosstavshiy-gigant.md" | split: "|" %}
+    {% assign current_index = -1 %}
     {% assign previous_guide = nil %}
     {% assign next_guide = nil %}
-    {% assign found_current = false %}
-
-    {% for guide in guides %}
-      {% if found_current %}
-        {% if next_guide == nil %}
-          {% assign next_guide = guide %}
-        {% endif %}
-      {% elsif guide.path == page.path or guide.url == page.url %}
-        {% assign current_guide = guide %}
-        {% assign found_current = true %}
-      {% else %}
-        {% assign previous_guide = guide %}
+    {% for path in guide_paths %}
+      {% assign guide = site.pages | where: "path", path | first %}
+      {% if guide.path == page.path %}
+        {% assign current_index = forloop.index0 %}
       {% endif %}
     {% endfor %}
-
-    {% if current_guide != nil %}
+    {% if current_index >= 0 %}
+      {% assign previous_index = current_index | minus: 1 %}
+      {% assign next_index = current_index | plus: 1 %}
+      {% if previous_index >= 0 %}
+        {% assign previous_path = guide_paths[previous_index] %}
+        {% assign previous_guide = site.pages | where: "path", previous_path | first %}
+      {% endif %}
+      {% if next_index < guide_paths.size %}
+        {% assign next_path = guide_paths[next_index] %}
+        {% assign next_guide = site.pages | where: "path", next_path | first %}
+      {% endif %}
       <nav class="guide-nav" aria-label="Навигация по гайдам">
-        {% if previous_guide != nil %}
+        {% if previous_guide %}
           <a class="guide-nav-link guide-nav-prev" href="{{ previous_guide.url | relative_url }}">
             <small>← Предыдущий гайд</small><strong>{{ previous_guide.title }}</strong>
           </a>
@@ -92,7 +93,7 @@
 
         <a class="guide-nav-home" href="{{ '/' | relative_url }}" aria-label="Все гайды">⌂</a>
 
-        {% if next_guide != nil %}
+        {% if next_guide %}
           <a class="guide-nav-link guide-nav-next" href="{{ next_guide.url | relative_url }}">
             <small>Следующий гайд →</small><strong>{{ next_guide.title }}</strong>
           </a>
@@ -102,6 +103,7 @@
           </span>
         {% endif %}
       </nav>
+    {% endif %}
     {% endif %}
   </article>
 </main>
