@@ -15,7 +15,7 @@ toc:
   - { label: "Советы", href: "#tips" }
 ---
 
-![Громовой Рух — Call of Dragons](https://codfan.com/img/behemoths/portrait/thunder_roc.png?v=1.1.0)
+![Громовой Рух — Call of Dragons]({{ '/assets/guides/behemoths/thunder-roc-cover.svg' | relative_url }})
 
 ## ⚡ Общая механика {#mechanics}
 
@@ -40,7 +40,7 @@ toc:
 
 > ❗ Задача танка — не просто держать агро. Нужно постоянно контролировать место, где стоит Рух.
 
-![Громовой Рух — позиционирование](https://codfan.com/img/behemoths/skills/thunder_roc_3.png?v=1.1.0)
+![Громовой Рух — позиционирование]({{ '/assets/guides/behemoths/thunder-mark.svg' | relative_url }})
 
 ## 💧 Вода и грозовые клетки {#water}
 
@@ -64,7 +64,7 @@ toc:
 
 > 🚨 Поэтому держитесь ближе к центру. Отбрасывание из центра значительно безопаснее.
 
-![Грозовая клетка и вода](https://codfan.com/img/behemoths/skills/thunder_roc_4.png?v=1.1.0)
+![Грозовая клетка и вода]({{ '/assets/guides/behemoths/thunder-mark.svg' | relative_url }})
 
 ## ⚡ Электрическая вспышка {#blast}
 
@@ -79,7 +79,7 @@ toc:
 
 Молния задевает окружающие легионы. Поэтому просто выйти из воды недостаточно — нужно отойти от остальных.
 
-![Электрическая вспышка](https://codfan.com/img/behemoths/skills/thunder_roc_7.png?v=1.1.0)
+![Электрическая вспышка]({{ '/assets/guides/behemoths/thunder-mark.svg' | relative_url }})
 
 ## 🕊️ Полёт и камни маны {#soar}
 
@@ -100,7 +100,7 @@ toc:
 
 Камни лечения можно собрать в этот же момент — они восстанавливают легкораненые войска легиона.
 
-![Полёт Громового Руха](https://codfan.com/img/behemoths/skills/thunder_roc_6.png?v=1.1.0)
+![Полёт Громового Руха]({{ '/assets/guides/behemoths/thunder-mark.svg' | relative_url }})
 
 ## ⚡ Ярость {#rage}
 
