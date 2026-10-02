@@ -593,3 +593,16 @@ html[data-theme="light"] .search-result-count{color:#c6531f}
 
 .image-missing{min-height:220px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#121720,#0d1117);border:1px dashed #343c48;border-radius:16px;color:#7f8997;font-size:13px;text-align:center;padding:20px}
 html[data-theme="light"] .image-missing{background:linear-gradient(135deg,#f5f7fa,#edf1f5);border-color:#d5dde6;color:#687687}
+
+
+/* GUIDE CONTENT MOBILE SAFETY — prevent accidental horizontal/grid layout */
+.guide > .content{display:block!important;width:100%;max-width:100%;min-width:0;overflow-x:hidden}
+.guide > .content > *{max-width:100%;min-width:0}
+.guide > .content h2,.guide > .content h3,.guide > .content p,.guide > .content ul,.guide > .content ol,.guide > .content blockquote,.guide > .content figure,.guide > .content img{display:block;float:none;position:relative}
+.guide > .content h2,.guide > .content h3{width:100%;clear:both}
+@media(max-width:700px){
+  .guide > .content{padding:22px 18px!important}
+  .guide > .content h2{font-size:26px;line-height:1.2;overflow-wrap:anywhere}
+  .guide > .content p,.guide > .content li{font-size:16px;line-height:1.7;overflow-wrap:anywhere}
+  .guide > .content img{width:100%;height:auto}
+}
