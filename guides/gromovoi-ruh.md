@@ -14,7 +14,7 @@ toc:
   - { label: "Чек-лист", href: "#tips" }
 ---
 
-![Громовой Рух — Call of Dragons](../assets/guides/heroes/gromovoi-ruh-hero.svg)
+![Громовой Рух — Call of Dragons](https://callofdragonsguides.com/wp-content/uploads/2023/01/Thunder-Roc-Guide-1120x630.jpg)
 
 ### 🎬 Визуальная схема боя
 
