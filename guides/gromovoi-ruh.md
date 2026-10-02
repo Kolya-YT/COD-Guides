@@ -40,7 +40,7 @@ toc:
 
 > ❗ Задача танка — не просто держать агро. Нужно постоянно контролировать место, где стоит Рух.
 
-![Громовой Рух — позиционирование]({{ '/assets/guides/behemoths/thunder-mark.svg' | relative_url }})
+![Громовой Рух — позиционирование]({{ '/assets/guides/behemoths/thunder-strike.svg' | relative_url }})
 
 ## 💧 Вода и грозовые клетки {#water}
 
@@ -64,7 +64,7 @@ toc:
 
 > 🚨 Поэтому держитесь ближе к центру. Отбрасывание из центра значительно безопаснее.
 
-![Грозовая клетка и вода]({{ '/assets/guides/behemoths/thunder-mark.svg' | relative_url }})
+![Грозовая клетка и вода]({{ '/assets/guides/behemoths/thunder-zones.svg' | relative_url }})
 
 ## ⚡ Электрическая вспышка {#blast}
 
@@ -79,7 +79,7 @@ toc:
 
 Молния задевает окружающие легионы. Поэтому просто выйти из воды недостаточно — нужно отойти от остальных.
 
-![Электрическая вспышка]({{ '/assets/guides/behemoths/thunder-mark.svg' | relative_url }})
+![Электрическая вспышка]({{ '/assets/guides/behemoths/thunder-charge.svg' | relative_url }})
 
 ## 🕊️ Полёт и камни маны {#soar}
 
@@ -100,7 +100,7 @@ toc:
 
 Камни лечения можно собрать в этот же момент — они восстанавливают легкораненые войска легиона.
 
-![Полёт Громового Руха]({{ '/assets/guides/behemoths/thunder-mark.svg' | relative_url }})
+![Полёт Громового Руха]({{ '/assets/guides/behemoths/thunder-finisher.svg' | relative_url }})
 
 ## ⚡ Ярость {#rage}
 
