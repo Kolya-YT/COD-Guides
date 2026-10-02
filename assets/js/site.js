@@ -20,6 +20,7 @@
 
     grids.forEach(grid => {
       grid.hidden = !cards.some(card => !card.hidden && grid.contains(card));
+      grid.classList.toggle('is-searching', !!query);
     });
 
     if (count) {
@@ -404,7 +405,8 @@
     buttons.forEach(btn => {
       btn.textContent = light ? '☀️' : '🌙';
       btn.setAttribute('aria-label', light ? 'Включить тёмную тему' : 'Включить светлую тему');
-      btn.title = light ? 'Тёмная тема' : 'Светлая тема';
+      btn.setAttribute('aria-pressed', light ? 'true' : 'false');
+      btn.title = light ? 'Сейчас светлая тема · нажмите для тёмной' : 'Сейчас тёмная тема · нажмите для светлой';
     });
   };
   buttons.forEach(btn => btn.addEventListener('click', () => {
@@ -418,4 +420,22 @@
 /* REMOVE OBSOLETE CATEGORY FILTER PILLS */
 (() => {
   document.querySelectorAll('.category-nav,[data-category-filter]').forEach(el => el.remove());
+})();
+/* BROKEN IMAGE FALLBACK */
+(() => {
+  const fallback = (img) => {
+    if (img.dataset.fallbackApplied) return;
+    img.dataset.fallbackApplied = '1';
+    img.style.display = 'none';
+    const holder = img.closest('.guide-card') || img.closest('.guide-image') || img.closest('.content');
+    if (!holder) return;
+    holder.classList.add('image-missing');
+    if (!holder.querySelector('.image-missing-label')) {
+      const label = document.createElement('div');
+      label.className = 'image-missing-label';
+      label.textContent = '🖼️ Изображение временно недоступно';
+      holder.appendChild(label);
+    }
+  };
+  document.querySelectorAll('img').forEach(img => img.addEventListener('error', () => fallback(img), {once:true}));
 })();
