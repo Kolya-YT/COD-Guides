@@ -43,7 +43,7 @@ toc:
 
 > ⚠️ Самая опасная ситуация — замереть внутри другой ледяной зоны.
 
-![Ледяная тюрьма]({{ '/assets/guides/behemoths/frost-front.svg' | relative_url }})
+![Ледяная тюрьма]({{ '/assets/guides/behemoths/frost-prison.svg' | relative_url }})
 
 ## 🌨️ Холодный фронт {#front}
 
@@ -61,7 +61,7 @@ toc:
 
 🏃 Заранее выйдите за край ледяной области и оставайтесь там до окончания механики.
 
-![Холодный фронт]({{ '/assets/guides/behemoths/frost-front.svg' | relative_url }})
+![Холодный фронт]({{ '/assets/guides/behemoths/frost-reckoning.svg' | relative_url }})
 
 ## 💀 Зимний приговор {#reckoning}
 
@@ -87,7 +87,7 @@ toc:
 
 > 🚨 Не ставьте ледяные области на пути движения рейда.
 
-![Ледяные ящеры]({{ '/assets/guides/behemoths/frost-front.svg' | relative_url }})
+![Ледяные ящеры]({{ '/assets/guides/behemoths/frost-lizards.svg' | relative_url }})
 
 ## 🧩 Советы {#tips}
 
