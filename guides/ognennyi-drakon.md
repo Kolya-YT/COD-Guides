@@ -95,7 +95,7 @@ toc:
 
 Накладывает **Страх** — отряды временно двигаются неконтролируемо.
 
-![Теневой огненный рывок]({{ '/assets/guides/behemoths/flame-stacks.svg' | relative_url }})
+![Теневой огненный рывок]({{ '/assets/guides/behemoths/flame-fire-attacks.svg' | relative_url }})
 
 ## 🦎 Бездонные ящеры {#lizards}
 
@@ -120,7 +120,7 @@ toc:
 
 Если ящеры стоят рядом, они усиливают атаку и защиту друг друга.
 
-![Бездонные ящеры]({{ '/assets/guides/behemoths/flame-stacks.svg' | relative_url }})
+![Бездонные ящеры]({{ '/assets/guides/behemoths/flame-lizards.svg' | relative_url }})
 
 ## 💀 Ярость {#rage}
 
