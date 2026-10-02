@@ -178,18 +178,6 @@ title: COD Guides
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
-
-
-  <a class="guide-card" href="{{ '/guides/direbear/' | relative_url }}" data-updated="1 октября 2026">
-    <img src="{{ '/assets/guides/behemoths/direbear-cover.svg' | relative_url }}" alt="Лютомедведь">
-    <div class="guide-card-body">
-      <div class="guide-card-tag">🐻 PVE · ИСПОЛИН</div>
-      <h3>Лютомедведь</h3>
-      <p>Тёмный рывок, печати тьмы, оглушение и окно −40% защиты.</p>
-      <span class="guide-open">Открыть гайд <b>→</b></span>
-    </div>
-  </a>
-
   <a class="guide-card" href="{{ '/guides/ognennyi-drakon/' | relative_url }}" data-updated="1 октября 2026">
     <img src="{{ '/assets/guides/behemoths/flame-dragon-cover.svg' | relative_url }}" alt="Огненный дракон">
     <div class="guide-card-body">
