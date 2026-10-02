@@ -16,6 +16,11 @@ toc:
 
 ![Громовой Рух](https://callofdragonsguides.com/wp-content/uploads/2023/01/Thunder-Roc-Guide-1120x630.jpg)
 
+### 🎬 Визуальная схема боя
+
+![Визуализация механик Грозового Руха](../assets/guides/mechanics/gromovoi-ruh.svg)
+
+
 ## ⚡ Главное {#mechanics}
 
 У Руха нужно контролировать три вещи: **💧 вода → ⚡ метки → 🪨 камни маны**.
