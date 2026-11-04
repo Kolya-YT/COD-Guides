@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="{% if page.url contains '/en/' %}en{% else %}ru{% endif %}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,9 +21,9 @@
 <body><div class="reading-progress" data-reading-progress aria-hidden="true"></div><button class="back-top" data-back-top type="button" aria-label="Наверх">↑</button>
 <header class="top">
   <a href="{{ '/' | relative_url }}" class="brand">🔥 COD <b>GUIDES</b></a>
+  {% include language-switcher.html %}
   <button class="theme-toggle desktop-theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему" aria-pressed="false">🌙</button>
 </header>
-{% include language-switcher.html %}
 <main class="page home-page">
   {{ content }}
 </main>
