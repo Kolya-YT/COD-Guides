@@ -188,7 +188,7 @@ const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : 'ru-RU';
       arr.forEach((v,i) => {
         const lvl=i+1;
         const value = v === 'a'
-          ? amberIcon + ' 4 ${COD_LANG === 'en' ? 'amber' : 'янтаря'}'
+          ? amberIcon + ` 4 ${COD_LANG === 'en' ? 'amber' : 'янтаря'}`
           : (v.toLocaleString(COD_LOCALE) + ' 🪙');
         html += '<span class="' + (lvl===3 ? 'is-current' : '') + '"><b>' + stars(lvl) + '</b><em>' + value + '</em></span>';
       });
@@ -211,7 +211,7 @@ const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : 'ru-RU';
     const img=el.querySelector('img');
     el.dataset.skillName=(title || img?.dataset?.name || '').replace(/\s*·\s*Ур\.\s*\d+$/,'').trim();
     el.removeAttribute('title');
-    el.setAttribute('aria-label', el.dataset.skillName + ' — 3 ${COD_LANG === 'en' ? 'stars' : 'звезды'}');
+    el.setAttribute('aria-label', el.dataset.skillName + ' — 3 ' + (COD_LANG === 'en' ? 'stars' : 'звезды'));
     el.addEventListener('mouseenter',()=>show(el));
     el.addEventListener('focus',()=>show(el));
     el.addEventListener('mouseleave',hide);
