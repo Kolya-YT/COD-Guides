@@ -11,7 +11,7 @@ except Exception:
     cache = {}
 
 def translate(text):
-    if not text.strip():
+    if not text.strip() or not re.search(r'[А-Яа-яЁё]', text):
         return text
     if text in cache:
         return cache[text]
