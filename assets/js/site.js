@@ -259,27 +259,10 @@ const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : 'ru-RU';
 })();
 
 
-/* SEARCH UX — shortcut, result counter and quick clear */
+/* SEARCH UX — keyboard shortcut and quick clear (result count is handled by the main search controller) */
 (() => {
   const input = document.querySelector('[data-guide-search]');
   if (!input) return;
-  let counter = document.querySelector('[data-search-count]');
-  if (!counter) {
-    const hint = document.querySelector('.search-hint');
-    if (hint) {
-      counter = document.createElement('span');
-      counter.className = 'search-count';
-      counter.dataset.searchCount = '';
-      hint.appendChild(counter);
-    }
-  }
-  const updateCount = () => {
-    const cards = [...document.querySelectorAll('.guide-card')];
-    const query = input.value.trim();
-    const visible = cards.filter(card => !card.hidden).length;
-    if (counter) counter.textContent = query ? ' · Найдено: ' + visible : '';
-  };
-  input.addEventListener('input', updateCount);
   document.addEventListener('keydown', (e) => {
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
       e.preventDefault();
@@ -292,7 +275,6 @@ const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : 'ru-RU';
       input.blur();
     }
   });
-  updateCount();
 })();
 
 /* LATEST UPDATES — generated from the guide cards */
@@ -302,6 +284,7 @@ const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : 'ru-RU';
   const cards = [...document.querySelectorAll('.guide-card[data-updated]')];
   const months = {января:0,февраля:1,марта:2,апреля:3,мая:4,июня:5,июля:6,августа:7,сентября:8,октября:9,ноября:10,декабря:11};
   const parseDate = value => {
+    if (COD_LANG === 'en') return new Date(value);
     const [day,month,year] = value.split(' ');
     return new Date(Number(year), months[month] ?? 0, Number(day));
   };
