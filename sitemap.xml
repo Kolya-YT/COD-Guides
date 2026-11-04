@@ -7,17 +7,11 @@ permalink: /sitemap.xml
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}/</loc>
   </url>
-  {% for guide in site.guides %}
+  {% for page in site.pages %}
+    {% if page.url contains '/guides/' or page.url == '/en/' %}
   <url>
-    <loc>{{ site.url }}{{ site.baseurl }}{{ guide.url }}</loc>
-    {% if guide.updated %}<lastmod>{{ guide.updated | date: "%Y-%m-%d" }}</lastmod>{% endif %}
-  </url>
-  {% endfor %}
-  {% for translated_page in site.pages %}
-    {% if translated_page.url contains '/en/' %}
-  <url>
-    <loc>{{ site.url }}{{ site.baseurl }}{{ translated_page.url }}</loc>
-    {% if translated_page.updated %}<lastmod>{{ translated_page.updated | date: "%Y-%m-%d" }}</lastmod>{% endif %}
+    <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
+    {% if page.url contains '/en/' and page.updated %}<lastmod>{{ page.updated | date: "%Y-%m-%d" }}</lastmod>{% endif %}
   </url>
     {% endif %}
   {% endfor %}
