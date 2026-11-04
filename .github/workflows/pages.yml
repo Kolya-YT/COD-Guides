@@ -20,6 +20,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Restore translation cache
+        uses: actions/cache@v4
+        with:
+          path: .translation-cache.json
+          key: cod-guides-translation-${{ hashFiles('index.md', 'guides/**/*.md') }}
+          restore-keys: |
+            cod-guides-translation-
+
       - name: Generate English edition
         run: python3 scripts/generate_english.py
 
