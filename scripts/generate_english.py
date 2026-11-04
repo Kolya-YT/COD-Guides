@@ -78,7 +78,7 @@ def flush_translations(rendered):
 
     for item in items:
         token, source_text = item
-        if batch and batch_size + len(source_text) > 2800:
+        if batch and batch_size + len(source_text) > 1800:
             send_batch(batch)
             batch, batch_size = [], 0
         batch.append(item)
