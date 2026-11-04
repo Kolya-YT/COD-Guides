@@ -37,12 +37,12 @@
 }
 </script>
 </head>
-<body><div class="reading-progress" data-reading-progress aria-hidden="true"></div><button class="back-top" data-back-top type="button" aria-label="Наверх">↑</button>
+<body><div class="reading-progress" data-reading-progress aria-hidden="true"></div><button class="back-top" data-back-top type="button" aria-label="{% if page.url contains '/en/' %}Back to top{% else %}Наверх{% endif %}">↑</button>
 <header class="top">
   <a href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="brand">🔥 COD <b>GUIDES</b></a>
   <div class="top-actions">
     {% include language-switcher.html %}
-    <button class="theme-toggle desktop-theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">🌙</button>
+    <button class="theme-toggle desktop-theme-toggle" type="button" data-theme-toggle aria-label="{% if page.url contains '/en/' %}Toggle theme{% else %}Переключить тему{% endif %}">🌙</button>
     <a href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="back">← {% if page.url contains '/en/' %}Back{% else %}Назад{% endif %}</a>
   </div>
 </header>
@@ -51,7 +51,7 @@
     <div class="guide-head">
       {% if page.category %}<div class="eyebrow">{{ page.category }}</div>{% endif %}
       <h1>{{ page.title }}</h1>
-      {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+      {% if page.description %}<p>{{ page.description }}</p>{% endif %}{% if page.author %}<div class="guide-author">{% if page.url contains '/en/' %}Author: {% else %}Автор: {% endif %}{{ page.author }}</div>{% endif %}
       <div class="guide-actions">
         {% if page.updated %}<div class="updated">{% if page.url contains '/en/' %}Updated: {{ page.updated }}{% else %}Обновлено: {{ page.updated }}{% endif %}</div>{% endif %}
         <button class="share-btn" type="button" data-share>{% if page.url contains '/en/' %}📤 Share{% else %}📤 Поделиться{% endif %}</button>
@@ -68,7 +68,7 @@
     <div class="content">{{ content }}</div>
 
 {% if page.url contains '/en/' %}
-{% assign guide_paths = "en/guides/giant.md|en/guides/ursus.md|en/guides/lihoursus.md|en/guides/direbear.md|en/guides/hydra.md|en/guides/magma.md|en/guides/mehastrazh.md|en/guides/miazmovyi-gigant.md|en/guides/ledyanoi-gigant.md|en/guides/ledyanoi-drakon.md|en/guides/ognennyi-drakon.md|en/guides/plameneya.md|en/guides/gromovoi-drakon.md|en/guides/gromovoi-ruh.md|en/guides/kosmicheskiy-ruh.md|en/guides/sumrachnyi-drakon.md|en/guides/haribda.md|en/guides/vosstavshiy-gigant.md" | split: "|" %}
+{% assign guide_paths = "en/guides/pitomcy.md|en/guides/pitomcy.md|guides/giant.md|en/guides/ursus.md|en/guides/lihoursus.md|en/guides/direbear.md|en/guides/hydra.md|en/guides/magma.md|en/guides/mehastrazh.md|en/guides/miazmovyi-gigant.md|en/guides/ledyanoi-gigant.md|en/guides/ledyanoi-drakon.md|en/guides/ognennyi-drakon.md|en/guides/plameneya.md|en/guides/gromovoi-drakon.md|en/guides/gromovoi-ruh.md|en/guides/kosmicheskiy-ruh.md|en/guides/sumrachnyi-drakon.md|en/guides/haribda.md|en/guides/vosstavshiy-gigant.md" | split: "|" %}
 {% else %}
     {% assign guide_paths = "guides/giant.md|guides/ursus.md|guides/lihoursus.md|guides/direbear.md|guides/hydra.md|guides/magma.md|guides/mehastrazh.md|guides/miazmovyi-gigant.md|guides/ledyanoi-gigant.md|guides/ledyanoi-drakon.md|guides/ognennyi-drakon.md|guides/plameneya.md|guides/gromovoi-drakon.md|guides/gromovoi-ruh.md|guides/kosmicheskiy-ruh.md|guides/sumrachnyi-drakon.md|guides/haribda.md|guides/vosstavshiy-gigant.md" | split: "|" %}
 {% endif %}
@@ -92,18 +92,18 @@
         {% assign next_path = guide_paths[next_index] %}
         {% assign next_guide = site.pages | where: "path", next_path | first %}
       {% endif %}
-      <nav class="guide-nav" aria-label="Навигация по гайдам">
+      <nav class="guide-nav" aria-label="{% if page.url contains '/en/' %}Guide navigation{% else %}Навигация по гайдам{% endif %}">
         {% if previous_guide %}
           <a class="guide-nav-link guide-nav-prev" href="{{ previous_guide.url | relative_url }}">
             <small>← {% if page.url contains '/en/' %}Previous guide{% else %}Предыдущий гайд{% endif %}</small><strong>{{ previous_guide.title }}</strong>
           </a>
         {% else %}
           <span class="guide-nav-link guide-nav-prev is-disabled">
-            <small>← Предыдущий гайд</small><strong>{% if page.url contains '/en/' %}This is the first guide{% else %}Это первый гайд{% endif %}</strong>
+            <small>← {% if page.url contains '/en/' %}Previous guide{% else %}Предыдущий гайд{% endif %}</small><strong>{% if page.url contains '/en/' %}This is the first guide{% else %}Это первый гайд{% endif %}</strong>
           </span>
         {% endif %}
 
-        <a class="guide-nav-home" href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="Все гайды">⌂</a>
+        <a class="guide-nav-home" href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="{% if page.url contains '/en/' %}All guides{% else %}Все гайды{% endif %}">⌂</a>
 
         {% if next_guide %}
           <a class="guide-nav-link guide-nav-next" href="{{ next_guide.url | relative_url }}">
@@ -111,14 +111,14 @@
           </a>
         {% else %}
           <span class="guide-nav-link guide-nav-next is-disabled">
-            <small>Следующий гайд →</small><strong>{% if page.url contains '/en/' %}This is the last guide{% else %}Это последний гайд{% endif %}</strong>
+            <small>{% if page.url contains '/en/' %}Next guide{% else %}Следующий гайд{% endif %} →</small><strong>{% if page.url contains '/en/' %}This is the last guide{% else %}Это последний гайд{% endif %}</strong>
           </span>
         {% endif %}
       </nav>
     {% endif %}
   </article>
 </main>
-<nav class="mobile-nav" data-mobile-nav aria-label="Мобильная навигация">
+<nav class="mobile-nav" data-mobile-nav aria-label="{% if page.url contains '/en/' %}Mobile navigation{% else %}Мобильная навигация{% endif %}">
 <a href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="mobile-nav-item">⌂<span>{% if page.url contains '/en/' %}Home{% else %}Главная{% endif %}</span></a>
 <button type="button" class="mobile-nav-item" data-mobile-action="toc">☰<span>{% if page.url contains '/en/' %}Sections{% else %}Разделы{% endif %}</span></button>
 <button type="button" class="mobile-nav-item" data-theme-toggle aria-label="Переключить тему">🌙<span>{% if page.url contains '/en/' %}Theme{% else %}Тема{% endif %}</span></button>
