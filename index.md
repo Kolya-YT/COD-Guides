@@ -9,7 +9,7 @@ title: COD Guides
     <h1>Гайды по <span>Call of Dragons</span></h1>
     <p>Разбираем исполинов и игровые механики простым языком — без лишней воды.</p>
     <div class="home-hero-meta">
-      <span>🌋 17 исполинов · 18 гайдов</span>
+      <span>🌋 18 исполинов · 19 гайдов</span>
       <span>📱 Удобно с телефона</span>
     </div>
   </div>
@@ -32,7 +32,7 @@ title: COD Guides
     <div class="home-kicker">CALL OF DRAGONS · PVE</div>
     <h2>🌋 Исполины</h2>
   </div>
-  <span class="guide-count" data-count="giants">17 гайдов</span>
+  <span class="guide-count" data-count="giants">18 гайдов</span>
 </div>
 
 <div class="guide-grid" data-category="giants">
@@ -45,6 +45,16 @@ title: COD Guides
       <div class="guide-card-tag">🌋 PVE · ИСПОЛИН</div>
       <h3>Магма</h3>
       <p>Расстановка групп, метки, переходы, камни лечения и аколиты.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
+
+  <a class="guide-card" href="{{ '/guides/direbear/' | relative_url }}" data-updated="2 октября 2026">
+    <img src="https://callofdragonsguides.com/wp-content/uploads/2023/01/Direbear-Guide-Call-of-Dragons-1120x630.jpg" alt="Лютомедведь">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🐻 PVE · ИСПОЛИН</div>
+      <h3>Лютомедведь</h3>
+      <p>Тёмный рывок, печать тьмы, оглушение, снижение защиты и камни лечения.</p>
       <span class="guide-open">Открыть гайд <b>→</b></span>
     </div>
   </a>
