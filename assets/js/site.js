@@ -1,5 +1,5 @@
 const COD_LANG = document.documentElement.lang === 'en' ? 'en' : 'ru';
-const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : COD_LOCALE;
+const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : 'ru-RU';
 (() => {
   const input = document.querySelector('[data-guide-search]');
   const grids = [...document.querySelectorAll('.guide-grid')];
@@ -53,15 +53,15 @@ const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : COD_LOCALE;
         await navigator.share(data);
       } else if (navigator.clipboard) {
         await navigator.clipboard.writeText(data.url);
-        button.textContent = '✓ ${COD_LANG === 'en' ? 'Link copied' : 'Ссылка скопирована'}';
-        setTimeout(() => { button.textContent = '📤 ${COD_LANG === 'en' ? 'Share' : 'Поделиться'}'; }, 1800);
+        button.textContent = `✓ ${COD_LANG === 'en' ? 'Link copied' : 'Ссылка скопирована'}`;
+        setTimeout(() => { button.textContent = `📤 ${COD_LANG === 'en' ? 'Share' : 'Поделиться'}`; }, 1800);
       } else {
-        window.prompt('${COD_LANG === 'en' ? 'Copy this link:' : 'Скопируйте ссылку:'}', data.url);
+        window.prompt(`${COD_LANG === 'en' ? 'Copy this link:' : 'Скопируйте ссылку:'}`, data.url);
       }
     } catch (error) {
       if (error?.name !== 'AbortError') {
-        button.textContent = '⚠️ ${COD_LANG === 'en' ? 'Could not share' : 'Не удалось поделиться'}';
-        setTimeout(() => { button.textContent = '📤 ${COD_LANG === 'en' ? 'Share' : 'Поделиться'}'; }, 1800);
+        button.textContent = `⚠️ ${COD_LANG === 'en' ? 'Could not share' : 'Не удалось поделиться'}`;
+        setTimeout(() => { button.textContent = `📤 ${COD_LANG === 'en' ? 'Share' : 'Поделиться'}`; }, 1800);
       }
     }
   });
@@ -406,9 +406,9 @@ const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : COD_LOCALE;
     const light = getTheme() === 'light';
     buttons.forEach(btn => {
       btn.textContent = light ? '☀️' : '🌙';
-      btn.setAttribute('aria-label', light ? '${COD_LANG === 'en' ? 'Enable dark theme' : 'Включить тёмную тему'}' : '${COD_LANG === 'en' ? 'Enable light theme' : 'Включить светлую тему'}');
+      btn.setAttribute('aria-label', light ? `${COD_LANG === 'en' ? 'Enable dark theme' : 'Включить тёмную тему'}` : `${COD_LANG === 'en' ? 'Enable light theme' : 'Включить светлую тему'}`);
       btn.setAttribute('aria-pressed', light ? 'true' : 'false');
-      btn.title = light ? '${COD_LANG === 'en' ? 'Light theme · click for dark' : 'Сейчас светлая тема · нажмите для тёмной'}' : '${COD_LANG === 'en' ? 'Dark theme · click for light' : 'Сейчас тёмная тема · нажмите для светлой'}';
+      btn.title = light ? `${COD_LANG === 'en' ? 'Light theme · click for dark' : 'Сейчас светлая тема · нажмите для тёмной'}` : `${COD_LANG === 'en' ? 'Dark theme · click for light' : 'Сейчас тёмная тема · нажмите для светлой'}`;
     });
   };
   buttons.forEach(btn => btn.addEventListener('click', () => {
@@ -435,7 +435,7 @@ const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : COD_LOCALE;
     if (!holder.querySelector('.image-missing-label')) {
       const label = document.createElement('div');
       label.className = 'image-missing-label';
-      label.textContent = '🖼️ ${COD_LANG === 'en' ? 'Image temporarily unavailable' : 'Изображение временно недоступно'}';
+      label.textContent = `🖼️ ${COD_LANG === 'en' ? 'Image temporarily unavailable' : 'Изображение временно недоступно'}`;
       holder.appendChild(label);
     }
   };
