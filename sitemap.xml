@@ -13,4 +13,12 @@ permalink: /sitemap.xml
     {% if guide.updated %}<lastmod>{{ guide.updated | date: "%Y-%m-%d" }}</lastmod>{% endif %}
   </url>
   {% endfor %}
+  {% for translated_page in site.pages %}
+    {% if translated_page.url contains '/en/' %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ translated_page.url }}</loc>
+    {% if translated_page.updated %}<lastmod>{{ translated_page.updated | date: "%Y-%m-%d" }}</lastmod>{% endif %}
+  </url>
+    {% endif %}
+  {% endfor %}
 </urlset>
