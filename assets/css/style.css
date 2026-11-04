@@ -637,3 +637,6 @@ html[data-theme="light"] .guide-card:after{background:linear-gradient(180deg,rgb
  .guide-card h3{font-size:24px}
  .guide-card p{font-size:12px;max-width:100%}
 }
+
+/* English-localized search empty state */
+html[lang="en"] .guide-grid.is-searching:after{content:"No guides found 😕"}
