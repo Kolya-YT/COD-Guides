@@ -209,7 +209,7 @@ const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : 'ru-RU';
   document.querySelectorAll('.pet-build-skill').forEach(el=>{
     const title=el.getAttribute('title') || '';
     const img=el.querySelector('img');
-    el.dataset.skillName=(title || img?.dataset?.name || '').replace(/\s*·\s*Ур\.\s*\d+$/,'').trim();
+    el.dataset.skillName=(title || img?.dataset?.name || '').replace(/\s*·\s*(?:Ур\.|Lv\.?)\s*\d+$/i,'').trim();
     el.removeAttribute('title');
     el.setAttribute('aria-label', el.dataset.skillName + ' — 3 ' + (COD_LANG === 'en' ? 'stars' : 'звезды'));
     el.addEventListener('mouseenter',()=>show(el));
