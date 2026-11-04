@@ -36,7 +36,7 @@ def translate_line(line):
         return line
     if re.match(r'^[A-Za-z_][A-Za-z0-9_-]*\s*:', line):
         key, value = line.split(":", 1)
-        if key.strip() in {"layout", "href", "url", "permalink", "date", "updated", "image", "src", "id", "class", "category_id"}:
+        if key.strip().lstrip("- ").strip() in {"layout", "href", "url", "permalink", "date", "updated", "image", "src", "id", "class", "category_id"}:
             return line
         value = value.strip()
         if not value or value.startswith(("[", "{", "|", ">")):
