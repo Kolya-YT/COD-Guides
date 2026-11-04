@@ -1,68 +1,41 @@
-<div class="language-switcher" data-language-switcher aria-label="Language">
-  <button type="button" data-language="ru" aria-label="Русский">RU</button>
-  <span aria-hidden="true">/</span>
-  <button type="button" data-language="en" aria-label="English">EN</button>
+{% assign current_url = page.url %}
+{% if current_url contains '/en/' %}
+  {% assign ru_url = current_url | remove_first: '/en' %}
+  {% assign en_url = current_url %}
+{% else %}
+  {% assign ru_url = current_url %}
+  {% assign en_url = current_url | prepend: '/en' %}
+{% endif %}
+<div class="language-switcher" role="group" aria-label="Language">
+  <a href="{{ ru_url | relative_url }}" data-language="ru" lang="ru">RU</a>
+  <a href="{{ en_url | relative_url }}" data-language="en" lang="en">EN</a>
 </div>
-<div id="google_translate_element" hidden></div>
 <style>
-.language-switcher{display:inline-flex;align-items:center;gap:5px;margin-left:12px;padding:5px 9px;border:1px solid var(--line,rgba(255,255,255,.14));border-radius:999px;background:var(--card,rgba(255,255,255,.04));font-size:12px;font-weight:800;letter-spacing:.04em}
-.language-switcher button{border:0;background:transparent;color:var(--muted,#9aa3b2);font:inherit;cursor:pointer;padding:2px 3px}
-.language-switcher button[aria-pressed=true]{color:var(--text,#fff)}
-.language-switcher button:focus-visible{outline:2px solid var(--accent,#e6a23c);outline-offset:3px;border-radius:4px}
-.top{display:flex;align-items:center;justify-content:space-between}
-.top-actions{display:flex;align-items:center;gap:10px}
-@media(max-width:640px){.language-switcher{margin-left:6px;padding:4px 7px}.top-actions{gap:5px}}
-.goog-te-banner-frame,.skiptranslate iframe{display:none!important}
-body{top:0!important}
-.goog-te-gadget{font-size:0!important}
-.goog-te-gadget .goog-te-combo{display:none!important}
+.language-switcher{display:flex;gap:5px;align-items:center}
+.language-switcher a{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:30px;padding:0 9px;border:1px solid var(--line,rgba(255,255,255,.12));border-radius:9px;color:var(--muted,#9aa3b2);font-size:11px;font-weight:800;letter-spacing:.06em;text-decoration:none}
+.language-switcher a[aria-current="true"]{background:var(--accent,rgba(255,255,255,.1));color:var(--text,#fff);border-color:var(--accent,rgba(255,255,255,.2))}
 </style>
 <script>
 (function(){
-  var KEY='cod-guides-language';
-  var root='/COD-Guides';
-  function readCookie(name){var m=document.cookie.match(new RegExp('(?:^|; )'+name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}
-  function setCookie(value){document.cookie='googtrans=/ru/'+value+';path=/;max-age=31536000;SameSite=Lax';document.cookie='googtrans=/ru/'+value+';path='+root+';max-age=31536000;SameSite=Lax';}
-  function current(){try{return localStorage.getItem(KEY)||''}catch(e){return ''}}
-  function apply(lang,save){
-    if(save){try{localStorage.setItem(KEY,lang)}catch(e){}}
-    if(lang==='ru'){setCookie('ru');location.reload();return}
-    setCookie('en');
-    if(window.google&&google.translate&&google.translate.TranslateElement){
-      var combo=document.querySelector('.goog-te-combo');
-      if(combo){combo.value='en';combo.dispatchEvent(new Event('change'));return}
-    }
-    location.reload();
+ var key='cod-guides-language',path=location.pathname;
+ var base='/COD-Guides',isEn=path.indexOf(base+'/en/')===0||path===base+'/en';
+ var current=isEn?'en':'ru';
+ try{
+  var saved=localStorage.getItem(key);
+  if(!saved){
+   var browser=(navigator.languages&&navigator.languages[0]||navigator.language||'ru').toLowerCase();
+   saved=browser.indexOf('en')===0?'en':'ru';
+   localStorage.setItem(key,saved);
+   if(saved!==current){
+    var target=isEn?path.replace(base+'/en',base):path.replace(base+'/',base+'/en/');
+    location.replace(target+location.search+location.hash);return;
+   }
   }
-  var lang=current();
-  if(!lang){
-    var browser=(navigator.languages&&navigator.languages[0]||navigator.language||'ru').toLowerCase();
-    lang=browser.startsWith('en')?'en':'ru';
-    try{localStorage.setItem(KEY,lang)}catch(e){}
-  }
-  var cookie=readCookie('googtrans');
-  if(lang==='en'&&cookie!=='/ru/en')setCookie('en');
-  if(lang==='ru'&&cookie==='/ru/en')setCookie('ru');
-  document.addEventListener('DOMContentLoaded',function(){
-    document.querySelectorAll('[data-language]').forEach(function(btn){
-      btn.setAttribute('aria-pressed',String(btn.dataset.language===lang));
-      btn.addEventListener('click',function(){if(btn.dataset.language!==lang)apply(btn.dataset.language,true)});
-    });
-  });
-  window.googleTranslateElementInit=function(){
-    new google.translate.TranslateElement({pageLanguage:'ru',includedLanguages:'en,ru',autoDisplay:false, multilanguagePage:true},'google_translate_element');
-    if(lang==='en'){
-      var attempts=0;
-      var timer=setInterval(function(){
-        var combo=document.querySelector('.goog-te-combo');
-        if(combo){clearInterval(timer);combo.value='en';combo.dispatchEvent(new Event('change'))}
-        if(++attempts>40)clearInterval(timer);
-      },250);
-    }
-  };
-  var s=document.createElement('script');
-  s.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  s.async=true;
-  document.head.appendChild(s);
+  document.documentElement.lang=current;
+ }catch(e){}
+ document.querySelectorAll('.language-switcher a').forEach(function(a){
+  a.setAttribute('aria-current',String(a.dataset.language===current));
+  a.addEventListener('click',function(){try{localStorage.setItem(key,a.dataset.language)}catch(e){}});
+ });
 })();
 </script>
