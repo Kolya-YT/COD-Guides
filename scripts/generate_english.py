@@ -95,7 +95,7 @@ ATTRIBUTE = re.compile(
     re.IGNORECASE,
 )
 FRONTMATTER_SKIP = {
-    "layout", "href", "url", "permalink", "date", "updated", "image", "src",
+    "layout", "href", "url", "permalink", "date", "image", "src",
     "id", "class", "category_id", "source", "author",
 }
 
