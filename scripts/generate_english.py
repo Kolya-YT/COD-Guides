@@ -30,10 +30,13 @@ def translate(text):
                 raise
             time.sleep(1.5 * (attempt + 1))
 
-PROTECTED = re.compile(r'(!?\[[^\]]*\]\([^)]*\)|<[^>]+>|\x60[^\x60]*\x60|https?://\S+|\{%.*?%\}|\{\{.*?\}\})')
+PROTECTED = re.compile(r'(\]\([^)]*\)|<[^>]+>|\x60[^\x60]*\x60|https?://\S+|\{%.*?%\}|\{\{.*?\}\})')
+ATTRIBUTE = re.compile(r"""((?:alt|title|placeholder|aria-label|aria-description)\s*=\s*)(["'])(.*?)\2""", re.IGNORECASE)
 def translate_line(line):
     if not line.strip() or line.lstrip().startswith(("---", chr(96)*3, "~~~")):
         return line
+    # Translate human-facing HTML attributes; preserve URLs and structural attributes.
+    line = ATTRIBUTE.sub(lambda m: m.group(1) + m.group(2) + translate(m.group(3)) + m.group(2), line)
     if re.match(r'^\s*[A-Za-z_][A-Za-z0-9_-]*\s*:', line):
         key, value = line.split(":", 1)
         if key.strip().lstrip("- ").strip() in {"layout", "href", "url", "permalink", "date", "updated", "image", "src", "id", "class", "category_id"}:
