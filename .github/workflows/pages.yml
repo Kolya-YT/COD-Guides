@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: read
   pages: write
   id-token: write
@@ -50,6 +51,36 @@ jobs:
       name: github-pages
       url: https://kolya-yt.github.io/COD-Guides/
     steps:
+      - name: Cancel stale Pages deployments
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const currentRunId = context.runId;
+            const runs = await github.paginate(github.rest.actions.listWorkflowRunsForRepo, {
+              owner,
+              repo,
+              branch: "main",
+              per_page: 100
+            });
+            const staleRuns = runs.filter(run =>
+              run.id < currentRunId &&
+              run.status === "in_progress" &&
+              run.path === ".github/workflows/pages.yml"
+            );
+            for (const run of staleRuns) {
+              core.info("Cancelling stale Pages run " + run.id + " (" + run.head_sha + ")");
+              await github.rest.actions.cancelWorkflowRun({ owner, repo, run_id: run.id });
+            }
+            for (const run of staleRuns) {
+              for (let attempt = 0; attempt < 30; attempt++) {
+                const response = await github.rest.actions.getWorkflowRun({ owner, repo, run_id: run.id });
+                if (response.data.status === "completed") break;
+                await new Promise(resolve => setTimeout(resolve, 2000));
+              }
+            }
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
