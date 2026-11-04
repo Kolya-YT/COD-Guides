@@ -95,7 +95,7 @@ ATTRIBUTE = re.compile(
     re.IGNORECASE,
 )
 FRONTMATTER_SKIP = {
-    "layout", "href", "url", "permalink", "date", "image", "src",
+    "layout", "href", "url", "permalink", "date", "updated", "image", "src",
     "id", "class", "category_id", "source", "author",
 }
 
@@ -119,6 +119,18 @@ def translate_frontmatter_line(line):
     if not match:
         return translate_markdown_line(line)
     prefix, key, separator, value, newline = match.groups()
+    if key.lower() == "updated":
+        raw_date = value.strip().strip("\\"'").lower()
+        date_match = re.fullmatch(r"(\\d{1,2})\\s+([а-яё]+)\\s+(\\d{4})", raw_date)
+        month_numbers = {
+            "января": 1, "февраля": 2, "марта": 3, "апреля": 4,
+            "мая": 5, "июня": 6, "июля": 7, "августа": 8,
+            "сентября": 9, "октября": 10, "ноября": 11, "декабря": 12,
+        }
+        if date_match and date_match.group(2) in month_numbers:
+            day, month, year = date_match.groups()
+            return prefix + key + separator + "\\"%s-%02d-%02d\\" % (year, month_numbers[month], int(day)) + newline
+        return line
     if key.lower() in FRONTMATTER_SKIP or not value.strip():
         return line
     raw = value.strip()
