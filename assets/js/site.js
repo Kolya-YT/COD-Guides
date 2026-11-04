@@ -93,9 +93,9 @@ const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : 'ru-RU';
 
     // Some build entries reuse the base icon slug for Advanced/Intense skills.
     // Prefer the real variant file, then fall back to the base skill icon.
-    if (/^Улучш\./i.test(title) && !slug.startsWith('advanced_')) {
+    if (/^(?:Улучш\.|Advanced\.)/i.test(title) && !slug.startsWith('advanced_')) {
       slug = 'advanced_' + slug;
-    } else if (/^Интенсив\./i.test(title) && !slug.startsWith('intense_')) {
+    } else if (/^(?:Интенсив\.|Intense\.)/i.test(title) && !slug.startsWith('intense_')) {
       slug = 'intense_' + slug;
     }
     return slug;
