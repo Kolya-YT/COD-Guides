@@ -20,7 +20,7 @@
 </head>
 <body><div class="reading-progress" data-reading-progress aria-hidden="true"></div><button class="back-top" data-back-top type="button" aria-label="Наверх">↑</button>
 <header class="top">
-  <a href="{{ '/' | relative_url }}" class="brand">🔥 COD <b>GUIDES</b></a>
+  <a href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="brand">🔥 COD <b>GUIDES</b></a>
   {% include language-switcher.html %}
   <button class="theme-toggle desktop-theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему" aria-pressed="false">🌙</button>
 </header>
@@ -28,10 +28,10 @@
   {{ content }}
 </main>
 <nav class="mobile-nav" data-mobile-nav aria-label="Мобильная навигация">
-<a href="{{ '/' | relative_url }}" class="mobile-nav-item is-active">⌂<span>Главная</span></a>
-<button type="button" class="mobile-nav-item" data-mobile-action="search">⌕<span>Поиск</span></button>
-<button type="button" class="mobile-nav-item" data-theme-toggle aria-label="Переключить тему">🌙<span>Тема</span></button>
-<button type="button" class="mobile-nav-item" data-mobile-action="top">↑<span>Наверх</span></button>
+<a href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="mobile-nav-item is-active">⌂<span>{% if page.url contains '/en/' %}Home{% else %}Главная{% endif %}</span></a>
+<button type="button" class="mobile-nav-item" data-mobile-action="search">⌕<span>{% if page.url contains '/en/' %}Search{% else %}Поиск{% endif %}</span></button>
+<button type="button" class="mobile-nav-item" data-theme-toggle aria-label="Переключить тему">🌙<span>{% if page.url contains '/en/' %}Theme{% else %}Тема{% endif %}</span></button>
+<button type="button" class="mobile-nav-item" data-mobile-action="top">↑<span>{% if page.url contains '/en/' %}Top{% else %}Наверх{% endif %}</span></button>
 </nav>
 <footer>🔥 COD Guides · Call of Dragons</footer>
 </body>
