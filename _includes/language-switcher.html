@@ -1,0 +1,68 @@
+<div class="language-switcher" data-language-switcher aria-label="Language">
+  <button type="button" data-language="ru" aria-label="Русский">RU</button>
+  <span aria-hidden="true">/</span>
+  <button type="button" data-language="en" aria-label="English">EN</button>
+</div>
+<div id="google_translate_element" hidden></div>
+<style>
+.language-switcher{display:inline-flex;align-items:center;gap:5px;margin-left:12px;padding:5px 9px;border:1px solid var(--line,rgba(255,255,255,.14));border-radius:999px;background:var(--card,rgba(255,255,255,.04));font-size:12px;font-weight:800;letter-spacing:.04em}
+.language-switcher button{border:0;background:transparent;color:var(--muted,#9aa3b2);font:inherit;cursor:pointer;padding:2px 3px}
+.language-switcher button[aria-pressed=true]{color:var(--text,#fff)}
+.language-switcher button:focus-visible{outline:2px solid var(--accent,#e6a23c);outline-offset:3px;border-radius:4px}
+.top{display:flex;align-items:center;justify-content:space-between}
+.top-actions{display:flex;align-items:center;gap:10px}
+@media(max-width:640px){.language-switcher{margin-left:6px;padding:4px 7px}.top-actions{gap:5px}}
+.goog-te-banner-frame,.skiptranslate iframe{display:none!important}
+body{top:0!important}
+.goog-te-gadget{font-size:0!important}
+.goog-te-gadget .goog-te-combo{display:none!important}
+</style>
+<script>
+(function(){
+  var KEY='cod-guides-language';
+  var root='/COD-Guides';
+  function readCookie(name){var m=document.cookie.match(new RegExp('(?:^|; )'+name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'=([^;]*)'));return m?decodeURIComponent(m[1]):'';}
+  function setCookie(value){document.cookie='googtrans=/ru/'+value+';path=/;max-age=31536000;SameSite=Lax';document.cookie='googtrans=/ru/'+value+';path='+root+';max-age=31536000;SameSite=Lax';}
+  function current(){try{return localStorage.getItem(KEY)||''}catch(e){return ''}}
+  function apply(lang,save){
+    if(save){try{localStorage.setItem(KEY,lang)}catch(e){}}
+    if(lang==='ru'){setCookie('ru');location.reload();return}
+    setCookie('en');
+    if(window.google&&google.translate&&google.translate.TranslateElement){
+      var combo=document.querySelector('.goog-te-combo');
+      if(combo){combo.value='en';combo.dispatchEvent(new Event('change'));return}
+    }
+    location.reload();
+  }
+  var lang=current();
+  if(!lang){
+    var browser=(navigator.languages&&navigator.languages[0]||navigator.language||'ru').toLowerCase();
+    lang=browser.startsWith('en')?'en':'ru';
+    try{localStorage.setItem(KEY,lang)}catch(e){}
+  }
+  var cookie=readCookie('googtrans');
+  if(lang==='en'&&cookie!=='/ru/en')setCookie('en');
+  if(lang==='ru'&&cookie==='/ru/en')setCookie('ru');
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('[data-language]').forEach(function(btn){
+      btn.setAttribute('aria-pressed',String(btn.dataset.language===lang));
+      btn.addEventListener('click',function(){if(btn.dataset.language!==lang)apply(btn.dataset.language,true)});
+    });
+  });
+  window.googleTranslateElementInit=function(){
+    new google.translate.TranslateElement({pageLanguage:'ru',includedLanguages:'en,ru',autoDisplay:false, multilanguagePage:true},'google_translate_element');
+    if(lang==='en'){
+      var attempts=0;
+      var timer=setInterval(function(){
+        var combo=document.querySelector('.goog-te-combo');
+        if(combo){clearInterval(timer);combo.value='en';combo.dispatchEvent(new Event('change'))}
+        if(++attempts>40)clearInterval(timer);
+      },250);
+    }
+  };
+  var s=document.createElement('script');
+  s.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  s.async=true;
+  document.head.appendChild(s);
+})();
+</script>
