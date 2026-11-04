@@ -32,11 +32,11 @@
 </head>
 <body><div class="reading-progress" data-reading-progress aria-hidden="true"></div><button class="back-top" data-back-top type="button" aria-label="Наверх">↑</button>
 <header class="top">
-  <a href="{{ '/' | relative_url }}" class="brand">🔥 COD <b>GUIDES</b></a>
+  <a href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="brand">🔥 COD <b>GUIDES</b></a>
   <div class="top-actions">
     {% include language-switcher.html %}
     <button class="theme-toggle desktop-theme-toggle" type="button" data-theme-toggle aria-label="Переключить тему">🌙</button>
-    <a href="{{ '/' | relative_url }}" class="back">← Назад</a>
+    <a href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="back">← {% if page.url contains '/en/' %}Back{% else %}Назад{% endif %}</a>
   </div>
 </header>
 <main class="page">
@@ -46,13 +46,13 @@
       <h1>{{ page.title }}</h1>
       {% if page.description %}<p>{{ page.description }}</p>{% endif %}
       <div class="guide-actions">
-        {% if page.updated %}<div class="updated">Обновлено: {{ page.updated }}</div>{% endif %}
-        <button class="share-btn" type="button" data-share>📤 Поделиться</button>
+        {% if page.updated %}<div class="updated">{% if page.url contains '/en/' %}Updated: {{ page.updated }}{% else %}Обновлено: {{ page.updated }}{% endif %}</div>{% endif %}
+        <button class="share-btn" type="button" data-share>{% if page.url contains '/en/' %}📤 Share{% else %}📤 Поделиться{% endif %}</button>
       </div>
     </div>
     {% if page.toc %}
     <div class="toc">
-      <strong>📌 В этом гайде</strong>
+      <strong>📌 {% if page.url contains '/en/' %}In this guide{% else %}В этом гайде{% endif %}</strong>
       {% for item in page.toc %}
       <a href="{{ item.href }}">{{ item.label | default: item.title }}</a>
       {% endfor %}
@@ -84,23 +84,23 @@
       <nav class="guide-nav" aria-label="Навигация по гайдам">
         {% if previous_guide %}
           <a class="guide-nav-link guide-nav-prev" href="{{ previous_guide.url | relative_url }}">
-            <small>← Предыдущий гайд</small><strong>{{ previous_guide.title }}</strong>
+            <small>← {% if page.url contains '/en/' %}Previous guide{% else %}Предыдущий гайд{% endif %}</small><strong>{{ previous_guide.title }}</strong>
           </a>
         {% else %}
           <span class="guide-nav-link guide-nav-prev is-disabled">
-            <small>← Предыдущий гайд</small><strong>Это первый гайд</strong>
+            <small>← Предыдущий гайд</small><strong>{% if page.url contains '/en/' %}This is the first guide{% else %}Это первый гайд{% endif %}</strong>
           </span>
         {% endif %}
 
-        <a class="guide-nav-home" href="{{ '/' | relative_url }}" aria-label="Все гайды">⌂</a>
+        <a class="guide-nav-home" href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" aria-label="Все гайды">⌂</a>
 
         {% if next_guide %}
           <a class="guide-nav-link guide-nav-next" href="{{ next_guide.url | relative_url }}">
-            <small>Следующий гайд →</small><strong>{{ next_guide.title }}</strong>
+            <small>{% if page.url contains '/en/' %}Next guide{% else %}Следующий гайд{% endif %} →</small><strong>{{ next_guide.title }}</strong>
           </a>
         {% else %}
           <span class="guide-nav-link guide-nav-next is-disabled">
-            <small>Следующий гайд →</small><strong>Это последний гайд</strong>
+            <small>Следующий гайд →</small><strong>{% if page.url contains '/en/' %}This is the last guide{% else %}Это последний гайд{% endif %}</strong>
           </span>
         {% endif %}
       </nav>
@@ -108,10 +108,10 @@
   </article>
 </main>
 <nav class="mobile-nav" data-mobile-nav aria-label="Мобильная навигация">
-<a href="{{ '/' | relative_url }}" class="mobile-nav-item">⌂<span>Главная</span></a>
-<button type="button" class="mobile-nav-item" data-mobile-action="toc">☰<span>Разделы</span></button>
-<button type="button" class="mobile-nav-item" data-theme-toggle aria-label="Переключить тему">🌙<span>Тема</span></button>
-<button type="button" class="mobile-nav-item" data-mobile-action="top">↑<span>Наверх</span></button>
+<a href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="mobile-nav-item">⌂<span>{% if page.url contains '/en/' %}Home{% else %}Главная{% endif %}</span></a>
+<button type="button" class="mobile-nav-item" data-mobile-action="toc">☰<span>{% if page.url contains '/en/' %}Sections{% else %}Разделы{% endif %}</span></button>
+<button type="button" class="mobile-nav-item" data-theme-toggle aria-label="Переключить тему">🌙<span>{% if page.url contains '/en/' %}Theme{% else %}Тема{% endif %}</span></button>
+<button type="button" class="mobile-nav-item" data-mobile-action="top">↑<span>{% if page.url contains '/en/' %}Top{% else %}Наверх{% endif %}</span></button>
 </nav>
 <footer>🔥 COD Guides · Call of Dragons</footer>
 </body>
