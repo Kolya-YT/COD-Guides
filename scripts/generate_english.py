@@ -120,8 +120,8 @@ def translate_frontmatter_line(line):
         return translate_markdown_line(line)
     prefix, key, separator, value, newline = match.groups()
     if key.lower() == "updated":
-        raw_date = value.strip().strip("\\"'").lower()
-        date_match = re.fullmatch(r"(\\d{1,2})\\s+([а-яё]+)\\s+(\\d{4})", raw_date)
+        raw_date = value.strip().strip(chr(34) + chr(39)).lower()
+        date_match = re.fullmatch(r"(\d{1,2})\s+([а-яё]+)\s+(\d{4})", raw_date)
         month_numbers = {
             "января": 1, "февраля": 2, "марта": 3, "апреля": 4,
             "мая": 5, "июня": 6, "июля": 7, "августа": 8,
@@ -129,7 +129,8 @@ def translate_frontmatter_line(line):
         }
         if date_match and date_match.group(2) in month_numbers:
             day, month, year = date_match.groups()
-            return prefix + key + separator + "\\"%s-%02d-%02d\\" % (year, month_numbers[month], int(day)) + newline
+            iso_date = "%s-%02d-%02d" % (year, month_numbers[month], int(day))
+            return prefix + key + separator + chr(34) + iso_date + chr(34) + newline
         return line
     if key.lower() in FRONTMATTER_SKIP or not value.strip():
         return line
