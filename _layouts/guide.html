@@ -68,9 +68,9 @@
     <div class="content">{{ content }}</div>
 
 {% if page.url contains '/en/' %}
-{% assign guide_paths = "en/guides/pitomcy.md|en/guides/pitomcy.md|guides/giant.md|en/guides/ursus.md|en/guides/lihoursus.md|en/guides/direbear.md|en/guides/hydra.md|en/guides/magma.md|en/guides/mehastrazh.md|en/guides/miazmovyi-gigant.md|en/guides/ledyanoi-gigant.md|en/guides/ledyanoi-drakon.md|en/guides/ognennyi-drakon.md|en/guides/plameneya.md|en/guides/gromovoi-drakon.md|en/guides/gromovoi-ruh.md|en/guides/kosmicheskiy-ruh.md|en/guides/sumrachnyi-drakon.md|en/guides/haribda.md|en/guides/vosstavshiy-gigant.md" | split: "|" %}
+{% assign guide_paths = "en/guides/giant.md|en/guides/ursus.md|en/guides/lihoursus.md|en/guides/direbear.md|en/guides/hydra.md|en/guides/magma.md|en/guides/mehastrazh.md|en/guides/miazmovyi-gigant.md|en/guides/ledyanoi-gigant.md|en/guides/ledyanoi-drakon.md|en/guides/ognennyi-drakon.md|en/guides/plameneya.md|en/guides/gromovoi-drakon.md|en/guides/gromovoi-ruh.md|en/guides/kosmicheskiy-ruh.md|en/guides/sumrachnyi-drakon.md|en/guides/haribda.md|en/guides/vosstavshiy-gigant.md|en/guides/pitomcy.md" | split: "|" %}
 {% else %}
-    {% assign guide_paths = "guides/giant.md|guides/ursus.md|guides/lihoursus.md|guides/direbear.md|guides/hydra.md|guides/magma.md|guides/mehastrazh.md|guides/miazmovyi-gigant.md|guides/ledyanoi-gigant.md|guides/ledyanoi-drakon.md|guides/ognennyi-drakon.md|guides/plameneya.md|guides/gromovoi-drakon.md|guides/gromovoi-ruh.md|guides/kosmicheskiy-ruh.md|guides/sumrachnyi-drakon.md|guides/haribda.md|guides/vosstavshiy-gigant.md" | split: "|" %}
+    {% assign guide_paths = "guides/giant.md|guides/ursus.md|guides/lihoursus.md|guides/direbear.md|guides/hydra.md|guides/magma.md|guides/mehastrazh.md|guides/miazmovyi-gigant.md|guides/ledyanoi-gigant.md|guides/ledyanoi-drakon.md|guides/ognennyi-drakon.md|guides/plameneya.md|guides/gromovoi-drakon.md|guides/gromovoi-ruh.md|guides/kosmicheskiy-ruh.md|guides/sumrachnyi-drakon.md|guides/haribda.md|guides/vosstavshiy-gigant.md|guides/pitomcy.md" | split: "|" %}
 {% endif %}
     {% assign current_index = -1 %}
     {% assign previous_guide = nil %}
