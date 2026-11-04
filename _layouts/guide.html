@@ -122,7 +122,7 @@
 <nav class="mobile-nav" data-mobile-nav aria-label="{% if page.url contains '/en/' %}Mobile navigation{% else %}Мобильная навигация{% endif %}">
 <a href="{% if page.url contains '/en/' %}{{ '/en/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}" class="mobile-nav-item">⌂<span>{% if page.url contains '/en/' %}Home{% else %}Главная{% endif %}</span></a>
 <button type="button" class="mobile-nav-item" data-mobile-action="toc">☰<span>{% if page.url contains '/en/' %}Sections{% else %}Разделы{% endif %}</span></button>
-<button type="button" class="mobile-nav-item" data-theme-toggle aria-label="Переключить тему">🌙<span>{% if page.url contains '/en/' %}Theme{% else %}Тема{% endif %}</span></button>
+<button type="button" class="mobile-nav-item" data-theme-toggle aria-label="{% if page.url contains '/en/' %}Toggle theme{% else %}Переключить тему{% endif %}">🌙<span>{% if page.url contains '/en/' %}Theme{% else %}Тема{% endif %}</span></button>
 <button type="button" class="mobile-nav-item" data-mobile-action="top">↑<span>{% if page.url contains '/en/' %}Top{% else %}Наверх{% endif %}</span></button>
 </nav>
 <footer>🔥 COD Guides · Call of Dragons</footer>
