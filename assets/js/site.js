@@ -1,3 +1,5 @@
+const COD_LANG = document.documentElement.lang === 'en' ? 'en' : 'ru';
+const COD_LOCALE = COD_LANG === 'en' ? 'en-US' : COD_LOCALE;
 (() => {
   const input = document.querySelector('[data-guide-search]');
   const grids = [...document.querySelectorAll('.guide-grid')];
@@ -8,11 +10,11 @@
   const cards = grids.flatMap(grid => [...grid.querySelectorAll('.guide-card')]);
 
   function update() {
-    const query = input.value.trim().toLocaleLowerCase('ru-RU');
+    const query = input.value.trim().toLocaleLowerCase(COD_LOCALE);
     let visible = 0;
 
     cards.forEach(card => {
-      const text = card.textContent.toLocaleLowerCase('ru-RU');
+      const text = card.textContent.toLocaleLowerCase(COD_LOCALE);
       const match = !query || text.includes(query);
       card.hidden = !match;
       if (match) visible++;
@@ -25,7 +27,7 @@
 
     if (count) {
       count.hidden = !query;
-      count.textContent = query ? `Найдено: ${visible}` : '';
+      count.textContent = query ? `${COD_LANG === 'en' ? 'Found' : 'Найдено'}: ${visible}` : '';
       count.classList.toggle('is-empty', !!query && visible === 0);
     }
 
@@ -51,15 +53,15 @@
         await navigator.share(data);
       } else if (navigator.clipboard) {
         await navigator.clipboard.writeText(data.url);
-        button.textContent = '✓ Ссылка скопирована';
-        setTimeout(() => { button.textContent = '📤 Поделиться'; }, 1800);
+        button.textContent = '✓ ${COD_LANG === 'en' ? 'Link copied' : 'Ссылка скопирована'}';
+        setTimeout(() => { button.textContent = '📤 ${COD_LANG === 'en' ? 'Share' : 'Поделиться'}'; }, 1800);
       } else {
-        window.prompt('Скопируйте ссылку:', data.url);
+        window.prompt('${COD_LANG === 'en' ? 'Copy this link:' : 'Скопируйте ссылку:'}', data.url);
       }
     } catch (error) {
       if (error?.name !== 'AbortError') {
-        button.textContent = '⚠️ Не удалось поделиться';
-        setTimeout(() => { button.textContent = '📤 Поделиться'; }, 1800);
+        button.textContent = '⚠️ ${COD_LANG === 'en' ? 'Could not share' : 'Не удалось поделиться'}';
+        setTimeout(() => { button.textContent = '📤 ${COD_LANG === 'en' ? 'Share' : 'Поделиться'}'; }, 1800);
       }
     }
   });
@@ -179,15 +181,15 @@
 
   const show = (el) => {
     const arr = costs[slug(el)];
-    const name = el.dataset.skillName || 'Навык';
+    const name = el.dataset.skillName || (COD_LANG === 'en' ? 'Skill' : 'Навык');
     let html = '<div class="pet-build-tooltip-title">' + name + '</div>';
     if (arr) {
       html += '<div class="pet-build-tooltip-levels">';
       arr.forEach((v,i) => {
         const lvl=i+1;
         const value = v === 'a'
-          ? amberIcon + ' 4 янтаря'
-          : (v.toLocaleString('ru-RU') + ' 🪙');
+          ? amberIcon + ' 4 ${COD_LANG === 'en' ? 'amber' : 'янтаря'}'
+          : (v.toLocaleString(COD_LOCALE) + ' 🪙');
         html += '<span class="' + (lvl===3 ? 'is-current' : '') + '"><b>' + stars(lvl) + '</b><em>' + value + '</em></span>';
       });
       html += '</div>';
@@ -209,7 +211,7 @@
     const img=el.querySelector('img');
     el.dataset.skillName=(title || img?.dataset?.name || '').replace(/\s*·\s*Ур\.\s*\d+$/,'').trim();
     el.removeAttribute('title');
-    el.setAttribute('aria-label', el.dataset.skillName + ' — 3 звезды');
+    el.setAttribute('aria-label', el.dataset.skillName + ' — 3 ${COD_LANG === 'en' ? 'stars' : 'звезды'}');
     el.addEventListener('mouseenter',()=>show(el));
     el.addEventListener('focus',()=>show(el));
     el.addEventListener('mouseleave',hide);
@@ -305,7 +307,7 @@
   };
   cards.sort((a,b) => parseDate(b.dataset.updated)-parseDate(a.dataset.updated)).slice(0,3).forEach(card => {
     const link = card.getAttribute('href');
-    const title = card.querySelector('h3')?.textContent?.trim() || 'Гайд';
+    const title = card.querySelector('h3')?.textContent?.trim() || (COD_LANG === 'en' ? 'Guide' : 'Гайд');
     const tag = card.querySelector('.guide-card-tag')?.textContent?.trim() || '';
     const item = document.createElement('a');
     item.className = 'latest-item';
@@ -404,9 +406,9 @@
     const light = getTheme() === 'light';
     buttons.forEach(btn => {
       btn.textContent = light ? '☀️' : '🌙';
-      btn.setAttribute('aria-label', light ? 'Включить тёмную тему' : 'Включить светлую тему');
+      btn.setAttribute('aria-label', light ? '${COD_LANG === 'en' ? 'Enable dark theme' : 'Включить тёмную тему'}' : '${COD_LANG === 'en' ? 'Enable light theme' : 'Включить светлую тему'}');
       btn.setAttribute('aria-pressed', light ? 'true' : 'false');
-      btn.title = light ? 'Сейчас светлая тема · нажмите для тёмной' : 'Сейчас тёмная тема · нажмите для светлой';
+      btn.title = light ? '${COD_LANG === 'en' ? 'Light theme · click for dark' : 'Сейчас светлая тема · нажмите для тёмной'}' : '${COD_LANG === 'en' ? 'Dark theme · click for light' : 'Сейчас тёмная тема · нажмите для светлой'}';
     });
   };
   buttons.forEach(btn => btn.addEventListener('click', () => {
@@ -433,7 +435,7 @@
     if (!holder.querySelector('.image-missing-label')) {
       const label = document.createElement('div');
       label.className = 'image-missing-label';
-      label.textContent = '🖼️ Изображение временно недоступно';
+      label.textContent = '🖼️ ${COD_LANG === 'en' ? 'Image temporarily unavailable' : 'Изображение временно недоступно'}';
       holder.appendChild(label);
     }
   };
