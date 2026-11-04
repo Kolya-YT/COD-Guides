@@ -19,7 +19,7 @@
 <meta property="og:title" content="{{ page.title | escape }}">
 <meta property="og:description" content="{{ page.description | default: fallback_description | escape }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
-<meta property="article:modified_time" content="{{ page.updated }}">
+<meta property="article:modified_time" content="{% if page.url contains '/en/' %}{{ page.updated | date: '%Y-%m-%d' }}{% else %}{{ page.updated }}{% endif %}">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ page.title | escape }}">
 <meta name="twitter:description" content="{{ page.description | default: fallback_description | escape }}">
@@ -54,7 +54,7 @@
       <h1>{{ page.title }}</h1>
       {% if page.description %}<p>{{ page.description }}</p>{% endif %}{% if page.author %}<div class="guide-author">{% if page.url contains '/en/' %}Author: {% else %}Автор: {% endif %}{{ page.author }}</div>{% endif %}
       <div class="guide-actions">
-        {% if page.updated %}<div class="updated">{% if page.url contains '/en/' %}Updated: {{ page.updated }}{% else %}Обновлено: {{ page.updated }}{% endif %}</div>{% endif %}
+        {% if page.updated %}<div class="updated">{% if page.url contains '/en/' %}Updated: {{ page.updated | date: '%B %-d, %Y' }}{% else %}Обновлено: {{ page.updated }}{% endif %}</div>{% endif %}
         <button class="share-btn" type="button" data-share>{% if page.url contains '/en/' %}📤 Share{% else %}📤 Поделиться{% endif %}</button>
       </div>
     </div>
