@@ -9,7 +9,7 @@ title: COD Guides
     <h1>Гайды по <span>Call of Dragons</span></h1>
     <p>Разбираем исполинов и игровые механики простым языком — без лишней воды.</p>
     <div class="home-hero-meta">
-      <span>🌋 17 исполинов · 17 гайдов</span>
+      <span>🌋 17 исполинов · 18 гайдов</span>
       <span>📱 Удобно с телефона</span>
     </div>
   </div>
@@ -208,6 +208,22 @@ title: COD Guides
     </div>
   </a>
 
+</div>
+
+<div class="home-section-head" data-section="pets">
+  <div><div class="home-kicker">CALL OF DRAGONS · COMPANIONS</div><h2>🐾 Питомцы</h2></div>
+  <span class="guide-count">1 гайд</span>
+</div>
+<div class="guide-grid" data-category="pets">
+  <a class="guide-card" href="{{ '/guides/pitomcy/' | relative_url }}" data-updated="4 ноября 2026">
+    <img src="https://i.postimg.cc/Mpjq2G4Z/osnovnaa-kartinka-1.png" alt="Питомцы">
+    <div class="guide-card-body">
+      <div class="guide-card-tag">🐾 F2P · ПИТОМЦЫ</div>
+      <h3>Питомцы</h3>
+      <p>Экономная прокачка навыков, карточки, зелья восстановления и метод 50/50.</p>
+      <span class="guide-open">Открыть гайд <b>→</b></span>
+    </div>
+  </a>
 </div>
 
 <div class="home-empty" data-search-empty hidden>
