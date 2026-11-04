@@ -6,7 +6,7 @@
   {% assign ru_url = current_url %}
   {% assign en_url = current_url | prepend: '/en' %}
 {% endif %}
-<div class="language-switcher" role="group" aria-label="Language">
+<div class="language-switcher" role="group" aria-label="{% if page.url contains '/en/' %}Language{% else %}Язык{% endif %}">
   <a href="{{ ru_url | relative_url }}" data-language="ru" lang="ru">RU</a>
   <a href="{{ en_url | relative_url }}" data-language="en" lang="en">EN</a>
 </div>
@@ -17,19 +17,26 @@
 </style>
 <script>
 (function(){
- var key='cod-guides-language',path=location.pathname;
- var base='/COD-Guides',isEn=path.indexOf(base+'/en/')===0||path===base+'/en';
+ var key='cod-guides-language',path=location.pathname,base='/COD-Guides';
+ var isEn=path===base+'/en'||path.indexOf(base+'/en/')===0;
  var current=isEn?'en':'ru';
  try{
   var saved=localStorage.getItem(key);
-  if(!saved){
+  if(saved!=='en'&&saved!=='ru'){
    var browser=(navigator.languages&&navigator.languages[0]||navigator.language||'ru').toLowerCase();
    saved=browser.indexOf('en')===0?'en':'ru';
    localStorage.setItem(key,saved);
-   if(saved!==current){
-    var target=isEn?path.replace(base+'/en',base):path.replace(base+'/',base+'/en/');
-    location.replace(target+location.search+location.hash);return;
+  }
+  if(saved!==current){
+   var relative=path.indexOf(base)===0?path.slice(base.length):'/';
+   var target;
+   if(saved==='en'){
+    target=base+'/en'+(relative==='/'?'/':relative);
+   }else{
+    relative=relative.replace(/^\/en(?=\/|$)/,'');
+    target=base+(relative===''?'/':relative);
    }
+   location.replace(target+location.search+location.hash);return;
   }
   document.documentElement.lang=current;
  }catch(e){}
