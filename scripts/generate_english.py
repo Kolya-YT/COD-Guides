@@ -72,7 +72,10 @@ def convert(source, destination):
             continue
         out.append(translate_line(line))
     destination.parent.mkdir(parents=True, exist_ok=True)
-    destination.write_text("".join(out), encoding="utf-8")
+    translated = "".join(out)
+    if destination.is_relative_to(ROOT / "en"):
+        translated = translated.replace("'/guides/", "'/en/guides/")
+    destination.write_text(translated, encoding="utf-8")
 
 def main():
     convert(ROOT / "index.md", ROOT / "en" / "index.md")
