@@ -34,7 +34,7 @@ PROTECTED = re.compile(r'(!?\[[^\]]*\]\([^)]*\)|<[^>]+>|\x60[^\x60]*\x60|https?:
 def translate_line(line):
     if not line.strip() or line.lstrip().startswith(("---", chr(96)*3, "~~~")):
         return line
-    if re.match(r'^[A-Za-z_][A-Za-z0-9_-]*\s*:', line):
+    if re.match(r'^\s*[A-Za-z_][A-Za-z0-9_-]*\s*:', line):
         key, value = line.split(":", 1)
         if key.strip().lstrip("- ").strip() in {"layout", "href", "url", "permalink", "date", "updated", "image", "src", "id", "class", "category_id"}:
             return line
