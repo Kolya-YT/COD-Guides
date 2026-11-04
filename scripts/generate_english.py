@@ -171,6 +171,16 @@ def convert(source, destination):
         translated = translated.replace("](/guides/", "](/en/guides/")
         translated = translated.replace("assets/guides/", "assets/en/guides/")
         translated = translated.replace("assets/img/", "assets/en/img/")
+        translated = re.sub(
+            r"\\.\\./assets/en/guides/([^\\s)]+)",
+            lambda match: "{{ '/assets/en/guides/" + match.group(1) + "' | relative_url }}",
+            translated,
+        )
+        translated = re.sub(
+            r"\\.\\./assets/en/img/([^\\s)]+)",
+            lambda match: "{{ '/assets/en/img/" + match.group(1) + "' | relative_url }}",
+            translated,
+        )
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(translated, encoding="utf-8")
 
