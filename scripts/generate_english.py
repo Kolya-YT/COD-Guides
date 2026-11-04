@@ -78,7 +78,7 @@ def flush_translations(rendered):
 
     for item in items:
         token, source_text = item
-        if batch and batch_size + len(source_text) > 1800:
+        if batch and batch_size + len(source_text) > 1500:
             send_batch(batch)
             batch, batch_size = [], 0
         batch.append(item)
@@ -156,14 +156,32 @@ def convert(source, destination):
         translated = translated.replace("'/guides/", "'/en/guides/")
         translated = translated.replace('"/guides/', '"/en/guides/')
         translated = translated.replace("](/guides/", "](/en/guides/")
+        translated = translated.replace("assets/guides/", "assets/en/guides/")
+        translated = translated.replace("assets/img/", "assets/en/img/")
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(translated, encoding="utf-8")
+
+def convert_svg_assets():
+    # Keep Russian diagrams untouched and generate translated SVG counterparts for EN pages.
+    roots = [ROOT / "assets" / "guides", ROOT / "assets" / "img"]
+    for asset_root in roots:
+        if not asset_root.exists():
+            continue
+        for source in sorted(asset_root.rglob("*.svg")):
+            lines = source.read_text(encoding="utf-8").splitlines(keepends=True)
+            translated = "".join(translate_markdown_line(line) for line in lines)
+            translated = flush_translations(translated)
+            relative = source.relative_to(ROOT / "assets")
+            destination = ROOT / "assets" / "en" / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(translated, encoding="utf-8")
 
 def main():
     convert(ROOT / "index.md", ROOT / "en" / "index.md")
     sources = sorted((ROOT / "guides").glob("*.md"))
     for source in sources:
         convert(source, ROOT / "en" / "guides" / source.name)
+    convert_svg_assets()
     CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=2), encoding="utf-8")
     print("Generated English homepage and %d guides using %d cached translations." % (len(sources), len(cache)))
 
